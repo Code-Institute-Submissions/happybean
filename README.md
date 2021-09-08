@@ -1,108 +1,546 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Happy Bean
 
-Welcome USER_NAME,
+This project is part of my Code Institute Full Stack Software Development studies, specifically the Full Stack Frameworks with Django module. The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an actual e-commerce website. This project is an e-commerce store for an artisanal coffee roasting company that specialises in roasting and selling coffee but also sells coffee equipment. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View live version of website via Heroku]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Mockup image]()
 
-## Gitpod Reminders
+___
+<br>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<a></a>
+## Table of Contents 
+* [UX](#ux)
+    * [User Persona](#user-persona)
+    * [User Goals](#user-goals) 
+    * [Site Owners Goals](#site-owners-goals) 
+    * [User Requirements and Expectations](#user-requirements-and-expectations)
+        * [Requirements](#requirements)
+        * [Expectations](#expectations)
+    * [User Stories](#user-stories)
+    * [User Flow](#user-flow)
+    * [Log In Sign Up Flow](#log-in-sign-up-flow)
+* [UI Design](#ui-design) 
+    * [Font](#font)
+    * [Colour Scheme](#colour-scheme)
+    * [Icons](#icons)
+    * [Structure](#structure)
+* [Wireframes](#wireframes)
+* [Data Structure](#data-structure)
+* [Existing Features](#existing-features)
+* [Future Features](#future-features)
+* [Technologies used](#technologies-used)
+    * [Languages](#languages)
+    * [Libraries](#libraries)
+    * [Tools](#tools)
+    * [Design](#design)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-`python3 -m http.server`
+___
+<br>
 
-A blue button should appear to click: _Make Public_,
+<a name="ux"></a>
+## **UX**
+<a></a>
+### **User Persona**
+This website project will target users who are interested in purchasing coffee and coffee equipment that are of high quality. The primary focus is on providing an easy to navigate and responsive e-commerce website that allows users to easily purchase products and also have access to resources such as articles, tools, videos and events related to coffee.
 
-Another blue button should appear to click: _Open Browser_.
+<a></a>
+### **User Goals**
+- View featured products on the website;
+- View, search and be able to easily purchase coffee and related products easily and securely;
+- The e-commerce store has to work well on all kinds of devices like mobile phones, tablets and desktops.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<a></a>
+### **Site Owners Goals**
+- View, edit, search, delete products;
+- Have an easy and effective user flow so that the user is able to, without obstacles, successfully make a purchase so that the conversion rate is high, shopping cart abandonment rate is low and the number of returning customers increase
+- Be the “go-to” and reliable place for users to buy their coffee and coffee equipment.
+- To create a community for users in who are interested in learning more about coffee
 
-A blue button should appear to click: _Make Public_,
+<a></a>
+### **User Requirements and Expectations**
+#### **Requirements**
+- Easy to navigate by using the navigation menu.
+- Relevant content for each product category.
+- Appealing visual elements.
+- Easy way to search, sort and filter products relevant to the user.
 
-Another blue button should appear to click: _Open Browser_.
+#### **Expectations**
+- When clicking on links (resource and social media links), expect the page to open in a separate browser.
+- Expect that the navigation links work properly to take the user where they intended to go.
+- Expect to be able to successfully & securely purchase a product with appropriate feedback of where they are in the process and if the status of the purchase.
+- Feedback whether or not registered, logged in, logged out.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<a></a>
+### **User Stories**
 
-To log into the Heroku toolbelt CLI:
+#### **Guest User**
+*As a Guest User, I want:*
+1. the main purpose of the site to be clear so that I immediately know what the site is intended for upon entering;
+2. to be met with a visually appealing and easy to read layout of created items;
+3. to view the product group categories to get a sense of what type of products they can buy and easily navigate to it;
+4. be able to easily go to the store section to purchase items;
+5. to easily find a way to search for products to to view what what I might be looking for
+to be able to register as a returning user to save my personal detail & access exclusive information
+6. to be able to get in contact via social media so that I can follow Happy Bean.
+7. to easily find a way to get in contact with Happy Bean if I have questions
+8. to feel secure in the payment process 
+9. to view an option to be a registered user to have my tailored experience
+10. to view products by category so I view particular group of products
+11. to be able to add a product to the shopping cart and view the total of the order at any time 12. to control my budget
+13. to control the number of products they view on a page for ease of use
+14. to view product details and high quality images so I am able to determine if you want the product and be able to choose the type, quantity and size of the product
+15. to be able to update and delete product in the basket to be in full control of the purchase
+16. to view order details to be able to confirm everything before purchase
+17. a clear indication how to pay for the product as well as an easy and secure method to pay for products with personal & card details so that they feel comfortable providing the information
+18. to view another summary to ensure the products and cost as final check
+19. to receive appropriate feedback of order success or failure to ensure purchase has gone through
+20. to connect and learn about Happy Bean and Coffee so that I have a better understanding of the products and company
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### **Registered User**
+*As a Registered User, I want to have the same as the a Guest user as well as:*
+1. to be able to log back into the site with my initial latest credentials
+2. to be able to reset password in the event they forget it
+3. to view place with my order history but also view, edit, add, delete personal info
+4. to be able to log out of my account;
+5. to view an exclusive place with insights and information about Coffee
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### **Admin User**
+*As a Admin User, I want to have the same as the a Guest & Registered users as well as:*
+1. to provide simple design e-commerce website so that they return and enjoy the experience
+2. to have the ability to log in to an admin account so that I can add, edit and delete products to the database;
+3. to give users an option to checkout with or without having an account
+have a secure website so that only authorised users can take CRUD actions and user profiles are protected
 
-------
+<a></a>
+### **User Flow**
+In the planning phase, I created a User flow to determine the main paths the user might take on the web app. 
+![User flow]()
+___
+<br>
 
-## Release History
+<a></a>
+## **UI Design**
+### **Font** 
+- [Google Fonts](https://fonts.google.com/) was used to explore the various options.
+- The project has the main font of [Lato](https://fonts.google.com/specimen/Lato?query=lato) as it is easy to read and modern
+- “Sans-Serif” is used as the default backup font in cases where these fonts have difficulty loading
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<a></a>
+### **Colour Scheme**
+- The colour scheme is based on creating an environment with that is modern and timeless with a touch of “Terra Cotta” to symbolize warmth & enjoyment ;
+- The logo was created with "Charcoal". The illustration is from [Canva](https://www.canva.com/) which combined "Charcoal" and “Terra Cotta”;
+- The navbar is created with the lighter version of "Cultured";
+- The call to action buttons background is created with "Charcoal";
+- All colours were checked with [WebAIM](https://webaim.org/resources/contrastchecker/) to check the accessibility of the colours and present a pass.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### **Colour Palette**
+Coolors was used to map out my colour scheme.
+![Colour Palette]()
+- #E47068 This colour is used for borders of buttons and where the text needed to stand out more because of the background.
+- #343E47: This colour is used as the main text colour and for the background CTA buttons.
+- #F4F3F3: This colour is used as a secondary background colour for graphics.
+- #F9F9F9: This colour is used as a tertiary background colour for graphics.
+- #FFFEFC: This colour is used as the main background colour for the website and for text where elements have darker backgrounds.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<a></a>
+### **Icons**
+- Majority of icons from the [Font Awesome](https://fontawesome.com/) Icon library were used.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<a></a>
+### **Framework**
+The overall structure that was used is the [Bootstrap5](https://getbootstrap.com/) framework. Bootstrap provides various elements of CSS and Javascript which is very helpful to keep a good structure on your page.
+___
+<br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<a></a>
+## **Wireframes**
+I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes and used Figma to create medium-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience. There is a mobile-first focus and therefore I wanted to keep in mind first what will work on mobile.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### **Site Structure**
+In the planning phase, the following site structure was created to determine the pages, subpages and which pages are related.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Site Structure]()
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **Wireframe Images**
+#### **Sketches**
+Sketches were part of the first phase of the design for this project. Sketches with pen and paper are used to roughly draft the flow and the structure of the project without having to focus on colour, fonts and the correct layout.
+![Sketch]()
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### **Low Fidelity**
+[Balsamiq](https://balsamiq.com/) was used to create low-fidelity wireframes. Low-fidelity designs were utilised to make the design process simple and test low-tech concepts. When designing a low-fi prototype, the font types and colours are ignored to focus on the design of the project itself.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<details>
+<summary>Home (index.html)</summary>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Wireframe: Home]()
+</details>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<details>
+<summary>Profile Page (profile.html) - registered users </summary>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Wireframe: Profile]()
+</details>
 
-------
+<details>
+<summary>Products (products.html, products/<category_name>.html) </summary>
 
-## FAQ about the uptime script
+![Wireframe: Products]()
+</details>
 
-**Why have you added this script?**
+<details>
+<summary>Product Details (product/<product_id>.html) </summary>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Wireframe: Product Details]()
+</details>
 
-**How will this affect me?**
+<details>
+<summary>Shopping Cart (cart.html)</summary>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Wireframe: Shopping Cart]()
+</details>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<details>
+<summary>Checkout (checkout.html) </summary>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Wireframe: Checkout]()
+</details>
 
-**So….?**
+<details>
+<summary>Payment (checkout.html) </summary>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Wireframe: Payment]()
+</details>
 
-**Can I opt out?**
+<details>
+<summary>Checkout Success (checkout_success.html)</summary>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Wireframe: Checkout Success]()
+</details>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+<details>
+<summary>Login Page (login.html) </summary>
 
-**Anything more?**
+![Wireframe: Login]()
+</details>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<details>
+<summary>Registration Page (register.html)</summary>
 
----
+![Wireframe: Registration]()
+</details>
 
-Happy coding!
+<details>
+<summary>Our Story (our_story.html)</summary>
+
+![Wireframe: Our Story]()
+</details>
+
+<details>
+<summary>FAQ (faq.html)</summary>
+
+![Wireframe: FAQ]()
+</details>
+
+<details>
+<summary>Coffee Corner (coffee_corner.html) - registered users</summary>
+
+![Wireframe: Coffee Corner]()
+</details>
+
+<details>
+<summary>Add Products Page (add_products.html) - for admin users</summary>
+
+![Wireframe: Add Products]()
+</details>
+
+<details>
+<summary>Edit Resource Page  (edit_products.html) - for admin users</summary>
+
+![Wireframe: Edit Products]()
+</details>
+
+___
+<br>
+
+<a></a>
+## **Data Structure**
+A database structure was designed to be specifically suited for Happy Bean. It was important to make sure the data structure was logical. Each product is linked to a category and these are identified by id (pk number). The products on the Coffee Group of Categories, are linked to an origin and are identified by id (pk number).
+
+Each order has a unique order number which is generated when the order is processed and orders have the user’s and product details.
+
+Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their personal details will not be saved, they won’t be able to see a Profile with their personal details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their personal details pre-populated the next time they shop and have access to the Coffee Corner. 
+
+SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
+
+The data structure outline: ![Data Structure]()
+
+<br>
+
+<a></a>
+## **Existing Features**
+### Elements on every page
+#### Header
+
+1. Logo
+- Allows the user to easily recognise the brand of “Happy Bean”. If the user clicks on the logo, it will return the users to the “Home” section as they would expect.
+2. Navbar
+- Navigation Bar - Allows the user to easily navigate the website's sections and find what they are looking for with ease and speed.
+- The navigation bar features the Happy Bean logo in the top left corner.
+- For visitors to the site who are not logged in (Guest Users), these menu links are available for them to use:
+    - Home
+    - Shop with dropdown:
+        - All Products
+        - “Coffee”: Products filtered by Coffee
+        - “Equipment”:  Products filtered by Equipment
+        - “Speciality”:  Products filtered by Speciality
+    - Connect & Learn:
+        - Our Story
+        - FAQ
+        - Contact us
+        - Coffee Corner if land on this page - will be redirected to the register page
+    - Profile Icon with dropdown:
+        - Log in
+        - Register
+- For users who are logged in (Registered Users), the list items are as follows:
+    - Home
+    - Shop with dropdown:
+    - Shop with dropdown:
+        - All Products
+        - “Coffee”: Products filtered by Coffee
+        - “Equipment”:  Products filtered by Equipment
+        - “Speciality”:  Products filtered by Speciality
+    - Connect & Learn:
+        - Our Story
+        - FAQ
+        - Contact us
+        - Coffee Corner
+    - Profile Icon with dropdown:
+        - My Profile
+        - Log out
+        - Manage Products - Only admin users will be able to to view this
+- The navbar is collapsed into a burger icon on small screens.
+#### Footer
+- A brief description of the purpose and mission of the site.
+- Popular Links 
+- Copyright information.
+- Links to social media for Admin -Social Icons - Allows the user to access the social platforms of the Happy Bean.
+
+### Home page (index.html) 
+- This is the main page of the website. 
+- The landing page gives the user an immediate welcome and indication of what the site is about.
+- There is a CTA button to view the Store (products.html) which is important as the primary goal of the user is to purchase products.
+- The main section is a navigation to the main product groups so the user can again easily go to a specific category of products.
+- A section on subscriptions and what they are as well as a CTA button to go to the shop and view the Speciality products view of the Store.
+- A Register section with a CTA that takes the user to the Registration page (register.html)
+
+### Profile Page (profile.html) - registered users 
+- This page can only be viewed by registered users
+- Then if the user logs in or registers successfully they are taken back to the login page to login.
+- This page will feature their username at the top to personalise the user experience.
+- The user will be able to see their user info, delivery info and order history
+- The user will see a Coffee Corner link as they will be able to access this information now. 
+- If it is an admin user, there is a link to Product Management Page to easily 
+
+### Products (products.html, products/<category_name>.html) 
+- The pages where users can see all products and sort by group of categories & category
+- If a user clicks on the product image, it will take them to the product details page.
+
+### Product Details (product/<product_id>.html) 
+- These pages are where the users can see product details and to select options such as size, quantity 
+- The user will see product detail like Price, Category and Intensity (if Coffee)
+- Users can add a product in the shopping cart.
+- The user will also be able to click on a link to go back to the products page
+- If a user adds a product to their shopping cart, they are notified and a toast will popup with a summary of what is in their shopping cart at that point in time as well as the cost, product info and a link to the shopping cart. 
+
+### Shopping Cart (cart.html) 
+- On this page users can view all the selected products and details. Users can update the quantity and there is an option to remove products. There is a button link to a checkout page for the final step of shopping.
+- The order total, delivery cost and Total cost is clearly indicated to the user.
+- At the top of the page, there is an indication of where the user is in the buying/checkout process for a better user experience
+
+### Checkout (checkout.html) 
+- The checkout page is where users can enter their information to process their order. 
+- The user can see a summary of their order at the top of the page.
+- At the top of the page, there is an indication of where the user is in the buying/checkout process for a better user experience.
+- The user will be able to click on a link to back to their cart if they want to adjust it
+- The user will see a clear button/link to go to the next step in the order process which will be the payment page.
+
+### Payment (checkout.html) 
+- Stripe is used to process the order payment. This is a secured platform for credit card payment.
+- The user will see a simple form to fill in their payment information and securely pay. This is reinforced with the Stripe logo and the lock icon.
+- At the top of the page, there is an indication of where the user is in the buying/checkout process for a better user experience.
+
+### Checkout Success (checkout_success.html) 
+- The users will see the checkout success page if the payment is a success and the order processed. Users can see the order number, shipping address and product details. 
+- The user will be able to return to the products page or the Coffee Corner 
+- At the top of the page, there is an indication of where the user is in the buying/checkout - process for a better user experience.
+
+### Login Page (login.html)  
+- The login page features a simple form where the user can enter either their username or their email address and their password.
+- There is helper text under each input field to guide the user as to the parameters they can input.
+- The user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
+- If the user lands on the log in page but realises they don't have an account yet and would like to register, there is a link on the page that will take them to the registration page or they can click on the navbar menu Register link.
+- The page where users can log in to the website and access to the Profile page to see their user info, delivery info and order history
+- The form with built-in functionality is created with the Django Allauth package.
+
+### Registration Page (register.html)
+- The sign-up page features a simple form, where the user can input a username, email address and password. The form was kept deliberately simple so that signup has minimum barriers.
+- If the user lands on the registration page but realises they already have an account and would like to log in, there is a link on the page that will take them to the login page or they can click on the navbar menu Log in Page link.
+- There is a message to the user about not sharing their information to put the user's mind at ease.
+
+### Our Story (our_story.html)
+- The page about the company background including the beans and the team
+- There is a section with links to other pages related to Connect & Learn including FAQ, Contract Us and Coffee Corner. If the Coffee corner link is clicked and the user is not logged in, they will be redirected to the Login page and be notified that they need to be logged in. If the user is logged in, they will be redirected to the Coffee Corner page.
+
+### FAQ (faq.html)
+- The user will be able to see frequently asked questions about products, ordering etc
+- There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and Coffee Corner. If the Coffee corner link is clicked and the user is not logged in, they will be redirected to the Login page and be notified that they need to be logged in. If the user is logged in, they will be redirected to the Coffee Corner page.
+
+### Coffee Corner (coffee_corner.html) - registered users
+- This page can only be viewed by the registered users.
+- The page will include Insights and information for registered users including Brewing Guides, Coffee Tips and Coffee Recipes
+- There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and FAQ. 
+
+### Add Products Page (add_products.html) - for admin users
+- This page can only be viewed by the admin user.
+- The add products page features a simple form, where the admin user can input the basic information including adding an image for the product
+- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
+- If the user clicks the add product button, it will add the new product to the database.
+- If the user clicks on the cancel button it will take them back to the products page.
+
+### Edit Resource Page  (edit_products.html) - for admin users
+- This page can only be viewed by the admin user.
+- The edit products page features a simple form, where the admin user can edit a product in the database
+- If the admin user clicked on the Edit resource button on the resources page then they will be taken to this page. 
+- The current product information will be shown and the admin user can change the information and save it. This will update the database with the new information.
+- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
+- If the user clicks on the cancel button it will take them back to the products page.
+
+### Log Out
+- If a registered or admin user clicks on the log out button, they will be logged out of their current session and will no longer be able to see the pages they would if they were logged in.
+- A registered user will have to log in again if they want to see their Profile or the Coffee Corner Page.
+- An Admin user will have to log in again if they want to see their Profile, Coffee Corner Page or the Manage Products Page.
+
+### 404 & 500 Page
+- The custom 404 & 500 Pages contains an image and text that makes the user understand they have encountered an error. There is a button to return the user to the Happy Bean Home page.
+
+___
+<br>
+
+<a></a>
+## **Future Features**
+These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
+- The user can change their password if they click on the Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
+- The user can delete their profile if they click on the Delete Profile link. This will open a modal to confirm if they want to continue to delete their profile. If they confirm, their username, email and password will be detailed from the Users collection. They will then be logged out and returned to the landing page as Guest users.
+- Coffee Corner Chat Forum app - registered users can converse about a topic and other users can comment on the thread.
+
+___
+<br>
+
+<a></a>
+## **Technologies Used**
+
+### **Languages**
+- [HTML5](https://en.wikipedia.org/wiki/HTML) for markup
+- [CSS3](https://en.wikipedia.org/wiki/CSS) for style
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for interaction
+- [Python3](https://www.python.org/) as a backend programming language
+
+### **Libraries & Frameworks**
+- [Bootstrap5](https://getbootstrap.com/) for simplify the structure of the website
+- [Google Fonts](https://fonts.google.com/) for fonts
+- [Font Awesome](https://fontawesome.com/) for icons
+- [Hover.css](https://cdnjs.com/libraries/hover.css/2.1.0) to apply hover effects to the projects navbar.
+- [Django](https://www.djangoproject.com/) (an open-source web framework) as the main framework of Python
+- [SQLite](https://www.sqlite.org/index.html) (Django built-in database) as a database in development mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as a database in production mode
+- [Stripe](https://stripe.com/en-ie) for credit card payment
+- [AWS](https://aws.amazon.com/) (Amazon Web Services) for hosting static files and images for the website
+
+### **Tools**
+- [Gitpod](https://www.gitpod.io/) as Integrated Development Environment (IDE)
+- [Git](https://git-scm.com/) for local version control, keeping the files & documents
+- [GitHub](https://github.com/) for online version control and keeping the files & documents
+- [Heroku](https://www.heroku.com/) for deploying the website
+- [Responsinator](http://www.responsinator.com/) - to determine if the site was responsive to various devices.
+- [Am I Responsive](http://ami.responsivedesign.is/#) to view images of the website on different devices if the site was responsive to various devices.
+- Chrome DevTools to help edit pages and diagnose problems quickly.
+- [W3C Markup Validator](https://validator.w3.org/) for testing HTML code
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) for testing CSS code
+- [JSHint Validator](https://jshint.com/) for detecting errors and potential problems in your JavaScript code
+- [Link Checker](https://validator.w3.org/checklink) for checking all links on the website and see if all links work
+- Lighthouse in Google dev tool for testing the performance of the website
+- [TestProject](https://testproject.io/) for automated testing of website
+- [Python Tester](https://extendsclass.com/python-tester.html) for checking Python code syntax
+- [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) to validate all tags correct
+- [Google Mobile-Friendly Test Mobile](https://search.google.com/test/mobile-friendly) to check if site is mobiole friendly
+- [Grammerly](https://www.grammarly.com/) to check spelling & grammer
+- [AutoPrefixer](https://autoprefixer.github.io/) to parse CSS and adds vendor prefixes
+
+### **Design**
+- [Balsamiq](https://balsamiq.com/) to design low fidelity mockups
+- [Figma](https://www.figma.com/) to design a medium-fidelity mockup
+- [Canva](https://www.canva.com/) for the logo
+
+___
+<br>
+
+<a></a>
+## **Testing**
+Testing information can be found in the separate [TESTING.md file](documentation/TESTING.md)
+
+<br>
+
+<a></a>
+## **Deployment**
+This project uses GitHub for version control, GitPod as the cloud-based IDE and Heroku to deploy the site into production. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files]().
+
+The below steps are specific to Gitpod therefore depending on your IDE, you might need to adjust the below steps. 
+
+**Heroku**
+
+**AWS**
+
+**Connecting to DJANGO**
+
+___
+<br>
+
+<a></a>
+## **Credits**
+
+### **Content**
+- The copy and text for this website was created by Franciska Du Toit except for the 
+- Product descriptions from the following sources:
+- Brewing Technique copy
+
+
+### **Media**
+- Logo Illustration is from [Canva](https://www.canva.com/)
+- Designs for coffee beans, grounds, capsules, gift boxes, taster boxes and subscriptions designed by Franciska Du Toit using the logo from [Canva](https://www.canva.com/)
+
+- Coffee Products photos from the following sources:
+    - Filter Coffee Papers from https://www.whittard.co.uk/equipmentcoffee-equipmentreplacement-partscoffee-filters-302240.html-302240.html?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNx31Epwjrewm8gHQAXr64HrpPc6yYnZzWt-0mvauMbkqMzUs0xNWoaAlNvEALw_wcB&gclsrc=aw.ds
+    - AeroPress Filters from https://coffee.ie/products/aeropress-filter-s-2-packs
+    - Hario V60 Drip Scale from https://www.hario.co.uk/collections/coffee-brew-scales
+    - Aeropress from https://www.rosettaroastery.com/collections/equipment
+    - Hario Cold Brew Pot from https://www.cremashop.eu/en/products/hario/mizudashi-coffee-pot
+    - Chemex Brewer from https://www.rosettaroastery.com/collections/equipment
+    - Rhinoware Hand Grinder from https://www.cremashop.eu/en/products/rhinowares/compact-hand-grinder/2242
+    - Baratza Encore Grinder from https://www.cremashop.eu/en/products/baratza/encore/2293
+
+
+### **Code**
+
+
+### **Acknowledgements**
+- Thanks to my mentor Antonio Rodriquez for guiding me throughout this project.
+
+##### back to [top](#table-of-contents)
