@@ -1,0 +1,48 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": { "name": "beans", "friendly_name": "Beans" }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": { "name": "grounds", "friendly_name": "Grounds" }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": { "name": "capsules", "friendly_name": "Capsules" }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": { "name": "accessories", "friendly_name": "Accessories" }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": { "name": "brewers", "friendly_name": "Brewers" }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": { "name": "grinders", "friendly_name": "Grinders" }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": { "name": "taster_boxes", "friendly_name": "Taster Boxes" }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": { "name": "gift_boxes", "friendly_name": "Gift Boxes" }
+    },
+    
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": { "name": "subscriptions", "friendly_name": "Subscriptions" }
+    }
+]

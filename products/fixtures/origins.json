@@ -1,0 +1,28 @@
+[
+    {
+        "pk": 1,
+        "model": "products.origin",
+        "fields": { "name": "africa", "friendly_name": "Africa" }
+    },
+    {
+        "pk": 2,
+        "model": "products.origin",
+        "fields": { "name": "asia", "friendly_name": "Asia" }
+    },
+    {
+        "pk": 3,
+        "model": "products.origin",
+        "fields": { "name": "south_america", "friendly_name": "South America" }
+    },
+    {
+        "pk": 4,
+        "model": "products.origin",
+        "fields": { "name": "central_america", "friendly_name": "Central America" }
+    },
+    {
+        "pk": 5,
+        "model": "products.origin",
+        "fields": { "name": "coffee_extras", "friendly_name": "Coffee Extras" }
+    }
+    
+]
