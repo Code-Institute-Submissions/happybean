@@ -74,9 +74,9 @@
                 Shop
               </a>
               <ul class="dropdown-menu" aria-labelledby="shop-link">
-                <li><a class="dropdown-item" href="#">Coffee</a></li>
-                <li><a class="dropdown-item" href="#">Equipment</a></li>
-                <li><a class="dropdown-item" href="#">Speciality</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=beans,grounds,capsules">Coffee</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=accessories,brewers,grinders">Equipment</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions">Speciality</a></li>
                 <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
               </ul>
             </li>
