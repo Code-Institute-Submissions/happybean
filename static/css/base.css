@@ -12,7 +12,7 @@ body {
 
 
 .shop-now-button {
-    background: black;
+    background: #555;
     color: white;
     min-width: 260px;
     border-radius: 8px;
@@ -22,6 +22,20 @@ body {
     background: black;
     color: white;
 }
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #555;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #555;
+    color: white !important;
+}
+
 
 .shop-now-button:hover,
 .shop-now-button:active,
