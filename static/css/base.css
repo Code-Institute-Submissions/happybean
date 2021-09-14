@@ -80,11 +80,11 @@ body {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
-
-
 
 /* -------------------------------- Media Queries */
 
