@@ -11,6 +11,10 @@
   transition: box-shadow 150ms ease;
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
@@ -26,14 +30,14 @@
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+  color: #000;
+  border: 1px solid #000;
 }
 
 #loading-overlay {
