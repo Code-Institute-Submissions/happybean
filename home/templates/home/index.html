@@ -2,44 +2,42 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<!-- Landing Section -->
+<main class="container landing">
+    <div class="row landing-row ">
+        <!-- Landing Text-->
+        <div class="col s12 m12 l12">
+            <h1 class="home-heading">
+                Speciality Grade, 
+                <br>
+                Ethically Sourced Coffee
+            </h1>
+            <h2 class=" logo-front">
+                You deserve extraordinary coffee at home
+            </h2>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">
+                        Shop Now
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
+</main>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-front text-black">
-                    Speciality Grade, Single Origin Coffee
-                </h1>
-                <h2 class=" logo-front text-black">
-                    You deserve extraordinary coffee at home
-                </h2>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                            Shop Now
-                        </a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Our Products section -->
-    <div class="container">
+    <section class="container" id="product-section">
         <div class="row">
-            <h2>Our Products</h2>
+            <h2 class="product-h">Our Products</h2>
         </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100">
-            <img src="#" class="card-img-top" alt="...">
+            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">COFFEE</h5>
               <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -48,7 +46,7 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img src="#" class="card-img-top" alt="...">
+            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">EQUIPMENT</h5>
               <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -57,7 +55,7 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img src="#" class="card-img-top" alt="...">
+            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">SPECIALITY</h5>
               <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -65,19 +63,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Subscriptions or About section -->
-    <div class="container h-100 ">
+    <!-- Subscriptions -->
+    <div class="container" id="subscription-section">
         <div class="row h-100">
             <div class="col-sm-12 col-md-6 ">
                 <img src="#" class="" alt="">
             </div>
             <div class="col-sm-12 col-md-6">
-                <h2 class="">Subscription
+                <h2 class="subscription-h">Subscription
                 </h2>
                 <p class="">
-                    fsdfsdfsdsfsdfsdfsdfsdfsdf
+                    Thrill your taste buds with wtically sourced, hyper-fresh bean on repeat. Check out our Coffee on Subscription section!
                 </p>
                 <a class="btn btn-primary" href="#" role="button">Link</a>
             </div>
@@ -85,10 +83,10 @@
     </div>
 
     <!-- Registration section -->
-    <div class="container h-100">
+    <div class="container" id="register-section">
         <div class="row h-100">
             <div class="col-sm-12 col-md-6">
-                <h2 class="">Registration
+                <h2 class="registration-h">Registration
                 </h2>
                 <p class="">
                     fsdfsdfsdsfsdfsdfsdfsdfsdf
