@@ -9,7 +9,8 @@
     --DarkShades: #343E47;
     --DarkAccent: #343E47;
     --LightAccent: #9596A1;
-    --Accent: #D1A478;
+    --Accent: #a26b25;
+    --Dark: #242020;
     --Light: #E1E8EA;
     --bgWhite: #FFFEFC;
     --ExtraLight: #F4F3F3 ;
@@ -35,7 +36,7 @@ body{
     font-family: 'Lato', sans-serif;
     color: var(--Text) ;
     background-color: var(--bgWhite);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1{
@@ -57,6 +58,11 @@ h3{
 .subtitle{
     font-size: 24px;
     font-weight:bolder;
+}
+
+.information{
+    font-size: 24px;
+    font-weight: normal;
 }
 
 .small-text{
@@ -193,8 +199,8 @@ h3{
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: #555;
-    color: white !important;
+    background: var(--DarkAccent);
+    color: var(--ExtraLight) !important;
 }
 
 
@@ -204,8 +210,8 @@ h3{
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: var(--Dark);
+    color: var(--ExtraLight);
 }
 
 
@@ -247,7 +253,6 @@ h3{
 /* PRODUCT SECTION */
 #product-section{
     padding-top:10%;
-    height: 100vh;
     max-width: 80%;
 }
 
@@ -263,18 +268,40 @@ h3{
 
 /* SUBSCRIPTION SECTION */
 #subscription-section{
-    padding-top:10%;
-    height: 100vh;
-    background-color: var(--Light) ;
+    margin-top: 10%;
     max-width: 80%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.subscription-button {
+    background: var(--DarkAccent);
+    color: var(--ExtraLight);
+    min-width: 260px;
+    border-radius: 8px;
+}
+
+.subscription-button:hover{
+    background: var(--Dark);
+    color: var(--ExtraLight);
+}
+
+.section-img{
+    margin-top: 10px;
+    width: 550px ;
+    height: 550px;
+
 }
 
 /* REGISTER SECTION */
 #register-section{
     padding-top:10%;
     height: 100vh;
-    background-color: var(--Light) ;
     max-width: 80%;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.register-h{
+    margin-top: 30px;
 }
 
 /* ------------------------------- bootstrap toasts */

@@ -28,7 +28,6 @@
 {% endblock %}
 
 {% block content %}
-
     <!-- Our Products section -->
     <section class="container" id="product-section">
         <div class="row">
@@ -64,17 +63,27 @@
 
     <!-- Subscriptions -->
     <div class="container" id="subscription-section">
-        <div class="row h-100">
-            <div class="col-sm-12 col-md-6 ">
-                <img src="#" class="" alt="">
+        <div class="row ">
+            <div class="col-sm-12 col-md-6 p-5 ">
+                <img src="/media/page_images/subscription-link-r.png"  class="section-img" alt="Cup of coffee on wooden board">
             </div>
-            <div class="col-sm-12 col-md-6">
-                <h2 class="subscription-h">Subscription
+            <div class="col-sm-12 col-md-6 p-5">
+                <h2 class="subscription-h">Subscriptions
                 </h2>
-                <p class="">
-                    Thrill your taste buds with wtically sourced, hyper-fresh bean on repeat. Check out our Coffee on Subscription section!
+                <p class="information">
+                    Thrill your taste buds with ethically sourced, hyper-fresh bean on repeat. Check out our Coffee on Subscription section!
                 </p>
-                <a class="btn btn-primary" href="#" role="button">Link</a>
+                <p>
+                    Subscriptions are a stress free way to ensure you never run out of our coffee. Get fresh coffee delivered to your door, once a month. 
+                </p>
+                <p>
+                <strong>How it works:</strong></p>
+                <ul>
+                    <li>You can select the quantity of coffee you require, and how often you’d like us to deliver</li>
+                    <li>You can also choose the size of coffee you’d like to receive</li>
+                    <li>Your credit card will be charged monthly, on the date you sign up. You’re free to upgrade, downgrade or cancel at any time - just get in touch with us if you need any help</li>
+                </ul>
+                <a class="btn btn-lg subscription-button" href="{% url 'products' %}?category=subscriptions" role="button">See Subscription options</a>
             </div>
         </div>
     </div>
@@ -82,16 +91,23 @@
     <!-- Registration section -->
     <div class="container" id="register-section">
         <div class="row h-100">
-            <div class="col-sm-12 col-md-6">
-                <h2 class="registration-h">Registration
+            <div class="col-sm-12 col-md-6 p-5">
+                <h2 class="register-h">Registration
                 </h2>
-                <p class="">
-                    fsdfsdfsdsfsdfsdfsdfsdfsdf
+                <p class="information">
+                    Sign up for free to join the Coffe Corner!
                 </p>
-                <a class="btn btn-primary" href="#" role="button">Link</a>
+                <p>
+                    By being part of the Coffee Corner, you will have loads of benefits such as the latest recipies, brewing techniques and Coffee Tips. 
+                </p>
+                <p>
+                    Also, you will have access to a personalised profile and make your buying experience even smoother!
+                </p>
+                </ul>
+                <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Sign me up!</a>
             </div>
-            <div class="col-sm-12 col-md-6 ">
-                <img src="#" class="" alt="">
+            <div class="col-sm-12 col-md-6 p-5 ">
+                <img src="/media/page_images/register-link.png"  class="section-img" alt="Coffee Grounds">
             </div>
         </div>
     </div>
