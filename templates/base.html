@@ -189,6 +189,63 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- About section -->
+          <div class="col-sm-12 col-md-6">
+            <h3 class="footer-h">About</h3>
+            <p class="footer-p">As a speciality coffee company, we source world-class coffee beans and high-quality coffee equipment - so you can enjoy a barista quality experience in your own home. </p>
+          </div>
+          <!-- Categories section -->
+          <div class="col-xs-6 col-md-3">
+            <h3 class="footer-h">Categories</h3>
+            <ul class="footer-links">
+              <li><a href="{% url 'products' %}?category=beans">Beans</a></li>
+              <li><a href="{% url 'products' %}?category=grounds">Grounds</a></li>
+              <li><a href="{% url 'products' %}?category=capsules">Capsules</a></li>
+              <li><a href="{% url 'products' %}?category=accessories">Accessories</a></li>
+              <li><a href="{% url 'products' %}?category=brewers">Brewers</a></li>
+              <li><a href="{% url 'products' %}?category=grinders">Grinders</a></li>
+              <li><a href="{% url 'products' %}?category=taster_boxes">Taster Boxes</a></li>
+              <li><a href="{% url 'products' %}?category=gift_boxes">Gift Boxes</a></li>
+              <li><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></li>
+            </ul>
+          </div>
+          <!-- Quick Links section -->
+          <div class="col-xs-6 col-md-3">
+            <h3 class="footer-h">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 - This website is created by <a id="link-external" href="https://franciskadutoit.com/">Franciska Du Toit </a> for educational purpose only
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
     {% block extra_scripts %} 
     <script type="text/javascript">
         $(document).ready(function() {
