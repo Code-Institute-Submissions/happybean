@@ -19,8 +19,6 @@
     --Error: #f44336;
 }
 
-
-
 /* --------------------------------------------------- */
 /*                 GENERAL BODY SYTLES                 */
 /* --------------------------------------------------- */
@@ -36,15 +34,62 @@ body{
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     color: var(--Text) ;
-    background-color: var(--bgWhite) ;
+    background-color: var(--bgWhite);
+    font-size: 16px;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: -2%;
+}
+
+h2{
+    font-size: 40px;
+    letter-spacing: -2%;
+}
+
+h3{
+    font-size: 24px;
+    letter-spacing: -2%;
+}
+
+.subtitle{
+    font-size: 24px;
+    font-weight:bolder;
+}
+
+.small-text{
+    font-size: 14px;
+    font-weight:bolder;
+}
+
+.button-text{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.link-text{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* --------------------------------------------------- */
 /*                       NAVBAR                        */
 /* --------------------------------------------------- */
 
+.logo{
+    font-size: 40px;
+    font-weight: normal;
+}
+
 .cart-menu {
     color:gray;
+}
+
+.nav-link {
+    font-size: 18px;
 }
 
 
@@ -211,6 +256,11 @@ body{
     padding-bottom: 20px;
 }
 
+.card-title{
+    text-align: center;
+    margin-top: -10px;
+}
+
 /* SUBSCRIPTION SECTION */
 #subscription-section{
     padding-top:10%;
@@ -226,8 +276,6 @@ body{
     background-color: var(--Light) ;
     max-width: 80%;
 }
-
-
 
 /* ------------------------------- bootstrap toasts */
 

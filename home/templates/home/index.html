@@ -17,7 +17,7 @@
             </h2>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3 ">
                         Shop Now
                     </a>
                 </h4>
@@ -36,30 +36,27 @@
         </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card h-100">
-            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">COFFEE</h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'products' %}?category=beans,grounds,capsules" class="btn"><img src="/media/page_images/coffee-category.png" class="card-img-top" alt="Coffee Products">
+                <div class="card-body">
+                  <h3 class="card-title">COFFEE</h3>
+                </div></a>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
-            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">EQUIPMENT</h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'products' %}?category=accessories,brewers,grinders" class="btn"><img src="/media/page_images/equipment-category.png" class="card-img-top" alt="Equipment Products">
+                <div class="card-body">
+                  <h3 class="card-title">EQUIPMENT</h3>
+                </div></a>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100">
-            <img src="media/taster-box-1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">SPECIALITY</h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions" class="btn"><img src="/media/page_images/speciality-category.png" class="card-img-top" alt="Speciality Products">
+                <div class="card-body">
+                  <h3 class="card-title">SPECIALITY</h3>
+                </div></a>
           </div>
         </div>
       </div>

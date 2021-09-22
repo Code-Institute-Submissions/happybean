@@ -27,6 +27,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <!-- Static Base CSS File -->
         <link rel="stylesheet" href="{% static 'css/base.css' %}" >
+        <!-- Hover.css CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" />
     {% endblock %}
 
     {% block extra_css %}
@@ -65,7 +67,7 @@
         <div class="container-fluid">
            <!-- Logo -->
           <a class="navbar-brand" href="{% url 'home' %}">
-            <h1>Happy Bean</h1>
+            <h1 class="logo">Happy Bean</h1>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
