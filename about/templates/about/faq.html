@@ -1,6 +1,141 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">FAQ</h1>
+    <div class="container">
+        <!-- Heading-->
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">FAQ</h2>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+    </div>
+    <!-- FAQ section-->
+        <main class="container pt-5 ">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Is there a delivery charge on orders?
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                We offer free shipping on an order above €50 for all deliveries in Europe. For orders to other countries (outside of the EU) additional delivery charges may apply. Please get in contact with us if you are not in the EU.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How is the coffee shipped?
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                We ship all our coffee with Nightline or An Post. But from time to time we will also deliver coffee to you ourselves so keep an eye out for us!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              If I bought a subscription, can I cancel it?
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes of course. If you really want to… Do you really want to? You can cancel your plan, we’ll send you whatever you’ve already paid for and you’ll never hear from us again. 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How long does delivery take?
+                              </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                Please allow up to 5 full business days for delivery in the EU. If you have not received anything within that period, please don't hesitate to contact us. If we are aware of a problem, we will always try and contact you in advance.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                What is your return policy?
+                              </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                Coffee is perishable, so we're unable to accept returns on coffee. But don't worry, we're here to help! If there was an error with your order, please contact us within 30 days of your purchase. 
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                I forgot my password!
+                              </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                If you would like to reset your password, you may do so from the login page. A password reset link will be sent to you via email (check your spam folder if you don’t see it in your inbox after a few minutes).
+                                If you experience any issues while trying to reset your password, don’t hesitate to reach out to us.
+                              </div>
+                            </div>
+                          </div>
+                          
+                       
+                      </div>
+                </div>
+            </div>
+        </main>
+
+
+    <!-- Our Connect & Learn section -->
+    <section class="container connect-section" >
+        <div class="row">
+            <h2 class="connect-h">Connect & Learn</h2>
+        </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="#" class="btn"><img src="/media/page_images/coffee-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Visit the Coffee Corner</h3>
+                </div></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'faq' %}" class="btn"><img src="/media/page_images/equipment-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">FAQ</h3>
+                </div></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'contact_us' %}" class="btn"><img src="/media/page_images/speciality-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Contact Us</h3>
+                </div></a>
+          </div>
+        </div>
+      </div>
+    </section>
 {% endblock %}
