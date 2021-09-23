@@ -400,6 +400,16 @@ h3{
     padding-bottom: 20px;
 }
 
+.block-connect-img{
+    max-width: 90%;
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1024px) {
+    .block {
+      padding-top: 10%;
+    }
+  }
 
 /* -------------------------------- Media Queries */
 
