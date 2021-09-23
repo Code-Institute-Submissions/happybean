@@ -299,11 +299,15 @@ h3{
 }
 
 .section-img{
-    margin-top: 10px;
-    width: 550px ;
-    height: 550px;
+    max-width: 90%;
 
 }
+/* Slightly larger container on xl screens */
+@media (min-width: 1024px) {
+    .section-block {
+      padding-top: 10%;
+    }
+  }
 
 /* REGISTER SECTION */
 #register-section{
