@@ -81,6 +81,19 @@ h3{
     text-decoration: underline;
 }
 
+.block-heading {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+.block-p{
+    font-weight: 300;
+}
+
+.block-img{
+    max-width: 100%;
+}
+
 /* --------------------------------------------------- */
 /*                       NAVBAR                        */
 /* --------------------------------------------------- */
