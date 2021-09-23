@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -20,6 +21,27 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+              <div class="contact-form-wrapper mx-auto my-3">
+                  <form id="contact-form" method="POST">
+                      {% csrf_token %}
+                      <fieldset class="form-group">
+                          <h3 class="">Get in touch</h3>
+                          <p>Got a question, comment or just want to say hi? We would love to hear from you!</p>
+                          {{ contact_form|crispy }}
+                      </fieldset>
+                      <div class="form-group">
+                          <button class="btn btn-secondary m-0" type="submit">Send</button>
+                      </div>
+                  </form>
+  
+              </div>
+          </div>
+      </div>
+  </div>
+
     <!-- Our Connect & Learn section -->
     <section class="container connect-section" >
         <div class="row">
