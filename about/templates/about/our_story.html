@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-
-    <div class="container pt-5 ">
+    <!-- About Section -->
+    <main class="container pt-5 ">
         <div class="row">
             <div class="col-12 col-md-6">
                 <img class="block-img" src="/media/page_images/equipment-category.png"  alt="">
@@ -54,7 +54,43 @@
                     By sourcing and curating a range of single-origin coffees from the most celebrated growing regions from around the world, Happy Bean offers each client the opportunity to experience the most exciting specialty coffee at home. We are not about one-size-fits-all house blends, but instead encourage customers to enjoy the variety of coffees we offer. </p>
             </div>
         </div>
-    </div>
+    </main>
+
+    <hr>
+
+    <!-- Our Connect & Learn section -->
+    <section class="container connect-section" >
+        <div class="row">
+            <h2 class="connect-h">Connect & Learn</h2>
+        </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="#" class="btn"><img src="/media/page_images/coffee-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Visit the Coffee Corner</h3>
+                </div></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'faq' %}" class="btn"><img src="/media/page_images/equipment-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">FAQ</h3>
+                </div></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 hvr-grow">
+            <a href="{% url 'contact_us' %}" class="btn"><img src="/media/page_images/speciality-category.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">Contact Us</h3>
+                </div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 {% endblock %}
 
 
