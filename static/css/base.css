@@ -385,6 +385,20 @@ h3{
     overflow-y: auto;
 }
 
+/* --------------------------------------------------- */
+/*                   CONNECT & LEARN                   */
+/* --------------------------------------------------- */
+
+.connect-section{
+    padding-top:5%;
+    padding-bottom:10%;
+    max-width: 80%;
+}
+
+.connect-h{
+    text-align: center;
+    padding-bottom: 20px;
+}
 
 
 /* -------------------------------- Media Queries */
