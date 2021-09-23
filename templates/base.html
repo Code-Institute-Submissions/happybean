@@ -99,9 +99,9 @@
                 Connnect &amp; Learn
               </a>
               <ul class="dropdown-menu" aria-labelledby="about-link">
-                <li><a class="dropdown-item" href="#">Our Story</a></li>
-                <li><a class="dropdown-item" href="#">FAQ</a></li>
-                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="{% url 'our_story' %}">Our Story</a></li>
+                <li><a class="dropdown-item" href="{% url 'faq' %}">FAQ</a></li>
+                <li><a class="dropdown-item" href="{% url 'contact_us' %}">Contact Us</a></li>
                 <li><a class="dropdown-item" href="#">Coffee Corner</a></li>
               </ul>
             </li>
@@ -217,10 +217,10 @@
           <div class="col-xs-6 col-md-3">
             <h3 class="footer-h">Quick Links</h3>
             <ul class="footer-links">
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="{% url 'our_story' %}">Our Story</a></li>
+              <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              <li><a href="{% url 'products' %}">Shop</a></li>
+              <li><a href="{% url 'faq' %}">FAQ</a></li>
               <li><a href="#">Sitemap</a></li>
             </ul>
           </div>
