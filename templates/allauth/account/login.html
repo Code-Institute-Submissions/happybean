@@ -51,7 +51,7 @@
 	{% include "socialaccount/snippets/login_extra.html" %}
 	{% else %}
 		<h3 class="block">{% blocktrans %}Your Information{% endblocktrans %}
-    </h3>
+    	</h3>
 	{% endif %}
 
 	<form class="login mx-auto mt-3 text-start pt-1" method="POST" action="{% url 'account_login' %}">
@@ -73,9 +73,9 @@
 
 </div>
 </section>
-
+<hr>
 <!-- Registration section -->
-<div class="container" id="register-section">
+<div class="container">
 	<div class="row h-100">
 		<div class="col-12 col-md-6 block">
 			<h2 class="block-heading">Have checked out the Coffee Corner?
@@ -90,7 +90,7 @@
 			<a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Visit the Coffee Corner</a>
 		</div>
 		<div class="col-sm-12 col-md-6 p-5 ">
-			<img src="/media/page_images/coffee_corner.png"  class="section-img" alt="Coffee Grounds">
+			<img src="{% static 'images/coffee_corner.png' %}"  class="section-img" alt="Coffee Grounds">
 		</div>
 	</div>
 </div>
