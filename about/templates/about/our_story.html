@@ -24,7 +24,7 @@
     <main class="container pt-5 ">
         <div class="row">
             <div class="col-12 col-md-6">
-                <img class="block-connect-img" src="/media/page_images/out_story.png"  alt="">
+                <img class="block-connect-img" src="{% static 'images/our_story_img.png' %}"  alt="">
             </div>
             <div class="col-12 col-md-6 block ">
                 <h2 class="block-heading">Where it all started</h2>
@@ -40,13 +40,13 @@
                     Our team is made up of a group of coffee obsessed professionals who are passionate about mastering coffee flavour. Here at Happy Bean, we’re a coffee company on a mission to transform your favorite coffee ritual into an extraordinary daily experience.</p>
             </div>
             <div class="col-12 col-md-6 ">
-                <img class="block-connect-img" src="/media/page_images/our_team.png"  alt="">
+                <img class="block-connect-img" src="{% static 'images/our_team.png' %}"  alt="">
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-12 col-md-6">
-                <img class="block-connect-img" src="/media/page_images/our_beans.png"  alt="">
+                <img class="block-connect-img" src="{% static 'images/our_beans.png' %}"  alt="">
             </div>
             <div class="col-12 col-md-6 block">
                 <h2 class="block-heading">Our Beans</h2>
@@ -66,7 +66,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="h-100 hvr-grow">
-            <a href="#" class="btn"><img src="/media/page_images/coffee_corner.png" class="card-img-top" alt="">
+            <a href="#" class="btn"><img src="{% static 'images/coffee_corner.png' %}" class="card-img-top" alt="">
                 <div class="card-body">
                   <h3 class="card-title">Visit the Coffee Corner</h3>
                 </div></a>
@@ -74,7 +74,7 @@
         </div>
         <div class="col">
           <div class="h-100 hvr-grow">
-            <a href="{% url 'faq' %}" class="btn"><img src="/media/page_images/faq.png" class="card-img-top" alt="">
+            <a href="{% url 'faq' %}" class="btn"><img src="{% static 'images/faq.png' %}" class="card-img-top" alt="">
                 <div class="card-body">
                   <h3 class="card-title">FAQ</h3>
                 </div></a>
@@ -82,7 +82,7 @@
         </div>
         <div class="col">
           <div class="h-100 hvr-grow">
-            <a href="{% url 'contact_us' %}" class="btn"><img src="/media/page_images/contact_us.png" class="card-img-top" alt="">
+            <a href="{% url 'contact_us' %}" class="btn"><img src="{% static 'images/contact_us.png' %}" class="card-img-top" alt="">
                 <div class="card-body">
                   <h3 class="card-title">Contact Us</h3>
                 </div></a>
