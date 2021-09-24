@@ -71,14 +71,23 @@ h3{
 }
 
 .button-text{
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 .link-text{
     font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
+    color: var(--Accent);
+}
+
+.link-text:hover{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--Text);
 }
 
 .block-heading {
@@ -93,6 +102,35 @@ h3{
 .block-img{
     max-width: 100%;
 }
+
+.action-btn{
+    background: var(--DarkAccent);
+    color: white;
+    min-width: fit-content;
+    border-radius: 8px;
+}
+
+.action-btn:hover{
+    background: var(--Dark);
+    color: var(--ExtraLight);
+}
+
+/* --------------------------------------------------- */
+/*                       FORMS                         */
+/* --------------------------------------------------- */
+
+
+.form-check-input:focus {
+    border-color: var(--Accent);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(162, 107, 37, 0.5);
+}
+
+.form-check-input:checked {
+    background-color:var(--DarkAccent);
+    border-color: var(--DarkAccent);
+}
+
 
 /* --------------------------------------------------- */
 /*                       NAVBAR                        */
@@ -128,7 +166,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 100vh;
-    background: url('/media/page_images/1.jpg') no-repeat center center fixed;
+    background: url('/static/images/1.jpg') no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80%;
