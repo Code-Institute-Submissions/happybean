@@ -134,6 +134,14 @@ h3{
 /* --------------------------------------------------- */
 
 
+.form-control:focus {
+    color: var(--Text);
+    background-color: var(--ExtraLight);
+    border-color: var(--Accent);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(162, 107, 37, 0.5);
+}
+
 .form-check-input:focus {
     border-color: var(--Accent);
     outline: 0;
