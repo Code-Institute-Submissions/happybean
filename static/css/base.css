@@ -105,7 +105,7 @@ h3{
 
 .action-btn{
     background: var(--DarkAccent);
-    color: white;
+    color: var(--ExtraLight);
     min-width: fit-content;
     border-radius: 8px;
 }
@@ -114,6 +114,20 @@ h3{
     background: var(--Dark);
     color: var(--ExtraLight);
 }
+
+.alt-action-btn{
+    background: var(--Light);
+    color: var(--Text);
+    min-width: fit-content;
+    border-color: var(--DarkAccent);
+    border-radius: 8px;
+}
+
+.alt-action-btn:hover{
+    background: var(--DarkAccent);
+    color: var(--ExtraLight);
+}
+
 
 /* --------------------------------------------------- */
 /*                       FORMS                         */
@@ -628,10 +642,7 @@ footer{
 
 /* FOOTER HORIZONTAL LINE */
 
-hr:not([size]) {
-    height: 5px;
-    color:var(--Accent);
-}
+
 
   /* SOCIAL MEDIA LINKS */
 .footer .social-icons a {
