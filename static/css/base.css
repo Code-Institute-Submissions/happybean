@@ -647,3 +647,31 @@ hr:not([size]) {
     text-decoration: underline;
     color:var(--Accent);
 }
+
+/* --------------------------------------------------- */
+/*                     ERROR PAGES                     */
+/* --------------------------------------------------- */
+
+.error-container{
+    min-height: 100vh;
+}
+
+.error-p{
+    padding-bottom: 30px;
+}
+
+.error-btn{
+    color: var(--Main-Text);
+    font-weight: 700;
+    background-color: var(--Orange);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.error-btn:hover{
+    color: var(--Main-Text);
+    background-color: var(--Accent);
+    border-radius: 10px;
+    border: 1px solid var(--Main-Text) ;
+    padding: 20px;
+}
