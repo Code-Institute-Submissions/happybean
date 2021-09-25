@@ -2,25 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container product-landing ">
+    <div class="row landing-row ">
+        <div class="col s12 m12 l12">
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay" ></div>
     <div class="container-fluid">
         <!-- Search Bar -->
-        <div class="row p-5">
+        <div class="row p-5" >
             <div class="col-12 col-lg-4 position-absolute start-50 translate-middle">
                 <form method="GET" action="{% url 'products' %}">
                   <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                    <input class="form-control border  rounded-2" type="text" name="q" placeholder="Search">
                     <div class="input-group-append">
-                      <button class="form-control btn btn-black border border-black rounded=0" type="submit">
+                      <button class="form-control btn search-btn rounded-2 " type="submit">
                         <span class="icon">
                           <i class="fas fa-search"></i>
                         </span>
@@ -31,11 +32,11 @@
               </div>
         </div>
         <!-- Heading-->
-        <div class="row">
+        <div class="row ">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Our Coffee Products </h2>
                 {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}" >
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
@@ -43,19 +44,19 @@
             </div>
         </div>
         <!-- Filter -->
-        <div class="row p-3">
-            <div class="col-12 col-lg-4 position-absolute start-50 translate-middle">
-                <ul class="nav nav-pills w-auto mx-auto">
+        <div class="row product-filter">
+            <div class="col-12 ">
+                <ul class="nav nav-pills w-auto " >
                     <li class="nav-item dropdown d-block" aria-labelledby="all-products-filter-link" >
-                        <a class="nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="all-products-filter-link">All Products</a>
-                        <ul class="dropdown-menu">
+                        <a class="product-sort nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="all-products-filter-link">All Products</a>
+                        <ul class="dropdown-menu ">
                             <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Pricing</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown d-block" aria-labelledby="coffee-filter-link" >
-                        <a class="nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="coffee-filter-link">Coffee</a>
+                    <li class="nav-item dropdown " aria-labelledby="coffee-filter-link" >
+                        <a class="product-sort nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="coffee-filter-link">Coffee</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=beans">Beans</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=grounds">Grounds</a></li>
@@ -63,8 +64,8 @@
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=beans,grounds,capsules">All Coffee</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown d-block" aria-labelledby="equipment-filter-link" >
-                        <a class="nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="equipment-filter-link">Equipment</a>
+                    <li class="nav-item dropdown " aria-labelledby="equipment-filter-link" >
+                        <a class="product-sort nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="equipment-filter-link">Equipment</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=accessories">Accessories</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=brewers">Brewers</a></li>
@@ -72,8 +73,8 @@
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=accessories,brewers,grinders">All Equipment</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown d-block" aria-labelledby="speciality-filter-link" >
-                        <a class="nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="speciality-filter-link">Speciality</a>
+                    <li class="nav-item dropdown " aria-labelledby="speciality-filter-link" >
+                        <a class="product-sort nav-link dropdown-toggle mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="speciality-filter-link">Speciality</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=taster_boxes">Taster Boxes</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=gift_boxes">Gift Boxes</a></li>
@@ -85,12 +86,9 @@
             </div>
         </div>
         <br>
-        <br>
-        <br>
-        
-        
+
         <!-- Products -->
-        <div class="row p-5">
+        <div class="row p-1">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">

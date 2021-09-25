@@ -128,6 +128,18 @@ h3{
     color: var(--ExtraLight);
 }
 
+.center {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    }
+
+.product-filter {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+  }
 
 /* --------------------------------------------------- */
 /*                       FORMS                         */
@@ -380,6 +392,46 @@ h3{
 .register-h{
     margin-top: 30px;
 }
+
+/* --------------------------------------------------- */
+/*                      PRODUCTS                       */
+/* --------------------------------------------------- */
+
+.product-landing{
+    min-width: 100vw;
+    padding-left: 2rem;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    background-color: var(--Accent);
+    min-height: 45vh;
+    background: url('/static/images/8.png') no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.product-sort{
+    color: var(--Text);
+}
+
+.product-sort:hover{
+    color: var(--Accent);
+}
+
+.product-sort:focus{
+    color: var(--Accent);
+}
+
+.search-btn{
+    background: var(--DarkAccent);
+    color: var(--ExtraLight);
+    min-width: fit-content;
+}
+
+.search-btn:hover{
+    background: var(--Dark);
+    color: var(--ExtraLight);
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
