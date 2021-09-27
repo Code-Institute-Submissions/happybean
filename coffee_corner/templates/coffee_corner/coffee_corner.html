@@ -39,16 +39,17 @@
             </div>
       
       </div>
+      <!-- Brewing Guides -->
       <div class="row">
         <div class="col-12">
-            <div class="accordion " id="accordionFlushExample">
+            <div class="accordion " id="accordion-flush-brew-guide">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <h2 class="accordion-header" id="flush-brew-guide-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-brew-guide-collapseOne" aria-expanded="false" aria-controls="flush-brew-guide-collapseOne">
                         <h4 class="subtitle"> Brewing Guide</h4>
                     </button>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-brew-guide-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-brew-guide-headingOne" data-bs-parent="#accordion-flush-brew-guide">
                     <div class="accordion-body container">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             <!-- Aeropress -->
@@ -207,6 +208,300 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                             <h5 class="modal-title" id="v60openLabel">V60</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <!-- Coffee Tips -->
+      <div class="row">
+        <div class="col-12">
+            <div class="accordion " id="accordion-coffee-tips">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-coffee-tips">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coffee-tipsOne" aria-expanded="false" aria-controls="flush-coffee-tipsOne">
+                        <h4 class="subtitle">Coffee Tips</h4>
+                    </button>
+                  </h2>
+                  <div id="flush-coffee-tipsOne" class="accordion-collapse collapse" aria-labelledby="flush-coffee-tips" data-bs-parent="#accordion-coffee-tips">
+                    <div class="accordion-body container">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <!-- How to Store Coffee Beans -->
+                            <div class="col">
+                              <div class="h-100 ">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#storingopen">
+                                    <img src="{% static 'images/store-icon.png' %}" class="card-img-top" alt="">
+                                    <h3 class="card-title">How to Store Coffee Beans</h3>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="storingopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="storingopenLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="storingopenLabel">How to Store Coffee Beans</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- When the grind matters -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#grindopen">
+                                        <img src="{% static 'images/grind-icon.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">When the grind matters</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="grindopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="grindopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="grindopenLabel">When the grind matters</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!-- Flavour Coffee with Spices -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#spicesopen">
+                                        <img src="{% static 'images/spice-icon.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">Flavour Coffee with Spices</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="spicesopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="spicesopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="spicesopenLabel">Flavour Coffee with Spices</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+       <!-- Coffee Recipies -->
+       <div class="row">
+        <div class="col-12">
+            <div class="accordion " id="accordion-coffee-recipies">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-coffee-recipies">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coffee-recipiesOne" aria-expanded="false" aria-controls="flush-coffee-recipiesOne">
+                        <h4 class="subtitle">Coffee Recipies</h4>
+                    </button>
+                  </h2>
+                  <div id="flush-coffee-recipiesOne" class="accordion-collapse collapse" aria-labelledby="flush-coffee-recipies" data-bs-parent="#accordion-coffee-recipies">
+                    <div class="accordion-body container">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <!-- Americano -->
+                            <div class="col">
+                              <div class="h-100 ">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#americaoopen">
+                                    <img src="{% static 'images/americano.png' %}" class="card-img-top" alt="">
+                                    <h3 class="card-title">Americano</h3>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="americaoopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="americaoopenLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="americaoopenLabel">Americano</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Cappucino -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#cappucinoopen">
+                                        <img src="{% static 'images/cappucino.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">Cappucino</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="cappucinoopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cappucinoopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="cappucinoopenLabel">Cappucino</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!-- Expresso -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#expressoopen">
+                                        <img src="{% static 'images/espresso.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">Expresso</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="expressoopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="expressoopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="expressoopenLabel">Expresso</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <!-- Flat White -->
+                            <div class="col">
+                              <div class="h-100 ">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#flatwhiteopen">
+                                    <img src="{% static 'images/flat-white.png' %}" class="card-img-top" alt="">
+                                    <h3 class="card-title">Americano</h3>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="flatwhiteopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="flatwhiteopenLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="flatwhiteopenLabel">Flat White</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ...
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Latte -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#latteopen">
+                                        <img src="{% static 'images/latte.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">Latte</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="latteopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="latteopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="latteopenLabel">Latte</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            ...
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!-- Macchiato -->
+                            <div class="col">
+                                <div class="h-100 ">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#macchiatoopen">
+                                        <img src="{% static 'images/macchiato.png' %}" class="card-img-top" alt="">
+                                        <h3 class="card-title">Macchiato</h3>
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="macchiatoopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="macchiatoopenLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="macchiatoopenLabel">Macchiato</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
