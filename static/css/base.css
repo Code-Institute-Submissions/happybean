@@ -509,6 +509,25 @@ h3{
     font-size: 20px;
 }
 
+/* PRODUCT DETAILS*/
+
+.decrement-qty {
+    border-radius: 8px;
+}
+
+.increment-qty {
+    border-radius: 8px;
+    background: var(--DarkAccent);
+    color: var(--ExtraLight);
+}
+
+.increment-qty:hover {
+    border-radius: 8px;
+    background: var(--Dark);
+    color: var(--ExtraLight);
+}
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
