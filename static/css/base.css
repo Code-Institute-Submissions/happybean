@@ -146,6 +146,18 @@ h3{
     padding: 10px;
   }
 
+.icons{
+    color: var(--Accent);
+}
+
+.accordion-button:not(.collapsed){
+    color:var(--Accent);
+}
+
+.accordion-button:visited{
+    color:var(--Accent);
+}
+
 /* --------------------------------------------------- */
 /*                       FORMS                         */
 /* --------------------------------------------------- */
