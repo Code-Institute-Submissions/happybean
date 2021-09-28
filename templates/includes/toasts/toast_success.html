@@ -1,6 +1,6 @@
 <div class="toast custom-toast rounded-border-top-0" data-bs-animation="true" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="arrow-up arrow-success"></div>
-    <div class="toast-header">
+    <div class="toast-header toast-header-success">
         <strong class="me-auto">Success!</strong>
         <button type="button" class=" btn-close" data-bs-dismiss="toast" aria-label="Close">
         </button>
@@ -39,12 +39,12 @@
                         <span class="float-right">€{{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
+                        <p class="mb-0 p-2 banner-note shadow-sm text-black text-center">
                             Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
+                    <a href="{% url 'view_cart' %}" class="btn action-btn mt-3">
+                        <span class="text-uppercase">Go To Checkout</span>
                     </a>
                 </div>
             </div>

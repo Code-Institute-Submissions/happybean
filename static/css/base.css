@@ -697,7 +697,32 @@ h3{
     background-color: var(--Accent);
 }
 
-/* ------------------------------- bootstrap toasts */
+/* --------------------------------------------------- */
+/*                       TOASTS                        */
+/* --------------------------------------------------- */
+
+.toast-header-success{
+    border-top: 5px solid var(--Success);
+}
+
+.toast-header-error{
+    border-top: 5px solid var(--Error);
+}
+
+.toast-header-info{
+    border-top: 5px solid var(--DarkAccent);
+}
+
+.toast-header-warning{
+    border-top: 5px solid var(--Accent);
+}
+
+.banner-note{
+    background-color: var(--Accent);
+    color: var(--bgWhite);
+    font-weight: bold;
+    border-radius: 8px;
+}
 
 .message-container {
     position: fixed;
@@ -720,7 +745,7 @@ h3{
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid var(--Dark);
     position: absolute;
     top: -10px;
     right: 36px;
@@ -728,38 +753,39 @@ h3{
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+    border-bottom-color: var(--PrimaryBrand) !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+    border-bottom-color: var(--LightAccent) !important;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+    border-bottom-color: var(--Success) !important;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+    border-bottom-color: var(--Error) !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+    border-bottom-color: var(--Accent) !important;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+    border-bottom-color: var(--DarkAccent) !important;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+    border-bottom-color: var(--ExtraLight) !important;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+    border-bottom-color: var(--DarkAccent) !important;
 }
 
 .cart-notification-wrapper {
+    margin-right: 20px;
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
