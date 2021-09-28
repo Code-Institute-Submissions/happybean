@@ -81,6 +81,11 @@ h3{
     letter-spacing: 2px;
 }
 
+.stand-out-text{
+    color: var(--PrimaryBrand);
+    font-weight: 500;
+}
+
 .link-text{
     font-size: 16px;
     font-weight: bold;
@@ -157,6 +162,7 @@ h3{
 .accordion-button:visited{
     color:var(--Accent);
 }
+
 
 /* --------------------------------------------------- */
 /*                       FORMS                         */
@@ -526,7 +532,6 @@ h3{
     background: var(--Dark);
     color: var(--ExtraLight);
 }
-
 
 /* ------------------------------- bootstrap toasts */
 
