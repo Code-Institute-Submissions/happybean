@@ -163,6 +163,14 @@ h3{
     color:var(--Accent);
 }
 
+.page-link-text{
+    color: var(--Text);
+}
+
+.page-link-text:hover{
+    color: var(--Accent);
+    font-weight: 600;
+}
 
 /* --------------------------------------------------- */
 /*                       FORMS                         */
@@ -576,7 +584,6 @@ h3{
     content: "Cart";
     font-size: 18px;
     font-weight: 700;
-    text-decoration: underline;
     padding-left: 15px;
 }
 
@@ -604,6 +611,41 @@ h3{
     max-width: 90%;
 }
 
+/* --------------------------------------------------- */
+/*                    CHECKOUT                         */
+/* --------------------------------------------------- */
+
+/* Cart Steps */
+
+#step-1-checkout{
+    background-color: var(--Accent);
+}
+
+#step-1-checkout::after {
+    content: "Cart";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-2-checkout{
+    background-color: var(--Accent);
+}
+
+#step-2-checkout::after {
+    content: "Checkout";
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Accent);
+}
+
+#step-3-checkout::after {
+    content: "Confirmation";
+    font-size: 16px;
+}
+
+.checkout-progressbar{
+    background-color: var(--Accent);
+}
 
 /* ------------------------------- bootstrap toasts */
 
