@@ -647,6 +647,56 @@ h3{
     background-color: var(--Accent);
 }
 
+
+/* --------------------------------------------------- */
+/*                  CHECKOUT SUCCESS                   */
+/* --------------------------------------------------- */
+
+.block-img-success{
+    max-width: 80%;
+}
+
+/* Cart Steps */
+
+#step-1-success{
+    background-color: var(--Accent);
+}
+
+#step-1-success::after {
+    content: "Cart";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-2-success{
+    background-color: var(--Accent);
+}
+
+#step-2-success::after {
+    content: "Cart";
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#step-3-success{
+    background-color: var(--Accent);
+}
+
+#step-3-success::after {
+    content: "Checkout";
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--Accent);
+}
+
+.success-progressbar{
+    background-color: var(--Accent);
+}
+
+#success-progresses #success-progess{
+    background-color: var(--Accent);
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
