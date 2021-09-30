@@ -830,13 +830,16 @@ ul {
 }
 
 /* --------------------------------------------------- */
-/*                    COFFEE CORNER                    */
+/*                      FORUM                          */
 /* --------------------------------------------------- */
 
 .thread {
     border: 1px solid var(--Accent);
     border-radius: 8px;
+}
 
+.main-thread{
+    background-color: var(--Light);
 }
 
 /* -------------------------------- Media Queries */

@@ -9,3 +9,8 @@ def forum(request):
 def add_thread(request):
     """ A view to return the add_thread page """
     return render(request, 'forum/add_thread.html')
+
+
+def thread(request):
+    """ A view to return the thread page """
+    return render(request, 'forum/thread.html')

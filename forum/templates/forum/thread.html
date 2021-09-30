@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+- Thread
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Heading-->
+        <div class="row pb-4">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Thread</h2>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Thread Box -->
+    <div class="container ">
+        <div class="row thread main-thread ms-3 me-3">
+            <div class="col">
+                <h3>Thread Title </h3>
+                <p>By: on </p>
+                <p>Thread Message</p>
+            </div>
+        </div>
+        <div class="row m-3 text-end">
+            <div class="col">
+                <a class="btn action-btn" href="{% url 'add_thread' %}">Add a comment
+                    <i class="fas fa-plus ps-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row me-3 text-end">
+            <div class="col">
+                <p>Comment Count</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment for thread-->
+    <div class="container">
+        <div class="row thread m-3">
+            <div class="col">
+                <p>Comment By: on </p>
+                <p>Comment Message</p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
