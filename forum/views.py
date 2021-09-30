@@ -14,3 +14,8 @@ def add_thread(request):
 def thread(request):
     """ A view to return the thread page """
     return render(request, 'forum/thread.html')
+
+
+def add_comment(request):
+    """ A view to return the add_comment page """
+    return render(request, 'forum/add_comment.html')

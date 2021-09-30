@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+- Forum
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Heading-->
+        <div class="row pb-4">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Add a Comment</h2>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <a class="btn alt-action-btn" href="{% url 'thread' %}">Cancel</a>
+                    <button class="btn action-btn" type="submit">Add Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
