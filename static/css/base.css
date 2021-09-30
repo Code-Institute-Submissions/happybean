@@ -213,9 +213,27 @@ h3{
 .nav-link {
     font-size: 18px;
 }
+.nav-link:hover{
+    color: var(--Accent);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--Accent);
+}
 
 .nav-link:focus, .nav-link:hover, .nav-link:active, .nav-link:visited, .nav-link:focus-visible {
     color: var(--Accent);
+    background-color: var(--Light);
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: var(--Accent);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--ExtraLight);
+    text-decoration: none;
+    background-color: var(--Accent);
 }
 
 
