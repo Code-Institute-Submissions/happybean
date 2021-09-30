@@ -664,6 +664,16 @@ h3{
     background-color: var(--Accent);
 }
 
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 62, 71,0.85) !important;
+    z-index: 9999;
+}
 
 /* --------------------------------------------------- */
 /*                  CHECKOUT SUCCESS                   */
