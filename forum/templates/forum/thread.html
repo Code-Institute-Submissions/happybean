@@ -16,15 +16,28 @@
 
 {% block content %}
     <div class="container">
-        <!-- Heading-->
+        <!-- Navigation -->
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'forum' %}" class="link-text">Forum</a> 
+                >> <strong> Thread </strong>
+            </div>
+        </div>
+        <!-- Heading -->
         <div class="row pb-4">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Thread</h2>
                 <hr class="w-100 mb-1">
             </div>
         </div>
+        <!-- Back Button -->
+        <div class="row pb-4">
+            <div class="col">
+                <a href="{% url 'forum' %}" class="btn action-btn"> <i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Forum</a>
+            </div>
+        </div>
     </div>
-
+    
     <!-- Thread Box -->
     <div class="container ">
         <div class="row thread main-thread ms-3 me-3">
