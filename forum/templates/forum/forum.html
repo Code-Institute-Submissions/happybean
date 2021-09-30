@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+- Forum
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Heading-->
+        <div class="row pb-4">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Forum</h2>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+             <!--Create Button-->
+            <div class="col-12">
+                <p class="d-flex justify-content-center">
+                    <a class="btn action-btn" href="#">Create a New Thread 
+                        <i class="fas fa-plus ps-1"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6"></div>
+            <div class="col-md-2 ">
+                <small>Posts</small>
+            </div>
+            <div class="col-md-4">
+                <small>Last Post</small>
+            </div>
+        </div>
+        <!--Treads-->
+        <div class="row thread m-2 pt-3">
+            <div class="col-sm-12 col-md-6">
+                <a class="link-text" href="# "></a>
+                <p>By: xxx 
+                    <a class="link-text" href="#">
+                    </a> on xxxx
+                </p>
+            </div>
+            <div class="col-md-2">
+                <p> <span class="forum-small-show"> comment</span></p>
+            </div>
+            <div class="col-md-4">
+                
+                <p><span class="forum-small-show">Last Post xxx </span><span class="forum-small-hide">By: xxxx</span><a class="go-to-profile" href="#"> </a> </p>
+              
+            </div>
+        </div>
+
+    </div>
+   
+    
+{% endblock %}
+
+

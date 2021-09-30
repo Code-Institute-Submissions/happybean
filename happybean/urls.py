@@ -28,4 +28,5 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('about/', include('about.urls')),
     path('coffee_corner/', include('coffee_corner.urls')),
+    path('forum/', include('forum.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
