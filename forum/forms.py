@@ -1,5 +1,6 @@
 from django import forms
 from .models import Thread, Comment
+from django import forms
 
 
 class ThreadForm(forms.ModelForm):

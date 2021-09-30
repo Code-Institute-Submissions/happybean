@@ -5,11 +5,11 @@ from django.urls import reverse
 
 class Thread(models.Model):
     """
-    Model for threads.
+    Model for threads in forum
     """
     title = models.CharField(max_length=60)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
-    description = models.CharField(max_length=2000)
+    description = models.CharField(max_length=1200)
     date_created = models.DateTimeField(auto_now_add=True)
     date_edited = models.DateTimeField(auto_now=True)
 
@@ -22,14 +22,15 @@ class Thread(models.Model):
 
 class Comment(models.Model):
     """
-    Model for comments. Each comment 'belongs to' a thread.
+    Model for comments on a thread.
     """
     thread = models.ForeignKey(Thread, related_name="comments",
                                on_delete=models.CASCADE)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.TextField(max_length=2000)
+    post = models.TextField(max_length=1200)
     date_created = models.DateTimeField(auto_now_add=True)
     date_edited = models.DateTimeField(auto_now=True)
 
     def __str__(self):
+        # https://pyformat.info/#simple
         return "On '%s' by %s" % (self.thread, self.creator)
