@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Heading-->
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Contact Us</h2>
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="row pt-3">
+        <div class="col-12 col-md-6">
+            <img class="block-connect-img" src="{% static 'images/coffee_corner1.png' %}"  alt="">
+        </div>
+        <div class="col-12 col-md-6 mt-5">
+            <h3 class="smaller-heading">Success! Thank you for your message. We will be in contact soon.</h3>
+            <a href="{% url 'products' %}" class="btn alt-action-btn mt-3">
+                <span class="text-uppercase">Go check out the Store</span>
+            </a>
+            <a href="{% url 'coffee_corner' %}" class="btn action-btn mt-3">
+                <span class="text-uppercase">Visit the Coffee Corner</span>
+            </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
