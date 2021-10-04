@@ -10,7 +10,11 @@ def forum(request):
     model = Thread
     template_name = "forum/forum.html"
 
-    return render(request, 'forum/forum.html')
+    context = {
+        'object_list': Thread.objects.all(),
+    }
+
+    return render(request, 'forum/forum.html', context)
 
 
 def add_thread(request):
