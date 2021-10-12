@@ -1,7 +1,13 @@
 from django.db import models
 
 
+# ------------------------------------------- #
+#               CATEGORY MODEL                #
+# ------------------------------------------- #
 class Category(models.Model):
+    """
+    Model for categories in products.
+    """
 
     class Meta:
         verbose_name_plural = 'Categories'
@@ -16,7 +22,15 @@ class Category(models.Model):
         return self.friendly_name
 
 
+# ------------------------------------------- #
+#               ORGIN MODEL                   #
+# ------------------------------------------- #
 class Origin(models.Model):
+    """
+    Model for orgin in products. It will indicate from where the
+    coffee products orginate from (country).
+    """
+
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
 
@@ -27,7 +41,16 @@ class Origin(models.Model):
         return self.friendly_name
 
 
+# ------------------------------------------- #
+#               PRODUCTS MODEL                #
+# ------------------------------------------- #
 class Product(models.Model):
+    """
+    Model for the products. It links to the above to models by
+    foreign key. Other fields include the product id, product name,
+    product description, the price, intensity for coffee products and
+    an image.
+    """
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     origin = models.ForeignKey('Origin', null=True, blank=True,
@@ -45,7 +68,13 @@ class Product(models.Model):
         return self.name
 
 
+# ------------------------------------------- #
+#               SIZE MODEL                    #
+# ------------------------------------------- #
 class Size(models.Model):
+    """
+    Model for the size names of products.
+    """
 
     class Meta:
         verbose_name_plural = 'Size'
@@ -60,7 +89,14 @@ class Size(models.Model):
         return self.friendly_name
 
 
-class Product_Size_Price(models.Model):
+# ------------------------------------------- #
+#           PRODUCT, SIZE & PRICE MODEL       #
+# ------------------------------------------- #
+class ProductSizePrice(models.Model):
+    """
+    Model for the linking products to specific pricing related to
+    their sizes.
+    """
     product = models.ForeignKey('Product', null=True, blank=True,
                                 on_delete=models.SET_NULL)
     size = models.ForeignKey('Size', null=True, blank=True,
