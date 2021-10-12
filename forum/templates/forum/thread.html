@@ -51,7 +51,7 @@
 <div class="container ">
     <div class="row thread main-thread ms-3 me-3">
         <div class="col pt-3 pb-3">
-            <h3><strong>Thread Title: {{ thread.title }}</strong></h3>
+            <h3><strong>Topic: {{ thread.title }}</strong></h3>
             <p>By: {{ thread.creator }} on {{ thread.date_created }} </p>
             <p>{{ thread.description }}</p>
             <div class="pt-1 pb-2">
@@ -76,6 +76,28 @@
             </p>
         </div>
     </div>
+    {% for comment in comments %}
+    <div class="container ">
+        <div class="row thread m-3">
+            <div class="col-sm-10 pb-3">
+                <p class="pt-3"><em>This comment is by <strong> {{ comment.creator }}</strong> posted on {{ comment.date_created }}</em></p>
+                <br>
+                <p>{{ comment.post }}</p>
+                <!-- If the user added the comment or it is an admin user, they will see the option to edit or delete the comment -->
+                {% if request.user == comment.creator or request.user.is_superuser %}
+                <br>
+                <div class="pt-1 pb-2">
+                    <!-- Edit comment -->
+                    <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
+                        class="btn alt-action-btn btn-sm">Edit</a>
+                    <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
+                        class="btn action-btn btn-sm">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
     {% else %}
     <div class="row mb-5">
         <div class="col mt-3 ms-3 ps-2 pt-3 text-center">
@@ -85,32 +107,8 @@
     {% endif %}
 </div>
 
-{% if comments %}
-<!-- Comment section: With comments -->
-<div class="container">
-    <!-- If there are comments -->
-    {% for comment in comments %}
-    <div class="row thread m-3">
-        <div class="col-sm-10 pb-3">
-            <p class="pt-3"><em>This comment is by <strong>{{ comment.creator }}</strong>posted on {{ comment.date_created }}</em></p>
-            <br>
-            <p>{{ comment.post }}</p>
-            <!-- If the user added the comment or it is an admin user, they will see the option to edit or delete the comment -->
-            {% if request.user == comment.creator or request.user.is_superuser %}
-            <br>
-            <div class="pt-1 pb-2">
-                <!-- Edit comment -->
-                <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
-                    class="btn alt-action-btn btn-sm">Edit</a>
-                <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
-                    class="btn action-btn btn-sm">Delete</a>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endif %}
+
+
 <div class="container mb-3">
     <div class="row">
         <div class="col d-flex justify-content-end me-3">
