@@ -63,14 +63,9 @@ class ThreadView(LoginRequiredMixin, DetailView):
         specific thread. To access this page, a user needs to be logged in.
         """
         context = super(ThreadView, self).get_context_data(**kwargs)
-        page = self.request.GET.get('page')
-        comments = Paginator(self.object.comments.all().order_by(
-                             'date_created'), 5)
-        comments_count = self.object.comments.count()
-        context['all_threads_on_forum'] = Thread.objects.all()
-        context['all_comments_on_forum'] = Comment.objects.all()
-        context['comments'] = comments.get_page(page)
-        context['comments_count'] = comments_count
+        # For presenting extra content via context: https://bit.ly/3v97u8e
+        context['comments'] = self.object.comments.all()
+        context['comments_count'] = self.object.comments.count()
         return context
 
 
