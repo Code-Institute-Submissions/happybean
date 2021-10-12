@@ -19,13 +19,29 @@
     <!-- Heading-->
     <div class="row pb-4">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Forum</h2>
+            <h2 class="logo-font">The Coffee Forum</h2>
             <hr class="w-100 mb-1">
         </div>
     </div>
 </div>
 
-<div class="container mb-5">
+<!--Intro section-->
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-5">
+            <img src="{% static 'images/signup.png' %}" alt="Coffee, book, pen and keyboard on table" class="block-img" height="350">
+        </div>
+        <div class="col-12 col-md-7 mt-3">
+            <h3 class="block">Discuss Topics on Coffee</h3>
+            <p>To discuss all things coffee related! Here you can ask tips, discuss recipies, share resources and give your reviews on certain coffees. We created a space so that everyone can connect adn learn from each other</p>
+            <p>You can either start a new Thread or add a Comment to one of the existing Threads by clicking on the title of the thread</p>
+        </div>
+    </div>
+    <hr class="w-100 mb-1">
+</section>
+  
+<!--Thread section-->
+<main class="container mb-5 mt-5" style="height: 50vh;">
     <div class="row">
         <!--Create Button-->
         <div class="col-12">
@@ -71,12 +87,14 @@
         </div>
     </div>
     {% endfor %}
-</div>
+</main>
+
 <!-- Scroll up button -->
 <button id="scrollButton" title="Go to top">
     <i class="fas fa-angle-double-up scrollup-arrow"></i>
 </button>
 {% endblock %}
+
 
 {% block postloadjs %}
 {{ block.super }}
