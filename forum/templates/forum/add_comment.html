@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_title %}
-- Forum
+- Forum: Add Comment
 {% endblock %}
 
 {% block page_header %}
@@ -31,8 +31,10 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <a class="btn alt-action-btn" href="{% url 'thread' %}">Cancel</a>
-                    <button class="btn action-btn" type="submit">Add Comment</button>
+                    <div class="mt-2 mb-2 d-flex justify-content-end ">
+                        <a class="btn alt-action-btn" href="{% url 'forum' %}">Cancel</a>
+                        <button class="btn action-btn" type="submit">Add Comment</button>
+                    </div>
                 </form>
             </div>
         </div>

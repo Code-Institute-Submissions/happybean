@@ -6,70 +6,138 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <!-- Navigation -->
-        <div class="row">
-            <div class="col">
-                <a href="{% url 'forum' %}" class="link-text">Forum</a> 
-                >> <strong> Thread </strong>
-            </div>
+<div class="container">
+    <!-- Source for navigation: Selmi Tech youtube: https://www.youtube.com/watch?v=knGk9aUr4Do -->
+    <!-- Navigation -->
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'forum' %}" class="link-text">Forum</a>
+            >> <strong> Thread </strong>
         </div>
-        <!-- Heading -->
-        <div class="row pb-4">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Thread</h2>
-                <hr class="w-100 mb-1">
-            </div>
+    </div>
+    <!-- Heading -->
+    <div class="row pb-4">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Thread</h2>
+            <hr class="w-100 mb-1">
         </div>
-        <!-- Back Button -->
-        <div class="row pb-4">
-            <div class="col">
-                <a href="{% url 'forum' %}" class="btn action-btn"> <i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Forum</a>
+    </div>
+    <!-- Back Button -->
+    <div class="row pb-4">
+        <div class="col ms-3">
+            <a href="{% url 'forum' %}" class="btn action-btn"> <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                Back to Forum</a>
+        </div>
+    </div>
+</div>
+
+<!-- Thread Box -->
+<div class="container ">
+    <div class="row thread main-thread ms-3 me-3">
+        <div class="col pt-3 pb-3">
+            <h3><strong>{{ thread.title }}</strong></h3>
+            <p>By: {{ thread.creator }} on {{ thread.date_created }} </p>
+            <p>{{ thread.description }}</p>
+            <div class="pt-1 pb-2">
+                {% if request.user == thread.creator or request.user.is_superuser %}
+                <a href="{% url 'edit_thread' thread.pk %} " class="btn alt-action-btn btn-sm">Edit</a>
+                <a href="{% url 'delete_thread' thread.pk %}" class="btn action-btn btn-sm">Delete</a>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">
+    {% if comments %}
+    <div class="row mt-1">
+        <div class="col me-3">
+            <!-- Comment section https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 -->
+            <p class="d-flex justify-content-end comment-count-pag">{{ comments_count }}
+                comment{% if comments_count == 0 or comments_count > 1 %}s{% endif %}
+            </p>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col mt-3 ms-3 ps-2 pt-3 text-center">
+            <p> There are no comments yet. </p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% if comments %}
+<!--Comment section-->
+<div class="container forum-small-hide">
+    <!-- If there are comments -->
+    {% for comment in comments %}
+    <div class="row thread m-3">
+        <div class="col-sm-10 pb-3">
+            <p class="pt-3">This comment is by <strong>{{ comment.creator }}</strong>
+                posted on {{ comment.date_created }}
+                
+            </p>
+            <br>
+            <p>{{ comment.post }}</p>
+            <!-- Edit & Delete only by Creator or Admin -->
+            {% if request.user == comment.creator or request.user.is_superuser %}
+            <br>
+            <div class="pt-1 pb-2">
+                <!-- Edit comment -->
+                <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
+                    class="btn alt-action-btn btn-sm">Edit</a>
+                <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
+                    class="btn action-btn btn-sm">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<div class="container mb-3">
+    <div class="row">
+        <div class="col d-flex justify-content-end me-3">
+            <a href="{% url 'add_comment' thread.pk %}?next={{ request.path }}?page={{ next_page }}"
+                class="btn action-btn">Add a comment</a>
+        </div>
+    </div>
+</div>
+<!-- Scroll up button -->
+<button id="scrollButton" title="Go to top">
+    <i class="fas fa-angle-double-up scrollup-arrow"></i>
+</button>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+	// Page scroll up feature 
+    /* Orginal code from with modifications for project:
+     https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */ 
+     $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#scrollButton').fadeIn();
+        } else {
+            $('#scrollButton').fadeOut();
+        }
+    });
     
-    <!-- Thread Box -->
-    <div class="container ">
-        <div class="row thread main-thread ms-3 me-3">
-            <div class="col">
-                <h3>Thread Title </h3>
-                <p>By: on </p>
-                <p>Thread Message</p>
-            </div>
-        </div>
-        <div class="row m-3 text-end">
-            <div class="col">
-                <a class="btn action-btn" href="{% url 'add_comment' %}">Add a comment
-                    <i class="fas fa-plus ps-1"></i>
-                </a>
-            </div>
-        </div>
-        <div class="row me-3 text-end">
-            <div class="col">
-                <p>Comment Count</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Comment for thread-->
-    <div class="container">
-        <div class="row thread m-3">
-            <div class="col">
-                <p>Comment By: on </p>
-                <p>Comment Message</p>
-            </div>
-        </div>
-    </div>
-
-
+    $("#scrollButton").click(function() {
+        $("html, body").animate({ 
+            scrollTop: 0 
+        }, "fast");
+     });
+	</script>
 {% endblock %}

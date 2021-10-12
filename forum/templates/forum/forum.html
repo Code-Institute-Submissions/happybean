@@ -6,72 +6,96 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <!-- Heading-->
-        <div class="row pb-4">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Forum</h2>
-                <hr class="w-100 mb-1">
-            </div>
+<div class="container">
+    <!-- Heading-->
+    <div class="row pb-4">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Forum</h2>
+            <hr class="w-100 mb-1">
         </div>
     </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-             <!--Create Button-->
-            <div class="col-12">
-                <p class="d-flex justify-content-center">
-                    <a class="btn action-btn" href="{% url 'add_thread' %}">Create a New Thread 
-                        <i class="fas fa-plus ps-1"></i>
-                    </a>
-                </p>
-            </div>
+<div class="container mb-5">
+    <div class="row">
+        <!--Create Button-->
+        <div class="col-12">
+            <p class="d-flex justify-content-center">
+                <a class="btn action-btn" href="{% url 'add_thread' %}">Create a New Thread
+                    <i class="fas fa-plus ps-1"></i>
+                </a>
+            </p>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6"></div>
-            <div class="col-md-2 ">
-                <small>Posts</small>
-            </div>
-            <div class="col-md-4">
-                <small>Last Post</small>
-            </div>
-        </div>
-        <!--Treads-->
-        {% for thread in object_list %}
-        <div class="row thread m-2 pt-3">
-            <div class="col-sm-12 col-md-6">
-                <a class="link-text" href="{% url 'thread' %} ">{{ thread.title }}</a>
-                <p>By: <a href="{% url 'profile'  %}">{{ thread.creator }} </a>  on {{ thread.date_created }}
-                </p>
-            </div>
-            <div class="col-md-2">
-                {% if thread.comments.all.count == 1 %}
-                <p> <span class=""> comment</span></p>
-                {% else %}  
-                <p>{{ thread.comments.all.count }} <span class=""> comments</span></p>
-                {% endif %}
-            </div>
-            <div class="col-md-4">
-                {% if thread.comments.all %}
-                <p><span class="">Last Post xxx </span><span class="forum-small-hide">By: {{ thread.comments.last.creator }}</span></p>
-                {% else %}
-                <p class="">No comments yet</p>
-                {% endif %} 
-            </div>
-        </div>
-        {% endfor %}
-        <br>
+
     </div>
-
+    <div class="row">
+        <div class="col-sm-12 col-md-6"></div>
+        <div class="col-md-2 ">
+            <small>Posts</small>
+        </div>
+        <div class="col-md-4">
+            <small>Last Post</small>
+        </div>
+    </div>
+    <!-- From https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 -->
+    <!-- Treads (newest thread at top)-->
+    {% for thread in object_list %}
+    <div class="row thread mt-2 mb-2">
+        <div class="col-sm-12 col-md-6 pt-2">
+            <strong><a class="link-text uppercase" href="{% url 'thread' thread.pk %} ">{{ thread.title }}</a></strong>
+            <p>By {{ thread.creator }} on {{ thread.date_created }}</p>
+        </div>
+        <div class="col-md-2 mt-2">
+            {% if thread.comments.all.count == 1 %}
+            <p>1 <span class="forum-small-show"> comment</span></p>
+            {% else %}
+            <p>{{ thread.comments.all.count }} <span class="forum-small-show"> comments</span></p>
+            {% endif %}
+        </div>
+        <div class="col-md-4 mt-2">
+            {% if thread.comments.all %}
+            <p><span class="forum-small-show">Last comment by: </span><span class="forum-small-hide">By</span>
+                {{ thread.comments.last.creator }} ({{ thread.comments.last.date_created }})</p>
+            {% else %}
+            <p class="forum-small-hide">No comments yet</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Scroll up button -->
+<button id="scrollButton" title="Go to top">
+    <i class="fas fa-angle-double-up scrollup-arrow"></i>
+</button>
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    // Page scroll up feature for resource page
+    /* Orginal code from with modifications for project:
+     https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */
+    $(window).scroll(function () {
+        if ($(this).scrollTop()) {
+            $('#scrollButton').fadeIn();
+        } else {
+            $('#scrollButton').fadeOut();
+        }
+    });
 
+    $("#scrollButton").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "fast");
+    });
+</script>
+{% endblock %}
