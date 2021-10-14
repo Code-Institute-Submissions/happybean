@@ -285,7 +285,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 100vh;
-    background: url('/static/images/1.jpg') no-repeat center center fixed;
+    background: url('/static/images/landing.jpg') no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80%;
@@ -489,7 +489,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 45vh;
-    background: url('/static/images/8.png') no-repeat center center fixed;
+    background: url('/static/images/products.png') no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
