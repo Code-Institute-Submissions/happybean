@@ -140,12 +140,11 @@ ___
 
 #### **Colour Palette**
 Coolors was used to map out my colour scheme.
-![Colour Palette]()
-- #E47068 This colour is used for borders of buttons and where the text needed to stand out more because of the background.
-- #343E47: This colour is used as the main text colour and for the background CTA buttons.
-- #F4F3F3: This colour is used as a secondary background colour for graphics.
-- #F9F9F9: This colour is used as a tertiary background colour for graphics.
-- #FFFEFC: This colour is used as the main background colour for the website and for text where elements have darker backgrounds.
+<details>
+<summary>Colour Palette Detail</summary>
+
+![Colour Palette](/documentation/images/general_doc_img/colour_palette.png)
+</details>
 
 <a></a>
 ### **Icons**
