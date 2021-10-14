@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from sortable_listview import SortableListView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.urls import reverse_lazy
