@@ -2,7 +2,7 @@
 
 [Main README.md file](/README.md)
 
-[View live version of website via Heroku](https://happybean.herokuapp.com/)
+[View live version of website via Heroku](#)
 ___
 <br>
 
