@@ -503,11 +503,193 @@ This project uses GitHub for version control, GitPod as the cloud-based IDE and 
 
 The below steps are specific to Gitpod therefore depending on your IDE, you might need to adjust the below steps. 
 
-**Heroku**
+### To clone the project:
+From the application's repository, click the "code" button and download the zip of the repository. Alternatively, you can clone the repository using the following line in your terminal: 
+```
+git clone https://github.com/Franciskadtt/happybean.git
+```
 
-**AWS**
+#### To install required software:
+While you are still in the terminal, type pip3 install -r requirements.txt, this will install all the required softwares to run the project:
+```
+pip3 install -r requirements.txt
+```
 
-**Connecting to DJANGO**
+#### Setup an enviroment for variables
+You now need to set up the database with environment variables. Create a file titled env.py and make sure it is placed in the of this file structure, on the same level as the app.py file. You can also add these in your workspace variable section. 
+
+Option 1: Env.py file:
+```
+ os.environ.setdefault('SECRET_KEY', '<your_variable_here>')
+ os.environ.setdefault('DEVELOPMENT', 'True')
+ os.environ.setdefault('STRIPE_PUBLIC_KEY', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_SECRET_KEY', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_WH_SECRET_CH', '<your_variable_here>')
+ os.environ.setdefault('STRIPE_WH_SECRET_SUB', '<your_variable_here>')
+ ```
+- In ` settings.py`  add:
+```
+if os.path.exists("env.py"):
+    import env
+```
+-  Add your env.py file to `.gitignore`, before pushing your changes.
+
+
+<br>Option 2: Workspace Variables:
+```
+KEY = 'SECRET_KEY', VALUE = '<your_variable_here>'
+KEY = 'DEVELOPMENT', VALUE = 'True'
+KEY = 'STRIPE_PUBLIC_KEY', VALUE = '<your_variable_here>'
+KEY = 'STRIPE_SECRET_KEY', VALUE = '<your_variable_here>'
+KEY = 'STRIPE_WH_SECRET_CH', VALUE = '<your_variable_here>'
+KEY = 'STRIPE_WH_SECRET_SUB', VALUE = '<your_variable_here>'
+KEY = 'AWS_ACCESS_KEY_ID', VALUE: '<your_variable_here>'
+KEY = 'AWS_SECRET_ACCESS_KEY', VALUE: '<your_variable_here>'
+KEY = 'USE_AWS', VALUE: 'True'
+ ```
+
+- In ` settings.py`  add:
+ ```
+ SECRET_KEY = os.environ.get('SECRET_KEY', '')
+ ```
+
+#### DEBUG 
+```
+DEBUG = 'DEVELOPMENT' in os.environ
+```
+
+### **Heroku Deployment**
+- Go to the [Heroku](https://www.heroku.com/) website. Register for an account and click on "Create a new app".
+- Setup a Heroku app within the Heroku dashboard - Type in the app name and select region the click on create app.
+- In Heroku, in your app, click on "GitHub" to connect to your repository. Type in the repository name as on GitHub. Click on "Connect".
+- Search for your repo (or sign in and connect GitHub account) and select this.
+- Then click "Hide Config Vars" in Heroku.
+- Go to the resources tab and search for Heroku Postgres. Choose the “hobby dev - free” option and submit the order form.
+- On the `settings.py file`, you will need to comment out the 'SQLite and Postgres databases' section and uncomment the 'PostgreSQL Database' section. (this is temporary, nothing should be pushed/committed just yet).
+- Add the database URL from Heroku & migrate your models to the PostgreSQL database with: 
+    ```
+    python3 manage.py migrate
+    ```
+- Create a superuser with the following command, and fill in the required information.:
+    ```
+    python3 manage.py createsuperuser
+    ```
+- In the `settings.py` file, you can now delete the 'PostgreSQL Database' section and uncomment the 'SQLite and PostgreSQL Databases' section. This means that either database can now be used interchangeably.
+- Install gunicorn and freeze that to the requirements file with the following commands:
+    ```
+    pip3 install gunicorn
+    pip3 freeze --local > requirements.txt
+    ```
+- Create a Procfile and inside, add the following:
+    ```
+    web: gunicorn happybean.wsgi:application
+- In `settings.py`, use an if statement so that when the app runs on Heroku, you will connect to Postgres, and otherwise, it will connect to sqlite3, like so:
+    ```
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
+    ```
+- Copy the variables from the variable enviroment one by one into the heroku config vars. They would be:
+   ```
+    KEY: 'SECRET_KEY', VALUE: “your_variable_here”
+    KEY: 'DEVELOPMENT', VALUE: "True"
+    KEY: 'STRIPE_PUBLIC_KEY', VALUE: "your_variable_here"
+    KEY: 'STRIPE_SECRET_KEY', VALUE: "your_variable_here"
+    KEY: 'STRIPE_WH_SECRET_CH', VALUE: "your_variable_here"
+    KEY: 'STRIPE_WH_SECRET_SUB', VALUE: "your_variable_here"
+    KEY: AWS_ACCESS_KEY_ID, VALUE: "AWS access key ID"
+    KEY: AWS_SECRET_ACCESS_KEY, VALUE: "AWS secret access key"
+    KEY: USE_AWS, VALUE: "True"
+    ```
+- Login to Heroku in the CLI and temporarity disable collectstatic, with the following command:
+    ```
+    heroku config:set DISABLE_COLLECTSTATIC=1 --app happybean
+    ```
+- Add your Heroku app and local host to allowed hosts in `settings.py.`
+- Push to Github, and then to Heroku master. 
+- In Heroku, go to the 'Deploy' tab. In the section 'Deployment Method' click on 'Github - Connect to Github'. Make sure your Github profile is displayed. Add the repository name and click on 'Search'. After Heroku has found the repository, click on 'Connect'. This will connect your Heroku app to your GitHub repository. Click 'Enable automatic deploys'. Your code will automatically be deployed to Heroku as well. 
+
+### **AWS (Amazon Web Services)**
+Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in. 
+- Go to the AWS management console and go to the S3 service. There, create a new bucket. Uncheck 'block all public access' and acknowledge that the bucket will be public.
+- Go to the buckets properties, and turn on static website hosting. Select 'Use this bucket to host a website', and fill in index.html and error.html, then click 'save'.
+- Go to the permissions tab, and go to CORS configuration. Paste in a CORS configuration:
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+- Go to the Bucket policy tab and click 'policy generator', to create a policy. Choose 's3 bucket policy', allow all principals by typing a star. From the action dropdown menu select 'GetObject'. Copy the ARN and paste it into the ARN box. Then click 'add statment' and then click 'generate policy'. Copy the policy into the bucket policy editor. Add a slash star onto the end of the resource key. Click 'save'. 
+- Go to access control list tab, under public access, click on 'Everyone', select 'List Objects'. Then click 'save'. 
+- Go to IAM (from services menu), click on 'groups' and create a new user group. Give the group a group name (f.e. 'manage-happybean'). Then click 'create group'. 
+- Click 'policies' in the dashboard, and then click 'create policy'. Go to the JSON tab. Click 'import managed policy'. Import 'AmazonS3FullAccess'. Get the bucket ARN from the bucket policy page in S3, and paste that in after 'Resource', as a list (first the ARN, then also the ARN with a slash and star). Click 'next tags' and then 'next review'. Give it a name and description. Click 'create policy'. 
+- Go to 'groups'. Click the manage-happybean group. Go to 'permissions'. Click 'attach policy'. Select the policy you just created. Click 'add permissions' and then 'Attach policy'.
+- Go to 'users'. Click 'add user'. As username write 'happybean-staticfiles-user. Give programmatic access. Click 'next'. Add the user to the group. Click through to the end. Download the .csv file. 
+
+### **Connecting to DJANGO to S3**
+- Go back to GitPod. Install boto3 and Django storages, and freeze them to the requirement file with the following commands:
+    ```
+    pip3 install boto3
+    pip3 install django-storages
+    pip3 freeze > requirements.txt
+    ```
+- Add 'storages' to the installed apps in the settings.py file.
+- Add the following if statement:
+    ```
+    if 'USE_AWS' in os.environ:
+        AWS_STORAGE_BUCKET_NAME = 'happybean'
+        AWS_S3_REGION_NAME = 'eu-west-1'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    ```
+- On Heroku, add the AWS keys to the Config Variables (they can be found in the csv file you downloaded earlier). Also, add USE_AWS and set it to True. 
+- Remove the DISABLE_COLLECTSTATIC from the variables. 
+- In GitPod, create a file called custom_storages.py and add:
+    ```
+    from django.conf import settings
+    from storages.backends.s3boto3 import S#Boto3Storage
+
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION 
+    ```
+- To the before mentioned if statement from above, in settings.py, also add:
+    ```
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+- Add, commit and push these changes. If you now go to the bucket, you will see all the static files. 
+- Go to your bucket and add a new folder called media. Inside it, click 'upload' and then 'add files'. Then select all the images you'd like to use. Click 'next'. Under 'manage public permissions', select 'grant public read access'.
+- On Stripe, add a new webhook endpoint, with the URL of your Heroku app, followed by 
+```/checkout/wh/```. Select 'receive all events' and click 'add endpoint'.
 
 ___
 <br>
@@ -522,6 +704,7 @@ ___
 
 
 ### **Media**
+
 - Logo Illustration is from [Canva](https://www.canva.com/)
 - Designs for coffee beans, grounds, capsules, gift boxes, taster boxes and subscriptions designed by Franciska Du Toit using the logo from [Canva](https://www.canva.com/)
 
@@ -534,6 +717,7 @@ ___
     - Chemex Brewer from https://www.rosettaroastery.com/collections/equipment
     - Rhinoware Hand Grinder from https://www.cremashop.eu/en/products/rhinowares/compact-hand-grinder/2242
     - Baratza Encore Grinder from https://www.cremashop.eu/en/products/baratza/encore/2293
+   
 
 
 ### **Code**
