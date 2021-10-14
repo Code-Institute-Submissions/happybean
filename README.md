@@ -321,6 +321,7 @@ The data structure outline: ![Data Structure]()
         - FAQ
         - Contact us
         - Coffee Corner
+    - Forum
     - Profile Icon with dropdown:
         - My Profile
         - Log out
@@ -328,7 +329,7 @@ The data structure outline: ![Data Structure]()
 - The navbar is collapsed into a burger icon on small screens.
 #### Footer
 - A brief description of the purpose and mission of the site.
-- Popular Links 
+- Popular Quick Links 
 - Copyright information.
 - Links to social media for Admin -Social Icons - Allows the user to access the social platforms of the Happy Bean.
 
@@ -478,7 +479,6 @@ ___
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
 - The user can change their password if they click on the Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - The user can delete their profile if they click on the Delete Profile link. This will open a modal to confirm if they want to continue to delete their profile. If they confirm, their username, email and password will be detailed from the Users collection. They will then be logged out and returned to the landing page as Guest users.
-- Coffee Corner Chat Forum app - registered users can converse about a topic and other users can comment on the thread.
 
 ___
 <br>
