@@ -717,10 +717,24 @@ ___
     - Chemex Brewer from https://www.rosettaroastery.com/collections/equipment
     - Rhinoware Hand Grinder from https://www.cremashop.eu/en/products/rhinowares/compact-hand-grinder/2242
     - Baratza Encore Grinder from https://www.cremashop.eu/en/products/baratza/encore/2293
-   
+    - Coffee Corner Images with icons from [Canva](https://www.canva.com/)
 
 
 ### **Code**
+- Checkout progress: Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913
+- Contact Form - https://learndjango.com/tutorials/django-email-contact-form
+- Forum templates:
+    - navigation: https://www.youtube.com/watch?v=knGk9aUr4Do
+    - comment counter: https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 
+- Class based views for forum app views https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/
+- Login & Security views for forum app views: https://docs.djangoproject.com/en/3.2/topics/auth/default/
+- Delete Success Message:  views for forum app views: https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
+- User permissions: views for forum app views: https://learndjango.com/tutorials/django-best-practices-user-permissions
+- Forum views success messages views for forum app views:  # for success messages: https://docs.djangoproject.com/en/3.2/ref/contrib/messages/
+- Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
+- Function to set the ridirect page: views for forum app views https://steemit.com/utopian-io/@duski.harahap/create-a-forum-application-using-django-15-use-reverse-lazy-and-implementing-the-pagination-system
+- Class based views & urlshttps://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/#using-class-based-views
+- For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
 
 
 ### **Acknowledgements**
