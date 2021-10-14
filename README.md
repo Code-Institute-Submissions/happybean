@@ -359,6 +359,25 @@ The data structure outline: ![Data Structure]()
 - The user will also be able to click on a link to go back to the products page
 - If a user adds a product to their shopping cart, they are notified and a toast will popup with a summary of what is in their shopping cart at that point in time as well as the cost, product info and a link to the shopping cart. 
 
+### Add Products Page (add_products.html) - for admin users
+- This page can only be viewed by the admin user.
+- The add products page features a simple form, where the admin user can input the basic information including adding an image for the product
+- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
+- If the user clicks the add product button, it will add the new product to the database.
+- If the user clicks on the cancel button it will take them back to the products page.
+
+### Edit Products Page  (edit_products.html) - for admin users
+- This page can only be viewed by the admin user.
+- The edit products page features a simple form, where the admin user can edit a product in the database
+- If the admin user clicked on the Edit resource button on the products page then they will be taken to this page. 
+- The current product information will be shown and the admin user can change the information and save it. This will update the database with the new information.
+- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
+- If the user clicks on the cancel button it will take them back to the products page.
+
+### Delete Product - for admin users
+- If the user is an administrator, they will see the option to delete a product.
+- If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the product and the database will be updated.
+
 ### Shopping Cart (cart.html) 
 - On this page users can view all the selected products and details. Users can update the quantity and there is an option to remove products. There is a button link to a checkout page for the final step of shopping.
 - The order total, delivery cost and Total cost is clearly indicated to the user.
@@ -407,20 +426,41 @@ The data structure outline: ![Data Structure]()
 - The page will include Insights and information for registered users including Brewing Guides, Coffee Tips and Coffee Recipes
 - There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and FAQ. 
 
-### Add Products Page (add_products.html) - for admin users
-- This page can only be viewed by the admin user.
-- The add products page features a simple form, where the admin user can input the basic information including adding an image for the product
-- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
-- If the user clicks the add product button, it will add the new product to the database.
-- If the user clicks on the cancel button it will take them back to the products page.
+### Forum (forum.html) - for registered users
+- This page can only be viewed by the registered users.
+- This page features the option to add and view threads about Coffee. 
+- If the user created the thread, they will be able to edit or delete the thread. An admin users will be able to edit or delete any thread.
 
-### Edit Resource Page  (edit_products.html) - for admin users
-- This page can only be viewed by the admin user.
-- The edit products page features a simple form, where the admin user can edit a product in the database
-- If the admin user clicked on the Edit resource button on the resources page then they will be taken to this page. 
-- The current product information will be shown and the admin user can change the information and save it. This will update the database with the new information.
-- The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
-- If the user clicks on the cancel button it will take them back to the products page.
+### Thread (thread.html) - for registered users
+- This page can only be viewed by the registered users where they can see the detail of a thread if they clicked on the heading of a specific thread.
+- They can see comments added by other users and they can add a new comment to a thread.
+- If the user created the comment, they will be able to edit or delete the comment. An admin users will be able to edit or delete any comment.
+
+### Add Thread (add_thread.html)
+- This page can only be viewed by the registered users.
+- This page has a form where the they user can add a new thread. The form has a space to add a subject and a description in input fields and click "create thread".
+
+### Edit Thread (edit_thread.html)
+- This page can only be viewed by the registered users who created the thread or an admin user.
+- This page has a form where the they user can edit an existing thread. 
+- The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
+
+### Delete Thread
+- If the user created the thread or is an administrator, they will see the option to delete a thread.
+- If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the thread and the database will be updated.
+
+### Add Comment (add_comment.html)
+- This page can only be viewed by the registered users.
+- This page has a form where the they user can add a comment in an input field and click "add comment"
+
+### Edit Comment (edit_comment.html)
+- This page can only be viewed by the registered users who created the comment or an admin user.
+- This page has a form where the they user can edit an existing comment. 
+- The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
+
+### Delete Comment
+- If the user created the comment or is an administrator, they will see the option to delete a comment.
+- If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the comment and the database will be updated.
 
 ### Log Out
 - If a registered or admin user clicks on the log out button, they will be logged out of their current session and will no longer be able to see the pages they would if they were logged in.
