@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Origin, Size
+from .models import Product, Category, Origin
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -8,7 +8,6 @@ class ProductAdmin(admin.ModelAdmin):
         'origin',
         'sku',
         'name',
-        'has_sizes',
         'price',
         'intensity',
         'image',
@@ -31,6 +30,6 @@ class OriginAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Product)
-admin.site.register(Category)
-admin.site.register(Origin)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Origin, OriginAdmin)
