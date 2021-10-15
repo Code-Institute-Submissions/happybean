@@ -71,7 +71,6 @@
                                 </td>
                                 <td class="py-3 ">
                                     <p class="mt-3"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size }}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small text-muted">Product ID: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
@@ -102,9 +101,6 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                {% if item.product.has_sizes %}
-                                                    <input type="hidden" name="product_size" value="{{ item.size }}">
-                                                {% endif %}
                                             </div>
                                         </div>
                                     </form>
@@ -187,9 +183,8 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
         var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        var data = 'csrfmiddlewaretoken', csrfToken;
 
         $.post(url, data)
          .done(function() {
