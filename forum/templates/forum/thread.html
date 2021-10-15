@@ -57,8 +57,8 @@
             <div class="pt-1 pb-2">
             <!-- If the user created the thread or it is an admin user, they will see the option to edit or delete the thread -->
             {% if request.user == thread.creator or request.user.is_superuser %}
-                <a href="{% url 'edit_thread' thread.pk %} " class="btn alt-action-btn btn-sm">Edit</a>
-                <a href="{% url 'delete_thread' thread.pk %}" class="btn action-btn btn-sm">Delete</a>
+                <a href="{% url 'edit_thread' thread.pk %} " class="btn action-btn btn-sm">Edit</a>
+                <a href="{% url 'delete_thread' thread.pk %}" class="btn alt-action-btn btn-sm">Delete</a>
             {% endif %}
             </div>
         </div>
@@ -89,9 +89,9 @@
                 <div class="pt-1 pb-2">
                     <!-- Edit comment -->
                     <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
-                        class="btn alt-action-btn btn-sm">Edit</a>
+                        class="btn action-btn btn-sm">Edit</a>
                     <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
-                        class="btn action-btn btn-sm">Delete</a>
+                        class="btn alt-action-btn btn-sm">Delete</a>
                     {% endif %}
                 </div>
             </div>
