@@ -1,3 +1,6 @@
+"""
+Models for Products, Categories and Orgins.
+"""
 from django.db import models
 
 
@@ -10,6 +13,9 @@ class Category(models.Model):
     """
 
     class Meta:
+        """
+        To ensure the plural of Catergory is correcrly specified.
+        """
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
@@ -19,6 +25,9 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        """
+        Return category friendly names
+        """
         return self.friendly_name
 
 
@@ -38,6 +47,9 @@ class Origin(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        """
+        Return Orgin friendly names
+        """
         return self.friendly_name
 
 
