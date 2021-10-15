@@ -478,7 +478,7 @@ ___
 ## **Future Features**
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
 - The user can change their password if they click on the Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
-- The user can delete their profile if they click on the Delete Profile link. This will open a modal to confirm if they want to continue to delete their profile. If they confirm, their username, email and password will be detailed from the Users collection. They will then be logged out and returned to the landing page as Guest users.
+- If the store owner decided to release some products in different sizes with different prices, there would be an option on the product view page to select different sizes and the prices will change accordingly.
 
 ___
 <br>
