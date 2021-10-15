@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.core.paginator import Paginator
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Origin
@@ -16,7 +17,7 @@ def all_products(request):
     A view to show all products, including sorting and search queries
     """
 
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('category')
     query = None
     categories = None
     origins = None
@@ -53,20 +54,29 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (Q(name__icontains=query) |
+                       Q(description__icontains=query))
             products = products.filter(queries)
 
+    # Pagination: https://docs.djangoproject.com/en/3.2/topics/pagination/
+    paginator = Paginator(products, 8)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     current_sorting = f'{sort}_{direction}'
+    product_page = True
 
     context = {
         'products': products,
+        'page_obj': page_obj,
         'search_term': query,
         'current_categories': categories,
         'current_origins': origins,
         'current_sorting': current_sorting,
+        'product_page': product_page,
     }
 
     return render(request, 'products/products.html', context)
