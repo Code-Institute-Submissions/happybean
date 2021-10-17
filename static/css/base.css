@@ -204,6 +204,12 @@ h3{
     float: right;
 }
 
+.btn-file input[type="file"]{
+    background: var(--DarkAccent);
+    color: var(--ExtraLight);
+    min-width: fit-content;
+    border-radius: 8px;
+}
 
 /* --------------------------------------------------- */
 /*                       NAVBAR                        */
