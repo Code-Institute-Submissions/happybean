@@ -48,11 +48,12 @@
 </div>
 
 <!-- Thread Section -->
-<div class="container ">
+<div class="container"> 
     <div class="row thread main-thread ms-3 me-3">
         <div class="col pt-3 pb-3">
             <h3><strong>Topic: {{ thread.title }}</strong></h3>
-            <p>By: {{ thread.creator }} on {{ thread.date_created }} </p>
+            <p>By: {{ thread.creator }} on {{ thread.date_created }}
+            </p>
             <p>{{ thread.description }}</p>
             <div class="pt-1 pb-2">
             <!-- If the user created the thread or it is an admin user, they will see the option to edit or delete the thread -->
@@ -66,7 +67,7 @@
 </div>
 
 <!-- Comment section: No comments -->
-<div class="container ">
+<div class="container mb-5" style="height: 100vh;">
     {% if comments %}
     <div class="row mt-1">
         <div class="col me-3">
@@ -75,9 +76,14 @@
                 comment{% if comments_count == 0 or comments_count > 1 %}s{% endif %}
             </p>
         </div>
+        <div class="row mt-1">
+            <div class="col d-flex justify-content-end">
+                <a href="{% url 'add_comment' thread.pk %}?next={{ request.path }}?page={{ next_page }}"
+                    class="btn action-btn">Add a comment</a>
+            </div>
+        </div>
     </div>
     {% for comment in comments %}
-    <div class="container ">
         <div class="row thread m-3">
             <div class="col-sm-10 pb-3">
                 <p class="pt-3"><em>This comment is by <strong> {{ comment.creator }}</strong> posted on {{ comment.date_created }}</em></p>
@@ -96,27 +102,18 @@
                 </div>
             </div>
         </div>
-    </div>
     {% endfor %}
     {% else %}
     <div class="row mb-5">
         <div class="col mt-3 ms-3 ps-2 pt-3 text-center">
             <p> There are no comments yet. </p>
+            <a href="{% url 'add_comment' thread.pk %}?next={{ request.path }}?page={{ next_page }}"
+                class="btn action-btn">Add a comment</a>
         </div>
     </div>
     {% endif %}
 </div>
 
-
-
-<div class="container mb-3">
-    <div class="row">
-        <div class="col d-flex justify-content-end me-3">
-            <a href="{% url 'add_comment' thread.pk %}?next={{ request.path }}?page={{ next_page }}"
-                class="btn action-btn">Add a comment</a>
-        </div>
-    </div>
-</div>
 
 <!-- Scroll up button -->
 <button id="scrollButton" title="Go to top">
