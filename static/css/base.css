@@ -871,7 +871,15 @@ ul {
 .thread {
     border: 1px solid var(--Accent);
     border-radius: 8px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
+
+@media (min-width: 425px) {
+    .thread-heading-row {
+      display: none;
+    }
+  }
 
 .main-thread{
     background-color: var(--Light);
