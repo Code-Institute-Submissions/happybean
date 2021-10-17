@@ -1,9 +1,13 @@
-from django.shortcuts import render, redirect
+"""
+Views for Forum, including threads and comments,
+also to add, edit and delete threads and comments.
+"""
+
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
-from .forms import ThreadForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
@@ -13,9 +17,8 @@ from django.views.generic import (
     UpdateView,
     DeleteView,
 )
+from .forms import ThreadForm, CommentForm
 from .models import Thread, Comment
-
-
 
 
 # ------------------------------------------- #
@@ -28,11 +31,17 @@ def forum_view(request):
     This renders the forum page. To access this page, a user needs
     to be logged in. All the current threads will display.
     """
-    model = Thread
-    template_name = "forum/forum.html"
+    threads = Thread.objects.all().order_by('-date_created')
+
+    # Pagination: https://docs.djangoproject.com/en/3.2/topics/pagination/
+    paginator = Paginator(threads, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    threads_page = True
 
     context = {
-        'object_list': Thread.objects.all(),
+        'page_obj': page_obj,
+        'threads_page': threads_page,
     }
 
     return render(request, 'forum/forum.html', context)
