@@ -53,7 +53,7 @@
         </div>
 
     </div>
-    <div class="row">
+    <div class="row thread-heading-row">
         <div class="col-sm-12 col-md-6"></div>
         <div class="col-md-2 ">
             <small>Posts</small>
@@ -64,9 +64,9 @@
     </div>
     <!-- From https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 -->
     <!-- Treads (newest thread at top)-->
-    {% for thread in object_list %}
+    {% for thread in page_obj %}
     <div class="row thread mt-2 mb-2">
-        <div class="col-sm-12 col-md-6 pt-2">
+        <div class="col-md-6 col-md-6 pt-2">
             <strong><a class="link-text uppercase" href="{% url 'thread' thread.pk %} ">{{ thread.title }}</a></strong>
             <p>By {{ thread.creator }} on {{ thread.date_created }}</p>
         </div>
@@ -87,6 +87,26 @@
         </div>
     </div>
     {% endfor %}
+    <!-- Pagination from Bootstrap and Django Documentation -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination  justify-content-center">
+            {% if page_obj.has_previous %}
+            <li class="page-item"> <a class="page-link link-text" href="?page=1">&laquo; first</a></li>
+            <li class="page-item"> <a class="page-link link-text"
+                    href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+            {% endif %}
+            <li class="page-item disabled">
+                <span class="current page-link link-text">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+            </li>
+            {% if page_obj.has_next %}
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.next_page_number }}">next</a></li>
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.paginator.num_pages }}">last
+                    &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
 </main>
 
 <!-- Scroll up button -->
