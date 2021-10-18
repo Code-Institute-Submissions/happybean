@@ -143,7 +143,7 @@ class DeleteThreadView(LoginRequiredMixin, DeleteView, UserPassesTestMixin,
     """
     model = Thread
     template_name = "forum/delete_thread.html"
-    success_message = "Thread '%(title)s' was successfully deleted"
+    success_message = "The Thread was successfully deleted."
     success_url = reverse_lazy('forum')
 
     # User permissions: https://bit.ly/3mSsegO
