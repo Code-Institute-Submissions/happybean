@@ -79,6 +79,10 @@
                 </div>
                 {% if not orders %}
                 <p class="text-center pt-3">There are no orders yet</p>
+                <div class="center">
+                    <a href="{% url 'products' %}" class="btn action-btn">Go to Shop</a>
+                </div>
+                
                 {% endif %}
             </div>
         </div>
