@@ -250,6 +250,11 @@ h3{
     background-color: var(--Accent);
 }
 
+.cart-nav-item{
+    display: flex;
+    justify-content: left;
+}
+
 /* --------------------------------------------------- */
 /*                   HOME PAGE                      */
 /* --------------------------------------------------- */
@@ -857,6 +862,11 @@ h3{
       padding-top: 10%;
     }
   }
+
+.our-story-img{
+    display: flex;
+    justify-content: center;
+}
 
 /* --------------------------------------------------- */
 /*                    COFFEE CORNER                    */
