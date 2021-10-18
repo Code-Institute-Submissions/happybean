@@ -76,7 +76,7 @@
           </button>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-2 me-lg-3 mb-2 mb-lg-0">
             <!-- Home -->
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
@@ -114,12 +114,6 @@
               <a class="nav-link" aria-current="page" href="{% url 'forum' %}">Forum</a>
             </li>
 
-            <!-- Search -->
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
-              </a>
-            </li>
-
             <!-- User -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="user-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -139,8 +133,14 @@
               </ul>
             </li>
 
+            <!-- Search -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
+              </a>
+            </li>
+
             <!-- Shopping Cart -->
-            <li class="list-inline-item">
+            <li class="nav-item list-inline-item cart-nav-item">
               <a href="{% url 'view_cart' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
                 <div class="text-center">
                   <div class="cart-menu">
