@@ -2,268 +2,295 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="E-commerce store where users can purchase coffee and coffee equipment that are of high quality">
-        <meta name="keywords" content="Happy Bean, Coffee, Coffee Beans, Coffee Grounds, Coffee Capsules, Coffee Equipment, Coffee Corner, Coffee Information, Coffee Store, Buy Coffee">
-    {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+<head>
+  <!-- Required meta tags -->
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="E-commerce store where users can purchase coffee and coffee equipment that are of high quality">
+  <meta name="keywords"
+    content="Happy Bean, Coffee, Coffee Beans, Coffee Grounds, Coffee Capsules, Coffee Equipment, Coffee Corner, Coffee Information, Coffee Store, Buy Coffee">
+  {% endblock %}
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
-    <!-- Core CSS -->
-    {% block corecss %}
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-        <!-- Static Base CSS File -->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" >
-        <!-- Hover.css CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" />
-        <!-- Google Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+  <!-- Core CSS -->
+  {% block corecss %}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <!-- Static Base CSS File -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!-- Hover.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+    integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+    crossorigin="anonymous" />
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {% endblock %}
 
-    <!-- Core JS -->
-    {% block corejs %}
-        <!-- Fontawesome JS -->
-        <script src="https://kit.fontawesome.com/597ff7c26b.js" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        <!-- Jquery CDN --> 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <!-- Stripe -->
-        <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block stripe %}
-    <!-- Stripe js-->
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  <!-- Core JS -->
+  {% block corejs %}
+  <!-- Fontawesome JS -->
+  <script src="https://kit.fontawesome.com/597ff7c26b.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+  </script>
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block stripe %}
+  <!-- Stripe js-->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    <!-- Title -->
-    <title>Happy Bean {% block extra_title %}{% endblock %}</title>
+  {% block extra_js %}
+  {% endblock %}
 
-  </head>
-  <!-- Body -->
-  <body>
-    <header class="container-fluid fixed-top ps-0 pe-0">
-      <!-- Navbar -->
-      <nav id="topnav" class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-           <!-- Logo -->
-          <a class="navbar-brand" href="{% url 'home' %}">
-            <h1 class="logo">Happy Bean</h1>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-2 me-lg-3 mb-2 mb-lg-0">
-            <!-- Home -->
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
-            </li>
+  <!-- Title -->
+  <title>Happy Bean {% block extra_title %}{% endblock %}</title>
 
-            <!-- Shop -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="shop-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shop
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="shop-link">
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=beans,grounds,capsules">Coffee</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=accessories,brewers,grinders">Equipment</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions">Speciality</a></li>
-                <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
-              </ul>
-            </li>
+</head>
+<!-- Body -->
 
-            <!-- Connect & Learn -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="about-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Connnect &amp; Learn
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="about-link">
-                <li><a class="dropdown-item" href="{% url 'our_story' %}">Our Story</a></li>
-                <li><a class="dropdown-item" href="{% url 'faq' %}">FAQ</a></li>
-                <li><a class="dropdown-item" href="{% url 'contact_us' %}">Contact Us</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="{% url 'coffee_corner' %}">Coffee Corner</a></li>
-              </ul>
-            </li>
+<body>
+  <header class="container-fluid fixed-top ps-0 pe-0">
+    <!-- Navbar -->
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand ms-3" href="{% url 'home' %}">
+          <h1 class="logo">Happy Bean</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-2 me-lg-5 mb-2 mb-lg-0">
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
 
-            <!-- Forum -->
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'forum' %}">Forum</a>
-            </li>
+          <!-- Shop -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="shop-link" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="shop-link">
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=beans,grounds,capsules">Coffee</a></li>
+              <li><a class="dropdown-item"
+                  href="{% url 'products' %}?category=accessories,brewers,grinders">Equipment</a></li>
+              <li><a class="dropdown-item"
+                  href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions">Speciality</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
+            </ul>
+          </li>
 
-            <!-- User -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="user-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user fa-lg"></i>
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="user-link">
-                {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                  <li><a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a></li>
-                {% endif %}
-                <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
-                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a></li>
-                {% else %}
-                  <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                  <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
-                {% endif %}
-              </ul>
-            </li>
+          <!-- Connect & Learn -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-link" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Connnect &amp; Learn
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="about-link">
+              <li><a class="dropdown-item" href="{% url 'our_story' %}">Our Story</a></li>
+              <li><a class="dropdown-item" href="{% url 'faq' %}">FAQ</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact_us' %}">Contact Us</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a class="dropdown-item" href="{% url 'coffee_corner' %}">Coffee Corner</a></li>
+            </ul>
+          </li>
 
-            <!-- Search -->
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
-              </a>
-            </li>
+          <!-- Forum -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'forum' %}">Forum</a>
+          </li>
 
-            <!-- Shopping Cart -->
-            <li class="nav-item list-inline-item cart-nav-item">
-              <a href="{% url 'view_cart' %}" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
-                <div class="text-center">
-                  <div class="cart-menu">
-                    <i class="fas fa-shopping-bag fa-lg">
-                    </i>
-                    <span class="count">{{ product_count }}</span>
-                  </div>
-                  <p class="text-dark my-0">
-                    {% if grand_total %}
-                      €{{ grand_total|floatformat:2 }}
-                    {% else %}
-                      €0.00
-                    {% endif%}
-                  </p>
+          <!-- User -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="user-link" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-user fa-lg"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="user-link">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <li><a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a></li>
+              {% endif %}
+              <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+              <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log out</a></li>
+              {% else %}
+              <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+              <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
+              {% endif %}
+            </ul>
+          </li>
+
+          <!-- Search -->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
+            </a>
+          </li>
+
+          <!-- Shopping Cart -->
+          <li class="nav-item list-inline-item cart-nav-item">
+            <a href="{% url 'view_cart' %}"
+              class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+              <div class="text-center">
+                <div class="cart-menu">
+                  <i class="fas fa-shopping-bag fa-lg">
+                  </i>
+                  <span class="count">{{ product_count }}</span>
                 </div>
-              </a>
-            </li>
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
-      <div id="delivery-banner" class="row text-center">
-        <div class="col delivery-banner">
-          <h4 class="logo-font my-1">
-            Free delivery on orders over €{{ free_delivery_threshold }}
-          </h4>
-        </div>
-      </div>
-      
-    </header>
+                <p class="text-dark my-0">
+                  {% if grand_total %}
+                  €{{ grand_total|floatformat:2 }}
+                  {% else %}
+                  €0.00
+                  {% endif%}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
+      </div>
+      </div>
+    </nav>
+    <div id="delivery-banner" class="row text-center">
+      <div class="col delivery-banner">
+        <h4 class="logo-font my-1">
+          Free delivery on orders over €{{ free_delivery_threshold }}
+        </h4>
+      </div>
     </div>
+
+  </header>
+
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
     {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <!-- About section -->
-          <div class="col-sm-12 col-md-6">
-            <h3 class="footer-h">About</h3>
-            <p class="footer-p">As a speciality coffee company, we source world-class coffee beans and high-quality coffee equipment - so you can enjoy a barista quality experience in your own home. </p>
-          </div>
-          <!-- Categories section -->
-          <div class="col-xs-6 col-md-3">
-            <h3 class="footer-h">Categories</h3>
-            <ul class="footer-links">
-              <li><a href="{% url 'products' %}?category=beans">Beans</a></li>
-              <li><a href="{% url 'products' %}?category=grounds">Grounds</a></li>
-              <li><a href="{% url 'products' %}?category=capsules">Capsules</a></li>
-              <li><a href="{% url 'products' %}?category=accessories">Accessories</a></li>
-              <li><a href="{% url 'products' %}?category=brewers">Brewers</a></li>
-              <li><a href="{% url 'products' %}?category=grinders">Grinders</a></li>
-              <li><a href="{% url 'products' %}?category=taster_boxes">Taster Boxes</a></li>
-              <li><a href="{% url 'products' %}?category=gift_boxes">Gift Boxes</a></li>
-              <li><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></li>
-            </ul>
-          </div>
-          <!-- Quick Links section -->
-          <div class="col-xs-6 col-md-3">
-            <h3 class="footer-h">Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="{% url 'our_story' %}">Our Story</a></li>
-              <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-              <li><a href="{% url 'products' %}">Shop</a></li>
-              <li><a href="{% url 'faq' %}">FAQ</a></li>
-              <li><a href="{% url 'forum' %}">Forum</a></li>
-            </ul>
-          </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- About section -->
+        <div class="col-sm-12 col-md-6">
+          <h3 class="footer-h">About</h3>
+          <p class="footer-p">As a speciality coffee company, we source world-class coffee beans and high-quality coffee
+            equipment - so you can enjoy a barista quality experience in your own home. </p>
         </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2021 - This website is created by <a id="link-external" href="https://franciskadutoit.com/"target="_blank" rel="noopener noreferrer" aria-hidden="false">Franciska Du Toit </a> for educational purpose only
-            </p>
-          </div>
-
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="github" target="_blank" href="https://github.com/Franciskadtt" rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-github"></i></a></li>
-              <li><a class="twitter" target="_blank" href="https://twitter.com/FranciskaDuToit" rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="instagram" target="_blank" href="https://www.instagram.com/designed.byfranciska/" rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-instagram"></i></a></li>
-              <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/franciskadutoit/" rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div>
+        <!-- Categories section -->
+        <div class="col-xs-6 col-md-3">
+          <h3 class="footer-h">Categories</h3>
+          <ul class="footer-links">
+            <li><a href="{% url 'products' %}?category=beans">Beans</a></li>
+            <li><a href="{% url 'products' %}?category=grounds">Grounds</a></li>
+            <li><a href="{% url 'products' %}?category=capsules">Capsules</a></li>
+            <li><a href="{% url 'products' %}?category=accessories">Accessories</a></li>
+            <li><a href="{% url 'products' %}?category=brewers">Brewers</a></li>
+            <li><a href="{% url 'products' %}?category=grinders">Grinders</a></li>
+            <li><a href="{% url 'products' %}?category=taster_boxes">Taster Boxes</a></li>
+            <li><a href="{% url 'products' %}?category=gift_boxes">Gift Boxes</a></li>
+            <li><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></li>
+          </ul>
+        </div>
+        <!-- Quick Links section -->
+        <div class="col-xs-6 col-md-3">
+          <h3 class="footer-h">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="{% url 'our_story' %}">Our Story</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+            <li><a href="{% url 'products' %}">Shop</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'forum' %}">Forum</a></li>
+          </ul>
         </div>
       </div>
-</footer>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2021 - This website is created by <a id="link-external"
+              href="https://franciskadutoit.com/" target="_blank" rel="noopener noreferrer"
+              aria-hidden="false">Franciska Du Toit </a> for educational purpose only
+          </p>
+        </div>
 
-    {% block postloadjs %}
-    {% endblock %}
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="github" target="_blank" href="https://github.com/Franciskadtt" rel="noopener noreferrer"
+                aria-hidden="false"><i class="fa fa-github"></i></a></li>
+            <li><a class="twitter" target="_blank" href="https://twitter.com/FranciskaDuToit" rel="noopener noreferrer"
+                aria-hidden="false"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="instagram" target="_blank" href="https://www.instagram.com/designed.byfranciska/"
+                rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/franciskadutoit/"
+                rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    {% block extra_scripts %} 
-    <script type="text/javascript">
-        $(document).ready(function() {
-        $(".toast").toast('show');
-    });  
-    </script>
-    {% endblock %}
+  {% block postloadjs %}
+  {% endblock %}
 
-  </body>
+  {% block extra_scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".toast").toast('show');
+    });
+  </script>
+  {% endblock %}
+
+</body>
+
 </html>
