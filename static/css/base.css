@@ -624,14 +624,14 @@ h3{
 }
 
 #step-2-cart::after {
-    content: "Info and Pay";
-    font-size: 16px;
+    content: "Checkout";
+    font-size: 15px;
     
 }
 
 #step-3-cart::after {
     content: "Confirmation";
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .progresses .progress {
@@ -669,14 +669,14 @@ h3{
 
 #step-2-checkout::after {
     content: "Checkout";
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--Accent);
 }
 
 #step-3-checkout::after {
     content: "Confirmation";
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .checkout-progressbar{
@@ -719,7 +719,7 @@ h3{
 }
 
 #step-2-success::after {
-    content: "Cart";
+    content: "Checkout";
     font-size: 16px;
     padding-left: 15px;
 }
