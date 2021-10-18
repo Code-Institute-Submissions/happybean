@@ -8,7 +8,7 @@
         <!-- Landing Text-->
         <div class="col s12 m12 l12">
             <h1 class="home-heading">
-                Speciality Grade, 
+                Speciality Grade,
                 <br>
                 Ethically Sourced Coffee
             </h1>
@@ -28,87 +28,94 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Our Products section -->
-    <section class="container" id="product-section">
-        <div class="row">
-            <h2 class="product-h">Our Products</h2>
-        </div>
+<!-- Our Products section -->
+<section class="container" id="product-section">
+    <div class="row">
+        <h2 class="product-h">Our Products</h2>
+    </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'products' %}?category=beans,grounds,capsules" class="btn"><img src="{% static 'images/coffee-category.png' %}" class="card-img-top" alt="Coffee Products">
-                <div class="card-body">
-                  <h3 class="card-title">COFFEE</h3>
-                </div></a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'products' %}?category=accessories,brewers,grinders" class="btn"><img src="{% static 'images/equipment_category.png' %}" class="card-img-top" alt="Equipment Products">
-                <div class="card-body">
-                  <h3 class="card-title">EQUIPMENT</h3>
-                </div></a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions" class="btn"><img src="{% static 'images/speciality_category.png' %}" class="card-img-top" alt="Speciality Products">
-                <div class="card-body">
-                  <h3 class="card-title">SPECIALITY</h3>
-                </div></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Subscriptions -->
-    <div class="container" id="subscription-section">
-        <div class="row ">
-            <div class="col-12 col-md-6  ">
-                <img src="{% static 'images/subscription.png' %}"  class="section-img" alt="Cup of coffee on wooden board">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'products' %}?category=beans,grounds,capsules" class="btn"><img
+                        src="{% static 'images/coffee-category.png' %}" class="card-img-top" alt="Coffee Products">
+                    <div class="card-body">
+                        <h3 class="card-title">COFFEE</h3>
+                    </div>
+                </a>
             </div>
-            <div class="col-sm-12 col-md-6 ">
-                <h2 class="block-heading">Subscriptions
-                </h2>
-                <p class="information">
-                    Thrill your taste buds with ethically sourced, hyper-fresh bean on repeat. Check out our Coffee on Subscription section!
-                </p>
-                <p>
-                    Subscriptions are a stress free way to ensure you never run out of our coffee. Get fresh coffee delivered to your door, once a month. 
-                </p>
-                <p>
-                <strong>How it works:</strong></p>
-                <ul>
-                    <li>You can select the quantity of coffee you require, and how often you’d like us to deliver</li>
-                    <li>You can also choose the size of coffee you’d like to receive</li>
-                    <li>Your credit card will be charged monthly, on the date you sign up. You’re free to upgrade, downgrade or cancel at any time - just get in touch with us if you need any help</li>
-                </ul>
-                <a class="btn btn-lg subscription-button" href="{% url 'products' %}?category=subscriptions" role="button">See Subscription options</a>
+        </div>
+        <div class="col">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'products' %}?category=accessories,brewers,grinders" class="btn"><img
+                        src="{% static 'images/equipment_category.png' %}" class="card-img-top"
+                        alt="Equipment Products">
+                    <div class="card-body">
+                        <h3 class="card-title">EQUIPMENT</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'products' %}?category=taster_boxes,gift_boxes,subscriptions" class="btn"><img
+                        src="{% static 'images/speciality_category.png' %}" class="card-img-top"
+                        alt="Speciality Products">
+                    <div class="card-body">
+                        <h3 class="card-title">SPECIALITY</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-
-    <!-- Registration section -->
-    <div class="container" id="register-section">
-        <div class="row h-100">
-            <div class="col-12 col-md-6 block">
-                <h2 class="block-heading">Register for exclusives
-                </h2>
-                <p class="information">
-                    Sign up for free to join the Coffe Corner!
-                </p>
-                <p>
-                    By being part of the Coffee Corner, you will have loads of benefits such as the latest recipies, brewing techniques and Coffee Tips. 
-                </p>
-                <p>
-                    Also, you will have access to a personalised profile and make your buying experience even smoother!
-                </p>
-                </ul>
-                <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Sign me up!</a>
-            </div>
-            <div class="col-sm-12 col-md-6 p-5 ">
-                <img src="{% static 'images/register.png' %}"  class="section-img" alt="Coffee Grounds">
-            </div>
+</section>
+<hr class="mt-5 mb-5">
+<!-- Subscriptions -->
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-12 col-md-6  ">
+            <img src="{% static 'images/subscription.png' %}" class="section-img" alt="Cup of coffee on wooden board">
+        </div>
+        <div class="col-sm-12 col-md-6 ">
+            <h2 class="block-heading">Subscriptions
+            </h2>
+            <p class="information">
+                Thrill your taste buds with ethically sourced, hyper-fresh bean on repeat. Check out our Coffee on
+                Subscription section!
+            </p>
+            <p>
+                Subscriptions are a stress free way to ensure you never run out of our coffee. Get fresh coffee
+                delivered to your door, once a month. You will be charged monthly
+            </p>
+            <p>
+                <a class="btn btn-lg subscription-button" href="{% url 'products' %}?category=subscriptions"
+                    role="button">See Subscription options</a>
         </div>
     </div>
+</div>
+<hr class="mt-5 mb-0">
+<!-- Registration section -->
+<div class="container mt-0 mb-5">
+    <div class="row">
+        <div class="col-12 col-md-6 block ps-4">
+            <h2 class="block-heading">Check out the Coffee Corner!
+            </h2>
+            <p class="information">
+                Sign up for free to view the Coffe Corner!
+            </p>
+            <p>
+                By being part of the Coffee Corner, you will have loads of benefits such as the latest recipies, brewing
+                techniques and Coffee Tips.
+            </p>
+            <p>
+                Also, you will have access to a personalised profile and make your buying experience even smoother!
+            </p>
+            </ul>
+            <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Go to Coffee
+                Corner</a>
+        </div>
+        <div class="col-sm-12 col-md-6 p-5 mt-5">
+            <img src="{% static 'images/coffee_corner1.png' %}" class="section-img" alt="Coffee Grounds">
+        </div>
+    </div>
+</div>
 {% endblock %}
