@@ -20,9 +20,8 @@
 {% endblock %}
 
 {% block content %}
-<!-- Checkout Progress bar-->
-<!-- Original code with modifications for progress bar from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913-->
-
+<!-- Checkout Progress bar -->
+<!-- Original code with modifications for progress bar from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913 -->
 <div class="progresses py-4">
     <ol class="d-flex align-items-center justify-content-between">
         <a href="{% url 'view_cart' %}" class="page-link-text">
@@ -36,7 +35,7 @@
             class="checkout-progressbar"></div>
     </div>
 </div>
-<!-- Heading-->
+<!-- Heading -->
 <div class="overlay"></div>
 <div class="container">
 
@@ -47,8 +46,8 @@
         </div>
     </div>
 </div>
-<!-- Cart Summary-->
-<div class="container mb-5">
+<!-- Cart Summary -->
+<main class="container mb-5">
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <h3 class="smaller-heading pb-3 pt-3 text-center">Order Summary ({{ product_count }})</h3>
@@ -137,8 +136,6 @@
                     <!-- Pass the client secret to the view so we can get the payment intent id -->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
-
-
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_cart' %}" class="btn alt-action-btn btn-lg">
                         <span class="icon">
@@ -151,7 +148,6 @@
                             <i class="fas fa-lock"></i>
                         </span>
                         <span class="font-weight-bold">Confirm & Pay</span>
-
                     </button>
                     <p class="small stand-out-text my-0">
                         <span class="icon">
@@ -163,7 +159,8 @@
             </form>
         </div>
     </div>
-</div>
+</main>
+<!-- Loading Overlay -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">

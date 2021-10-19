@@ -774,7 +774,7 @@ h3{
 }
 
 #step-3-success::after {
-    content: "Checkout";
+    content: "Confirmation";
     font-size: 18px;
     font-weight: 700;
     color: var(--Accent);
