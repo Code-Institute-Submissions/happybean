@@ -2,95 +2,96 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <!-- Heading-->
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Our Story</h2>
-                <hr class="w-100 mb-1">
+<!-- Heading-->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Our Story</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<!-- About Section -->
+<main class="container pt-5 ">
+    <div class="row">
+        <div class="col-12 col-md-6 our-story-img">
+            <img class="block-connect-img" src="{% static 'images/our_story_img.png' %}" alt="Coffee mug on table">
+        </div>
+        <div class="col-12 col-md-6 block ps-3">
+            <h2 class="block-heading">Where it all started</h2>
+            <p class="block-p">
+                Established in 2009, the story of Happy Bean started. It has been the founder's dream to create something which will bring people joy and be sustainable. They started the Happy Bean a small space in Dublin and are so proud that it has grown to a great community of coffee lovers!</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 col-md-6 block ps-3">
+            <h2 class="block-heading">Our Team</h2>
+            <p class="block-p ">
+                Our team is made up of a group of coffee-obsessed professionals who are passionate about mastering coffee flavour. Here at Happy Bean, we’re a coffee company on a mission to transform your favorite coffee ritual into an extraordinary daily experience.</p>
+        </div>
+        <div class="col-12 col-md-6 our-story-img">
+            <img class="block-connect-img" src="{% static 'images/our_team.png' %}" alt="Black and white image of team huddle">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 col-md-6 our-story-img">
+            <img class="block-connect-img" src="{% static 'images/our_beans.png' %}" alt="Glass splilling beans on table">
+        </div>
+        <div class="col-12 col-md-6 block ps-3">
+            <h2 class="block-heading">Our Beans</h2>
+            <p class="block-p">
+                By sourcing and curating a range of single-origin coffees from the most celebrated growing regions from around the world, Happy Bean offers each client the opportunity to experience the most exciting speciality coffee at home. We are not about one-size-fits-all house blends, but instead, encourage customers to enjoy the variety of coffees we offer.</p>
+        </div>
+    </div>
+</main>
+<hr>
+<!-- Our Connect & Learn section -->
+<section class="container connect-section">
+    <div class="row">
+        <h2 class="connect-h">Connect & Learn</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'coffee_corner' %}" class="btn"><img src="{% static 'images/coffee_corner.png' %}"
+                        class="card-img-top" alt="Coffee, clock and flower vase">
+                    <div class="card-body">
+                        <h3 class="card-title">Visit the Coffee Corner</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'faq' %}" class="btn"><img src="{% static 'images/faq.png' %}" class="card-img-top"
+                        alt="Clipboard with Coffee">
+                    <div class="card-body">
+                        <h3 class="card-title">FAQ</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'contact_us' %}" class="btn"><img src="{% static 'images/contact_us.png' %}"
+                        class="card-img-top" alt="Coffee and Phone">
+                    <div class="card-body">
+                        <h3 class="card-title">Contact Us</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <!-- About Section -->
-    <main class="container pt-5 ">
-        <div class="row">
-            <div class="col-12 col-md-6 our-story-img">
-                <img class="block-connect-img" src="{% static 'images/our_story_img.png' %}"  alt="">
-            </div>
-            <div class="col-12 col-md-6 block ">
-                <h2 class="block-heading">Where it all started</h2>
-                <p class="block-p">
-                    Established in 2009, the story of Happy Bean started. It has been the founder's dream to create a something which will bring people joy and be sustainable. They started the Happy Bean a small space in Dublin and are so proud that it has grown to a great community of coffee lovers! </p>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-12 col-md-6 block">
-                <h2 class="block-heading">Our Team</h2>
-                <p class="block-p ">
-                    Our team is made up of a group of coffee obsessed professionals who are passionate about mastering coffee flavour. Here at Happy Bean, we’re a coffee company on a mission to transform your favorite coffee ritual into an extraordinary daily experience.</p>
-            </div>
-            <div class="col-12 col-md-6 ">
-                <img class="block-connect-img" src="{% static 'images/our_team.png' %}"  alt="">
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img class="block-connect-img" src="{% static 'images/our_beans.png' %}"  alt="">
-            </div>
-            <div class="col-12 col-md-6 block">
-                <h2 class="block-heading">Our Beans</h2>
-                <p class="block-p">
-                    By sourcing and curating a range of single-origin coffees from the most celebrated growing regions from around the world, Happy Bean offers each client the opportunity to experience the most exciting specialty coffee at home. We are not about one-size-fits-all house blends, but instead encourage customers to enjoy the variety of coffees we offer. </p>
-            </div>
-        </div>
-    </main>
-
-    <hr>
-
-    <!-- Our Connect & Learn section -->
-    <section class="container connect-section" >
-        <div class="row">
-            <h2 class="connect-h">Connect & Learn</h2>
-        </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'coffee_corner' %}" class="btn"><img src="{% static 'images/coffee_corner.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">Visit the Coffee Corner</h3>
-                </div></a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'faq' %}" class="btn"><img src="{% static 'images/faq.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">FAQ</h3>
-                </div></a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'contact_us' %}" class="btn"><img src="{% static 'images/contact_us.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">Contact Us</h3>
-                </div></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+</section>
 {% endblock %}
-
-

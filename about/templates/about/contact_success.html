@@ -12,19 +12,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <!-- Heading-->
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Contact Us</h2>
-                <hr class="w-100 mb-1">
-            </div>
+<!-- Heading-->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Contact Us</h2>
+            <hr class="w-100 mb-1">
         </div>
     </div>
-    <div class="container mb-5" style="height: 50vh;">
-        <div class="row pt-3">
+</div>
+<!-- Contact From Success Message-->
+<main class="container mb-5" style="height: 50vh;">
+    <div class="row pt-3">
         <div class="col-12 col-md-6">
-            <img class="block-connect-img" src="{% static 'images/coffee_corner1.png' %}"  alt="">
+            <img class="block-connect-img" src="{% static 'images/coffee_corner1.png' %}" alt="Coffee Cup and beans">
         </div>
         <div class="col-12 col-md-6 mt-5">
             <h3 class="smaller-heading">Success! Thank you for your message. We will be in contact soon.</h3>
@@ -34,7 +35,7 @@
             <a href="{% url 'coffee_corner' %}" class="btn action-btn mt-3">
                 <span class="text-uppercase">Visit the Coffee Corner</span>
             </a>
-            </div>
         </div>
     </div>
+</main>
 {% endblock %}
