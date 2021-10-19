@@ -1176,13 +1176,26 @@ footer{
     background-color:var(--Accent);
 }
 
+@media only screen and (min-width: 767px) {
+    .social-icons {
+        padding-left:0px;
+      }
+    }
+
+@media only screen and (min-width: 992x) {
+    .social-icons {
+        padding-left:2rem;
+        }
+    }
+
 /* COPYRIGHT TEXT */
 .copyright-text{
-    color: var(--SubtleText);
+    color: var(--Light);
 }
 
 #link-external{
     text-decoration: underline;
+    color: var(--Light);
 }
 
 #link-external:hover{
