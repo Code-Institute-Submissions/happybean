@@ -1,3 +1,25 @@
+/* --------------------------------------------------- */
+/*                  ROOT VARIABLES                     */
+/* --------------------------------------------------- */
+
+:root {
+  --PrimaryBrand: #E47068;
+  --SecondaryBrand: #e7827b;
+  --TertiaryBrand: #eb948e;
+  --DarkShades: #343E47;
+  --DarkAccent: #343E47;
+  --LightAccent: #9596A1;
+  --Accent: #a26b25;
+  --Dark: #242020;
+  --Light: #E1E8EA;
+  --bgWhite: #FFFEFC;
+  --ExtraLight: #F4F3F3 ;
+  --Text: #333e47;
+  --SubtleText: #999999;
+  --Success: #6fab69;
+  --Error: #f44336;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -5,8 +27,8 @@
   padding: 10px 12px;
   border: 1px solid transparent;
   border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
+  background-color: var(--bgWhite);
+  box-shadow: 0 1px 3px 0 var(--ExtraLight);
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
@@ -18,15 +40,16 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 var(--Light);
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+  background-color: var(--bgWhite) !important;
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: var(--LightAccent);
+  color: #dc3545
 }
 
 .fieldset-label {
@@ -36,35 +59,35 @@
 
 #payment-form .form-control,
 #card-element {
-  color: #000;
-  border: 1px solid #000;
+  color: var(--Dark);
+  border: 1px solid var(--Dark);
 }
 
 select,
 select option {
-    color: #000000;
+  color: var(--DarkAccent);
 }
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+  color: var(--LightAccent) !important;
 }
 
 #loading-overlay {
-	display: none;
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 162, 184, .85);
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 62, 71,0.85);
+  z-index: 9999;
 }
 
 .loading-spinner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
 }
