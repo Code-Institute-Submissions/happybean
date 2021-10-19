@@ -16,7 +16,7 @@
 
 {% block content %}
 <div class="container">
-    <!-- Heading-->
+    <!-- Heading -->
     <div class="row pb-4">
         <div class="col text-center mt-3">
             <h2 class="logo-font">The Coffee Forum</h2>
@@ -24,22 +24,24 @@
         </div>
     </div>
 </div>
-
-<!--Intro section-->
+<!-- Intro section -->
 <section class="container">
     <div class="row">
         <div class="col-12 col-md-5">
-            <img src="{% static 'images/signup.png' %}" alt="Coffee, book, pen and keyboard on table" class="block-img" height="400">
+            <img src="{% static 'images/signup.png' %}" alt="Coffee, book, pen and keyboard on table" class="block-img"
+                height="400">
         </div>
         <div class="col-12 col-md-7 mt-3">
             <h3 class="block">Discuss Topics on Coffee</h3>
-            <p>To discuss all things coffee related! Here you can ask tips, discuss recipies, share resources and give your reviews on certain coffees. We created a space so that everyone can connect adn learn from each other</p>
-            <p>You can either start a new Thread or add a Comment to one of the existing Threads by clicking on the title of the thread</p>
+            <p>To discuss all things coffee related! Here you can ask tips, discuss recipies, share resources and give
+                your reviews on certain coffees. We created a space so that everyone can connect adn learn from each
+                other</p>
+            <p>You can either start a new Thread or add a Comment to one of the existing Threads by clicking on the
+                title of the thread</p>
         </div>
     </div>
     <hr class="w-100 mb-1">
 </section>
-  
 <!--Thread section-->
 <main class="container mb-5 mt-5">
     <div class="row">
@@ -101,20 +103,19 @@
                 </span>
             </li>
             {% if page_obj.has_next %}
-            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.next_page_number }}">next</a></li>
+            <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.next_page_number }}">next</a>
+            </li>
             <li class="page-item"> <a class="page-link link-text" href="?page={{ page_obj.paginator.num_pages }}">last
                     &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
 </main>
-
 <!-- Scroll up button -->
 <button id="scrollButton" title="Go to top">
     <i class="fas fa-angle-double-up scrollup-arrow"></i>
 </button>
 {% endblock %}
-
 
 {% block postloadjs %}
 {{ block.super }}

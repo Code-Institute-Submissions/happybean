@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<section class="container">
     <!-- Orginal code from with modifications for project - navigation: https://www.youtube.com/watch?v=knGk9aUr4Do -->
     <!-- Navigation -->
     <div class="row">
@@ -45,10 +45,9 @@
                 Back to Forum</a>
         </div>
     </div>
-</div>
-
+</section>
 <!-- Thread Section -->
-<div class="container"> 
+<main class="container">
     <div class="row thread main-thread ms-3 me-3">
         <div class="col pt-3 pb-3">
             <h3><strong>Topic: {{ thread.title }}</strong></h3>
@@ -56,18 +55,17 @@
             </p>
             <p>{{ thread.description }}</p>
             <div class="pt-1 pb-2">
-            <!-- If the user created the thread or it is an admin user, they will see the option to edit or delete the thread -->
-            {% if request.user == thread.creator or request.user.is_superuser %}
+                <!-- If the user created the thread or it is an admin user, they will see the option to edit or delete the thread -->
+                {% if request.user == thread.creator or request.user.is_superuser %}
                 <a href="{% url 'edit_thread' thread.pk %} " class="btn action-btn btn-sm">Edit</a>
                 <a href="{% url 'delete_thread' thread.pk %}" class="btn alt-action-btn btn-sm">Delete</a>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
-</div>
-
+</main>
 <!-- Comment section: No comments -->
-<div class="container mb-5" >
+<section class="container mb-5">
     {% if comments %}
     <div class="row mt-1">
         <div class="col me-3">
@@ -84,24 +82,25 @@
         </div>
     </div>
     {% for comment in comments %}
-        <div class="row thread m-3">
-            <div class="col-sm-10 pb-3">
-                <p class="pt-3"><em>This comment is by <strong> {{ comment.creator }}</strong> posted on {{ comment.date_created }}</em></p>
-                <br>
-                <p>{{ comment.post }}</p>
-                <!-- If the user added the comment or it is an admin user, they will see the option to edit or delete the comment -->
-                {% if request.user == comment.creator or request.user.is_superuser %}
-                <br>
-                <div class="pt-1 pb-2">
-                    <!-- Edit comment -->
-                    <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
-                        class="btn action-btn btn-sm">Edit</a>
-                    <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
-                        class="btn alt-action-btn btn-sm">Delete</a>
-                    {% endif %}
-                </div>
+    <div class="row thread m-3">
+        <div class="col-sm-10 pb-3">
+            <p class="pt-3"><em>This comment is by <strong> {{ comment.creator }}</strong> posted on
+                    {{ comment.date_created }}</em></p>
+            <br>
+            <p>{{ comment.post }}</p>
+            <!-- If the user added the comment or it is an admin user, they will see the option to edit or delete the comment -->
+            {% if request.user == comment.creator or request.user.is_superuser %}
+            <br>
+            <div class="pt-1 pb-2">
+                <!-- Edit comment -->
+                <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}?page={{ comments.number }}"
+                    class="btn action-btn btn-sm">Edit</a>
+                <a href="{% url 'delete_comment' comment.pk %}?next={{ request.path }}"
+                    class="btn alt-action-btn btn-sm">Delete</a>
+                {% endif %}
             </div>
         </div>
+    </div>
     {% endfor %}
     {% else %}
     <div class="row mb-5">
@@ -112,14 +111,11 @@
         </div>
     </div>
     {% endif %}
-</div>
-
-
+</section>
 <!-- Scroll up button -->
 <button id="scrollButton" title="Go to top">
     <i class="fas fa-angle-double-up scrollup-arrow"></i>
 </button>
-
 {% endblock %}
 
 {% block postloadjs %}
