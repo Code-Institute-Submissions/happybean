@@ -1,3 +1,6 @@
+"""
+Forum Admin Classes
+"""
 from django.contrib import admin
 from .models import Thread, Comment
 
