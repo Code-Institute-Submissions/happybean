@@ -1,598 +1,677 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}
+- Coffee Corner
+{% endblock %}
+
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <!-- Heading-->
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Coffee Corner</h2>
-                <hr class="w-100 mb-1">
+<!-- Heading -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Coffee Corner</h2>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<!-- Information & Accordian -->
+<main class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="{% static 'images/coffee_corner1.png' %}" alt="Coffee and beans on table" class="block-img">
+        </div>
+        <!-- Introduction -->
+        <div class="col-12 col-md-6">
+            <h3 class="block">Learn & Enjoy More</h3>
+            <p>Our vision for the Coffee Corner is to be a place where you will learn more about your favourite coffee but also discover some new ideas to try. We want everyone to enjoy the same quality coffee at home as you would at any cafe.</p>
+            <h4 class="smaller-heading">Some of the things you can expect to see in the Coffee Corner: </h4>
+            <ul>
+                <li class="coffee-list"><i class="fas fa-book"></i> Brewing Guide</li>
+                <li class="coffee-list"><i class="fas fa-info-circle"></i> Coffee Tips</li>
+                <li class="coffee-list"><i class="fas fa-mug-hot"></i> Coffee Recipies</li>
+            </ul>
+            <p>Click on the sections below and you will see more info!</p>
+        </div>
+    </div>
+    <!-- Brewing Guides -->
+    <div class="row">
+        <div class="col-12">
+            <div class="accordion" id="accordion-flush-brew-guide">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-brew-guide-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-brew-guide-collapseOne" aria-expanded="false"
+                            aria-controls="flush-brew-guide-collapseOne">
+                            <h4 class="subtitle"> Brewing Guide</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-brew-guide-collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="flush-brew-guide-headingOne" data-bs-parent="#accordion-flush-brew-guide">
+                        <div class="accordion-body container">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Aeropress -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#aeropressopen">
+                                            <img src="{% static 'images/aeropress_icon.png' %}" class="card-img-top"
+                                                alt="aeropress icon">
+                                            <h3 class="card-title">Aeropress</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="aeropressopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="aeropressopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="aeropressopenLabel">Aeropress</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 2min
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> 200ml
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Insert filter into holder and lock in place</li>
+                                                                <li>Rinse brewer and filter paper with hot water</li>
+                                                                <li>Sit the main part of the Aeropress on a cup</li>
+                                                                <li>Add ground coffee</li>
+                                                                <li>Add hot water</li>
+                                                                <li>Stir coffee</li>
+                                                                <li> Put press in place, seal to create a vacuum</li>
+                                                                <li>Wait one minute</li>
+                                                                <li>Push the plunger down until coffee is poured</li>
+                                                                <li>Pull press up one inch</li>
+                                                                <li>Pull press up slightly</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chemex -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#chemexopen">
+                                            <img src="{% static 'images/chemex_icon.png' %}" class="card-img-top"
+                                                alt="Chemex icon">
+                                            <h3 class="card-title">Chemex</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="chemexopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="chemexopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="chemexopenLabel">Chemex</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 8min
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> 1 litre
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Boil water</li>
+                                                                <li>Rinse filter and brewer with hot water</li>
+                                                                <li>Add ground coffee to filter</li>
+                                                                <li>Use pouring or regular kettle</li>
+                                                                <li> Pour slowly, enough to saturate the coffee</li>
+                                                                <li>Wait as water travels through the coffee bed</li>
+                                                                <li>Pour again with slow, circular movements </li>
+                                                                <li>Let sit until all water has filtered through</li>
+                                                                <li>Remove filter, coffee is ready to pour</li>
+                                                            </ol>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Espresso -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#espressoopen">
+                                            <img src="{% static 'images/espresso_icon.png' %}" class="card-img-top"
+                                                alt="Espresso maker icon">
+                                            <h3 class="card-title">Espresso</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="espressoopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="espressoopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="espressoopenLabel">Espresso</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 20-30 seconds
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Beans or Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i
+                                                                        class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> Fill the coffee machine's
+                                                                    water tank
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Depending on the machine, either pour beans or
+                                                                    ground at the top or fill your portafilter basket to
+                                                                    the top with ground coffee</li>
+                                                                <li>If you are using the portafilter basket, using a
+                                                                    tamper, apply even pressure to the coffee grounds to
+                                                                    ensure it’s level and place your portafilter into
+                                                                    the espresso machine’s group head</li>
+                                                                <li>Start the water flowing by pushing the button, or
+                                                                    switching on your espresso machine</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Frenchpress -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn" data-bs-toggle="modal"
+                                            data-bs-target="#frenchpressopen">
+                                            <img src="{% static 'images/frenchpress_icon.png' %}" class="card-img-top"
+                                                alt="Frenchpress icon">
+                                            <h3 class="card-title">Frenchpress</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="frenchpressopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="frenchpressopenLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="frenchpressopenLabel">Frenchpress</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 3.5 min
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> 30g coffee to 500ml water
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Preheat the press with hot water and discard</li>
+                                                                <li>Add coarsely ground coffee to the press and cover
+                                                                    the coffee with water to bloom, allow to sit for
+                                                                    30secs</li>
+                                                                <li>Stir the coffee twice and pour the remainder of the
+                                                                    water into the press</li>
+                                                                <li>Leave to brew for 3.5 minutes</li>
+                                                                <li>Scoop out any floating grounds of coffee, and throw
+                                                                    them away</li>
+                                                                <li>Place the filter on top of the press and gently push it
+                                                                    down</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Moka Pot -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#mokapotopen">
+                                            <img src="{% static 'images/mokapot_icon.png' %}" class="card-img-top"
+                                                alt="Moka pot icon">
+                                            <h3 class="card-title">Moka Pot</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="mokapotopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="mokapotopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="mokapotopenLabel">Moka Pot</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 8 min
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> Fill lower chamber
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Unscrew the top from the safety bottom</li>
+                                                                <li>Remove the brew basket</li>
+                                                                <li>Add hot water to just below safety valve</li>
+                                                                <li>Add ground coffee to brew basket</li>
+                                                                <li>Ensure coffee is level, no need to pack it</li>
+                                                                <li>Reassemble brewer</li>
+                                                                <li>With lid open, place pot on heat (low-med)</li>
+                                                                <li>Pressure forces coffee into the upper chamber</li>
+                                                                <li>As coffee pales and bubbles, move from the heat</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- V60 -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#v60open">
+                                            <img src="{% static 'images/v60_icon.png' %}" class="card-img-top" alt="v-60 icon">
+                                            <h3 class="card-title">V60</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="v60open" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="v60openLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="v60openLabel">V60</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <ul>
+                                                                <li>
+                                                                    <i class="material-icons icons ">schedule</i>
+                                                                    <strong>Brewing Time:</strong> 20 seconds
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">coffee_maker</i>
+                                                                    <strong>Grind Type:</strong> Ground
+                                                                </li>
+                                                                <li>
+                                                                    <i class="material-icons icons prefix">water_drop</i>
+                                                                    <strong>Water:</strong> 250g
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>Steps:
+                                                            <ol>
+                                                                <li>Position V60 over the cup or glass beaker</li>
+                                                                <li>Place the filter paper in the V60, rinse the paper
+                                                                    with hot water and empty the cup.</li>
+                                                                <li>Put the coffee into the V60 and level the coffee
+                                                                </li>
+                                                                <li>Slowly pour the hot water into the centre of the
+                                                                    coffee, avoid pouring water on the
+                                                                    paper directly</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!--  Section -->
-    <section class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img src="{% static 'images/coffee_corner1.png' %}" alt="" class="block-img">
-            </div>
-        
-            <div class="col-12 col-md-6">
-                <h3 class="block">Learn & Enjoy More</h3>
-                <p>Our vision for the Coffee Corner is to be a place where you will learn more about your favourite coffee but also discover some new ideas to try. We want everyone to enjoy the same quality coffee at home as you would at any cafe.</p>
-                <h4 class="smaller-heading">Some of the things you can expect to see in the Coffee Corner: </h4>
-                <ul> 
-                    <li class="coffee-list"><i class="fas fa-book"></i> Brewing Guide</li>
-                    <li class="coffee-list"><i class="fas fa-info-circle"></i> Coffee Tips</li>
-                    <li class="coffee-list"><i class="fas fa-mug-hot"></i> Coffee Recipies</li>
-                </ul>
-                <p>Click on the sections below and you will see more info!</p>
-            
-            </div>
-      
-      </div>
-      <!-- Brewing Guides -->
-      <div class="row">
-        <div class="col-12">
-            <div class="accordion " id="accordion-flush-brew-guide">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-brew-guide-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-brew-guide-collapseOne" aria-expanded="false" aria-controls="flush-brew-guide-collapseOne">
-                        <h4 class="subtitle"> Brewing Guide</h4>
-                    </button>
-                  </h2>
-                  <div id="flush-brew-guide-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-brew-guide-headingOne" data-bs-parent="#accordion-flush-brew-guide">
-                    <div class="accordion-body container">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <!-- Aeropress -->
-                            <div class="col">
-                              <div class="h-100 ">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#aeropressopen">
-                                    <img src="{% static 'images/aeropress_icon.png' %}" class="card-img-top" alt="">
-                                    <h3 class="card-title">Aeropress</h3>
-                                </button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="aeropressopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aeropressopenLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title" id="aeropressopenLabel">Aeropress</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <ul>
-                                                    <li> 
-                                                        <i class="material-icons icons ">schedule</i> 
-                                                        <strong>Brewing Time:</strong> 2min
-                                                    </li>
-                                                    <li> 
-                                                        <i class="material-icons icons prefix">coffee_maker</i>
-                                                        <strong>Grind Type:</strong> Ground
-                                                    </li>
-                                                    <li> 
-                                                        <i class="material-icons icons prefix">water_drop</i>  
-                                                        <strong>Water:</strong> 200ml
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div>Steps:
-                                                <ol>
-                                                    <li>Insert filter into holder and lock in place</li>
-                                                    <li>Rinse brewer and filter paper with hot water</li>
-                                                    <li>Sit the main part of the Aeropress on cup</li>
-                                                    <li>Add ground coffee</li>
-                                                    <li>Add hot water</li>
-                                                    <li>Stir coffee</li>
-                                                    <li> Put press in place, seal to create a vacuum</li>
-                                                    <li>Wait one minute</li>
-                                                    <li>Push plunger down until coffee is poured</li>
-                                                    <li>Pull press up one inch</li>
-                                                    <li>Pull press up slightly</li>
-                                                </ol>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Chemex -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#chemexopen">
-                                        <img src="{% static 'images/chemex_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">Chemex</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="chemexopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="chemexopenLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="chemexopenLabel">Chemex</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <ul>
-                                                        <li> 
-                                                            <i class="material-icons icons ">schedule</i> 
-                                                            <strong>Brewing Time:</strong> 8min
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">coffee_maker</i>
-                                                            <strong>Grind Type:</strong> Ground
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">water_drop</i>  
-                                                            <strong>Water:</strong> 1 litre
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div>Steps:
-                                                    <ol>
-                                                        <li>Boil water</li>
-                                                        <li>Rinse filter and brewer with hot water</li>
-                                                        <li>Add ground coffee to filter</li>
-                                                        <li>Use pouring or regular kettle</li>
-                                                        <li> Pour slowly, enough to saturate the coffee</li>
-                                                        <li>Wait as water travels through coffee bed</li>
-                                                        <li>Pour again with slow, circular movements </li>
-                                                        <li>Let sit until all water has filtered through</li>
-                                                        <li>Remove filter, coffee is ready to pour</li>
-                                                    </ol>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <!-- Espresso -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#espressoopen">
-                                        <img src="{% static 'images/espresso_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">Espresso</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="espressoopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="espressoopenLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="espressoopenLabel">Espresso</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                                <div class="modal-body">
-                                                    <div>
-                                                    <ul>
-                                                        <li> 
-                                                            <i class="material-icons icons ">schedule</i> 
-                                                            <strong>Brewing Time:</strong> 20-30 seconds
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">coffee_maker</i>
-                                                            <strong>Grind Type:</strong> Beans or Ground
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">water_drop</i>  
-                                                            <strong>Water:</strong> Fill the coffee machine's water tank
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div>Steps:
-                                                    <ol>
-                                                        <li>Depending on the machine, either pour beans or ground at the top or fill your portafilter basket to the top with ground coffee</li>
-                                                        <li>If you are using the portafilter basket, using a tamper, apply even pressure to the coffee grounds to ensure it’s level and place your portafilter into the espresso machine’s group head</li>
-                                                        <li>Start the water flowing by pushing the button, or switching on your espresso machine</li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <!-- Frenchpress -->
-                            <div class="col">
-                              <div class="h-100 ">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#frenchpressopen">
-                                    <img src="{% static 'images/frenchpress_icon.png' %}" class="card-img-top" alt="">
-                                    <h3 class="card-title">Frenchpress</h3>
-                                </button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="frenchpressopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="frenchpressopenLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title" id="frenchpressopenLabel">Frenchpress</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <ul>
-                                                    <li> 
-                                                        <i class="material-icons icons ">schedule</i> 
-                                                        <strong>Brewing Time:</strong> 3.5 min
-                                                    </li>
-                                                    <li> 
-                                                        <i class="material-icons icons prefix">coffee_maker</i>
-                                                        <strong>Grind Type:</strong> Ground
-                                                    </li>
-                                                    <li> 
-                                                        <i class="material-icons icons prefix">water_drop</i>  
-                                                        <strong>Water:</strong> 30g coffee to 500ml water
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div>Steps:
-                                                <ol>
-                                                    <li>Preheat the press with hot water and discard</li>
-                                                    <li>Add coarsely ground coffee to the press and cover the coffee with water to bloom, allow to sit for 30secs</li>
-                                                    <li>Stir the coffee twice and pour the remainder of the water into the press</li>
-                                                    <li>Leave to brew for 3.5 minutes</li>
-                                                    <li>Scoop out any floating grounds of coffee, and throw them away</li>
-                                                    <li>Place the filter on top of the press and gently push down</li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Moka Pot -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#mokapotopen">
-                                        <img src="{% static 'images/mokapot_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">Moka Pot</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="mokapotopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="mokapotopenLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="mokapotopenLabel">Moka Pot</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <ul>
-                                                        <li> 
-                                                            <i class="material-icons icons ">schedule</i> 
-                                                            <strong>Brewing Time:</strong> 8 min
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">coffee_maker</i>
-                                                            <strong>Grind Type:</strong> Ground
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">water_drop</i>  
-                                                            <strong>Water:</strong> Fill lower chamber
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div>Steps:
-                                                    <ol>
-                                                        <li>Unscrew the top from the bottom</li>
-                                                        <li>Remove the brew basket</li>
-                                                        <li>Add hot water to just below safety valve</li>
-                                                        <li>Add ground coffee to brew basket</li>
-                                                        <li>Ensure coffee is level, no need to pack it</li>
-                                                        <li>Reassemble brewer</li>
-                                                        <li>With lid open, place pot on heat (low-med)</li>
-                                                        <li>Pressure forces coffee into upper chamber</li>
-                                                        <li>As coffee pales and bubbles, move from heat</li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <!-- V60 -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#v60open">
-                                        <img src="{% static 'images/v60_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">V60</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="v60open" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="v60openLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="v60openLabel">V60</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <ul>
-                                                        <li> 
-                                                            <i class="material-icons icons ">schedule</i> 
-                                                            <strong>Brewing Time:</strong> 20 seconds
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">coffee_maker</i>
-                                                            <strong>Grind Type:</strong> Ground
-                                                        </li>
-                                                        <li> 
-                                                            <i class="material-icons icons prefix">water_drop</i>  
-                                                            <strong>Water:</strong> 250g
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div>Steps:
-                                                    <ol>
-                                                        <li>Position V60 over the cup or glass beaker</li>
-                                                        <li>Place the filter paper in the V60, rinse the paper with hot water and empty the cup.</li>
-                                                        <li>Put the coffee into the V60 and level the coffee</li>
-                                                        <li>Slowly pour the hot water into the centre of the coffee, avoid pouring water on the
-                                                            paper directly</li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-      </div>
-      <!-- Coffee Tips -->
-      <div class="row">
+    <!-- Coffee Tips -->
+    <div class="row">
         <div class="col-12">
             <div class="accordion " id="accordion-coffee-tips">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-coffee-tips">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coffee-tipsOne" aria-expanded="false" aria-controls="flush-coffee-tipsOne">
-                        <h4 class="subtitle">Coffee Tips</h4>
-                    </button>
-                  </h2>
-                  <div id="flush-coffee-tipsOne" class="accordion-collapse collapse" aria-labelledby="flush-coffee-tips" data-bs-parent="#accordion-coffee-tips">
-                    <div class="accordion-body container">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <!-- How to Store Coffee Beans -->
-                            <div class="col">
-                              <div class="h-100 ">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#storingopen">
-                                    <img src="{% static 'images/store_icon.png' %}" class="card-img-top" alt="">
-                                    <h3 class="card-title">How to Store Coffee Beans</h3>
-                                </button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="storingopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="storingopenLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                        <h5 class="modal-title" id="storingopenLabel">How to Store Coffee Beans</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>The basics of storing your fresh coffee beans:
-                                                <ul>
-                                                    <li><i class="fas fa-mug-hot icons"></i> 
-                                                        Decrease air movement
-                                                    </li>
-                                                    <li><i class="fas fa-mug-hot icons"></i>
-                                                        Keep the ambient temperature fairly consistent
-                                                    </li>
-                                                    <li><i class="fas fa-mug-hot icons"></i>
-                                                        Keep beans well away from moisture
-                                                    </li>
-                                                    <li><i class="fas fa-mug-hot icons"></i>
-                                                        Limit beans exposure to light.
-                                                    </li>
-                                                </ul>
+                    <h2 class="accordion-header" id="flush-coffee-tips">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-coffee-tipsOne" aria-expanded="false"
+                            aria-controls="flush-coffee-tipsOne">
+                            <h4 class="subtitle">Coffee Tips</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-coffee-tipsOne" class="accordion-collapse collapse"
+                        aria-labelledby="flush-coffee-tips" data-bs-parent="#accordion-coffee-tips">
+                        <div class="accordion-body container">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- How to Store Coffee Beans -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn" data-bs-toggle="modal"
+                                            data-bs-target="#storingopen">
+                                            <img src="{% static 'images/store_icon.png' %}" class="card-img-top" alt="Coffee storage icon">
+                                            <h3 class="card-title">How to Store Coffee Beans</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="storingopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="storingopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="storingopenLabel">How to Store
+                                                            Coffee Beans</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>The basics of storing your fresh coffee beans:
+                                                            <ul>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Decrease air movement
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Keep the ambient temperature fairly consistent
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Keep beans well away from moisture
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Limit beans exposure to light.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
-                              </div>
-                            </div>
-                            <!-- Why the grind matters -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#grindopen">
-                                        <img src="{% static 'images/grind_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">Why the grind matters</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="grindopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="grindopenLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="grindopenLabel">Why the grind matters</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>Grind size affects contact time, extraction rate, and flow rate of your brewing:
-                                                    <ul>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            Extraction rates of coffee grounds increase with a larger surface area
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            To increase surface area, grind your coffee finer
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            The higher the extraction rate, the less contact time needed
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            Finer grinds reduce the flow rate of water, increasing contact time
-                                                        </li>
-                                                    </ul>
+                                <!-- Why the grind matters -->
+                                <div class="col">
+                                    <div class="h-100">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn " data-bs-toggle="modal"
+                                            data-bs-target="#grindopen">
+                                            <img src="{% static 'images/grind_icon.png' %}" class="card-img-top" alt="Coffee grinder icon">
+                                            <h3 class="card-title">Why the grind matters</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="grindopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="grindopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="grindopenLabel">Why the grind
+                                                            matters</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>Grind size affects contact time, extraction rate, and flow
+                                                            rate of your brewing:
+                                                            <ul>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Extraction rates of coffee grounds increase with a
+                                                                    larger surface area
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    To increase surface area, grind your coffee finer
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    The higher the extraction rate, the less contact
+                                                                    time needed
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    Finer grinds reduce the flow rate of water,
+                                                                    increasing contact time
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
                                     </div>
-                                  </div>
-                            </div>
-                            <!-- Flavour Coffee with Spices -->
-                            <div class="col">
-                                <div class="h-100 ">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#spicesopen">
-                                        <img src="{% static 'images/spice_icon.png' %}" class="card-img-top" alt="">
-                                        <h3 class="card-title">Flavour Coffee with Spices</h3>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="spicesopen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="spicesopenLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="spicesopenLabel">Flavour Coffee with Spices</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>Good coffee has its own natural, often very complex sensory profile however if you are looking to spice up your coffee, here are our recommendations:
-                                                    <ul>
-                                                        <br>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            <strong>Coffee with vanilla:</strong> If you have a sweet tooth and appreciate mild flavors, choose vanilla. The inconspicuous vanilla pod hides wonderful, balsamic seeds that will emphasize the caramel and almond aftertaste, as well as subtly tweak the natural sweetness of the brew. What’s more, vanilla complements the other spices perfectly, balancing them and creating a sweet and spicy indulgence for the senses.
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            <strong>Coffee with cinnamon:</strong> A pinch of cinnamon in coffee will enrich the drink with its characteristic sweetness combined with a delicate, pleasantly warming spiciness.You can use ground cinnamon or cinnamon sticks, which will additionally strengthen the visual appeal of the beverage.
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            <strong>Coffee with cardamom</strong> With its subtle, warm aroma and an original camphor-lemon aftertaste, which is an interesting match for coffees with a fruit flavor profile.
-                                                        </li>
-                                                        <li><i class="fas fa-mug-hot icons"></i>
-                                                            <strong>Coffee with star anise:</strong> It has a very distinct aroma, and is quite spicy with a noticeable herbal aftertaste similar to licorice. You can choose ground anise or pods in the shape of stars.
-                                                        </li>
-                                                    </ul>
+                                </div>
+                                <!-- Flavour Coffee with Spices -->
+                                <div class="col">
+                                    <div class="h-100 ">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn" data-bs-toggle="modal"
+                                            data-bs-target="#spicesopen">
+                                            <img src="{% static 'images/spice_icon.png' %}" class="card-img-top" alt="Coffee and spice icon">
+                                            <h3 class="card-title">Flavour Coffee with Spices</h3>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="spicesopen" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="spicesopenLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="spicesopenLabel">Flavour Coffee with
+                                                            Spices</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>Good coffee has its natural, often very complex sensory profile however if you are looking to spice up your coffee, here are our recommendations:
+                                                            <ul>
+                                                                <br>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    <strong>Coffee with vanilla:</strong> If you have a sweet tooth and appreciate mild flavours, choose vanilla. The inconspicuous vanilla pod hides wonderful, balsamic seeds that will emphasize the caramel and almond aftertaste, as well as subtly tweak the natural sweetness of the brew. What’s more, vanilla complements the other spices perfectly, balancing them and creating a sweet and spicy indulgence for the senses.
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    <strong>Coffee with cinnamon:</strong> A pinch of cinnamon in coffee will enrich the drink with its characteristic sweetness combined with a delicate, pleasantly warming spiciness. You can use ground cinnamon or cinnamon sticks, which will additionally strengthen the visual appeal of the beverage.
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    <strong>Coffee with cardamom</strong> With its subtle, warm aroma and an original camphor-lemon aftertaste, which is an interesting match for coffees with a fruit flavour profile.
+                                                                </li>
+                                                                <li><i class="fas fa-mug-hot icons"></i>
+                                                                    <strong>Coffee with star anise:</strong> It has a very distinct aroma, and is quite spicy with a noticeable herbal aftertaste similar to liquorice. You can choose ground anise or pods in the shape of stars.
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </div>
-      </div>
-       <!-- Coffee Recipies -->
-       <div class="row">
+    </div>
+    <!-- Coffee Recipies -->
+    <div class="row">
         <div class="col-12">
-            <div class="accordion " id="accordion-coffee-recipies">
+            <div class="accordion" id="accordion-coffee-recipies">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-coffee-recipies">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coffee-recipiesOne" aria-expanded="false" aria-controls="flush-coffee-recipiesOne">
-                        <h4 class="subtitle">Coffee Recipies</h4>
-                    </button>
-                  </h2>
-                  <div id="flush-coffee-recipiesOne" class="accordion-collapse collapse" aria-labelledby="flush-coffee-recipies" data-bs-parent="#accordion-coffee-recipies">
-                    <div class="accordion-body container">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <!-- Americano -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/americano.png' %}" class="card-img-top" alt="americano">
-                                <h3 class="card-title">Americano</h3>
+                    <h2 class="accordion-header" id="flush-coffee-recipies">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-coffee-recipiesOne" aria-expanded="false"
+                            aria-controls="flush-coffee-recipiesOne">
+                            <h4 class="subtitle">Coffee Recipies</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-coffee-recipiesOne" class="accordion-collapse collapse"
+                        aria-labelledby="flush-coffee-recipies" data-bs-parent="#accordion-coffee-recipies">
+                        <div class="accordion-body container">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Americano -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/americano.png' %}" class="card-img-top" alt="americano icon">
+                                    <h3 class="card-title">Americano</h3>
+                                </div>
+                                <!-- Cappucino -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/cappucino.png' %}" class="card-img-top" alt="cappucino icon">
+                                    <h3 class="card-title">Cappucino</h3>
+                                </div>
+                                <!-- Expresso -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/espresso.png' %}" class="card-img-top" alt="expresso icon">
+                                    <h3 class="card-title">Expresso</h3>
+                                </div>
                             </div>
-                            <!-- Cappucino -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/cappucino.png' %}" class="card-img-top" alt="">
-                                <h3 class="card-title">Cappucino</h3>
-                            </div>
-                            <!-- Expresso -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/espresso.png' %}" class="card-img-top" alt="">
-                                <h3 class="card-title">Expresso</h3>
-                            </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <!-- Flat White -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/flat_white.png' %}" class="card-img-top" alt="">
-                                <h3 class="card-title">Americano</h3>
-                            </div>
-                            <!-- Latte -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/latte.png' %}" class="card-img-top" alt="">
-                                <h3 class="card-title">Latte</h3>
-                            </div>
-                            <!-- Macchiato -->
-                            <div class="col h-100">
-                                <img src="{% static 'images/macchiato.png' %}" class="card-img-top" alt="">
-                                <h3 class="card-title">Macchiato</h3>
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <!-- Flat White -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/flat_white.png' %}" class="card-img-top" alt="flatwhite icon">
+                                    <h3 class="card-title">Flat White</h3>
+                                </div>
+                                <!-- Latte -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/latte.png' %}" class="card-img-top" alt="latte icon">
+                                    <h3 class="card-title">Latte</h3>
+                                </div>
+                                <!-- Macchiato -->
+                                <div class="col h-100">
+                                    <img src="{% static 'images/macchiato.png' %}" class="card-img-top" alt="macchiato icon">
+                                    <h3 class="card-title">Macchiato</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
         </div>
-      </div>
-      </section>
-
-    <hr>
-
-    <!-- Our Connect & Learn section -->
-    <section class="container connect-section" >
-        <div class="row">
-            <h2 class="connect-h">Connect & Learn</h2>
-        </div>
+    </div>
+</main>
+<hr>
+<!-- Our Connect & Learn section -->
+<section class="container connect-section">
+    <div class="row">
+        <h2 class="connect-h">Connect & Learn</h2>
+    </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'our_story' %}" class="btn"><img src="{% static 'images/our_story.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">Our Story</h3>
-                </div></a>
-          </div>
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'our_story' %}" class="btn"><img src="{% static 'images/our_story.png' %}"
+                        class="card-img-top" alt="Spoons with coffee">
+                    <div class="card-body">
+                        <h3 class="card-title">Our Story</h3>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'faq' %}" class="btn"><img src="{% static 'images/faq.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">FAQ</h3>
-                </div></a>
-          </div>
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'faq' %}" class="btn"><img src="{% static 'images/faq.png' %}" class="card-img-top"
+                        alt="Clipboard and coffee">
+                    <div class="card-body">
+                        <h3 class="card-title">FAQ</h3>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="col">
-          <div class="h-100 hvr-grow">
-            <a href="{% url 'contact_us' %}" class="btn"><img src="{% static 'images/contact_us.png' %}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h3 class="card-title">Contact Us</h3>
-                </div></a>
-          </div>
+            <div class="h-100 hvr-grow">
+                <a href="{% url 'contact_us' %}" class="btn"><img src="{% static 'images/contact_us.png' %}"
+                        class="card-img-top" alt="Phone and Coffee">
+                    <div class="card-body">
+                        <h3 class="card-title">Contact Us</h3>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-    </section>
-
+    </div>
+</section>
 {% endblock %}
-
-
