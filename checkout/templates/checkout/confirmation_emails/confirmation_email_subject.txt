@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Happy Bean Confirmation for Order Number {{ order.order_number }}
