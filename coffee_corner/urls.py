@@ -1,4 +1,6 @@
-from django.contrib import admin
+"""
+Urls for Coffee Corner application
+"""
 from django.urls import path
 from . import views
 
