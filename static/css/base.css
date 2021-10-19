@@ -271,7 +271,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 100vh;
-    background: url('/static/images/landing.jpg') no-repeat center center fixed;
+    background: url('/static/images/landing_smaller.png') no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80%;
