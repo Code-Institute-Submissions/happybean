@@ -267,14 +267,14 @@ h3{
     min-width: 100vw;
     padding-left: 2rem;
     padding-right: 20px;
-    padding-top: 10rem;
+    padding-top: 5rem;
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 100vh;
-    background: url('/static/images/static/images/mobile_landing_smaller.png') no-repeat center center fixed;
+    background: url('/static/images/landing_smaller.png') no-repeat center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 80%;
+    background-position: 50%;
 }
 
 /* For Tablets */
@@ -283,7 +283,7 @@ h3{
         padding-top: 12.5rem;
         padding-left: 10rem;
         min-height: 100vh;
-        background: url('/static/images/landing_smaller.png') no-repeat center center fixed;
+        background: url('/static/images/landing_smaller.png') no-repeat center center ;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 80%;
@@ -480,7 +480,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 45vh;
-    background: url('/static/images/products.png') no-repeat center center fixed;
+    background: url('/static/images/products.png') no-repeat center center ;
     background-size: cover;
     background-repeat: no-repeat;
 }
