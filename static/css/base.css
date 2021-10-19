@@ -271,7 +271,7 @@ h3{
     padding-bottom: 8px;
     background-color: var(--Accent);
     min-height: 100vh;
-    background: url('/static/images/landing_smaller.png') no-repeat center center fixed;
+    background: url('/static/images/static/images/mobile_landing_smaller.png') no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 80%;
@@ -282,6 +282,11 @@ h3{
     .landing {
         padding-top: 12.5rem;
         padding-left: 10rem;
+        min-height: 100vh;
+        background: url('/static/images/landing_smaller.png') no-repeat center center fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 80%;
     }
 }
 
