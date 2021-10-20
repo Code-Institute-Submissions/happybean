@@ -1,9 +1,18 @@
+"""
+Profiles Form Classes
+"""
 from django import forms
 from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """
+    Profiles Form to render the fields in the form for User Profile
+    """
     class Meta:
+        """
+        Selecting the fields to use.
+        """
         model = UserProfile
         exclude = ('user',)
 
@@ -30,5 +39,5 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = 'profile-form-input'
             self.fields[field].label = False
