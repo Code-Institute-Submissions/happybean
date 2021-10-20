@@ -1,8 +1,14 @@
+"""
+Product App Amin Classes
+"""
 from django.contrib import admin
 from .models import Product, Category, Origin
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Product admin
+    """
     list_display = (
         'category',
         'origin',
@@ -17,6 +23,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Category Admin
+    """
     list_display = (
         'friendly_name',
         'name',
@@ -24,6 +33,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class OriginAdmin(admin.ModelAdmin):
+    """
+    Origin Admin
+    """
     list_display = (
         'friendly_name',
         'name',

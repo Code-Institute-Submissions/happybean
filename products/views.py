@@ -64,7 +64,7 @@ def all_products(request):
             products = products.filter(queries)
 
     # Pagination: https://docs.djangoproject.com/en/3.2/topics/pagination/
-    paginator = Paginator(products, 8)
+    paginator = Paginator(products, 12)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     current_sorting = f'{sort}_{direction}'

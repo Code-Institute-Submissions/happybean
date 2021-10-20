@@ -1,7 +1,6 @@
 """
 Product Form
 """
-
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, Origin
@@ -11,7 +10,6 @@ class ProductForm(forms.ModelForm):
     """
     Product Form to render the fields in the form for products.
     """
-
     class Meta:
         """
         Selecting the fields to use.

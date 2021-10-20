@@ -1,5 +1,5 @@
 """
-Models for Products, Categories and Orgins.
+Models for Products, Categories and Orgins
 """
 from django.db import models
 
