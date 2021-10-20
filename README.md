@@ -180,91 +180,145 @@ Sketches were part of the first phase of the design for this project. Sketches w
 <details>
 <summary>Home (index.html)</summary>
 
-![Wireframe: Home]()
+![Wireframe: Home](/documentation/wireframes/wireframe_home.png)
 </details>
 
 <details>
 <summary>Profile Page (profile.html) - registered users </summary>
 
-![Wireframe: Profile]()
+![Wireframe: Profile](/documentation/wireframes/wireframe_profile.png)
 </details>
 
 <details>
 <summary>Products (products.html, products/<category_name>.html) </summary>
 
-![Wireframe: Products]()
+![Wireframe: Products](/documentation/wireframes/wireframe_products.png)
 </details>
 
 <details>
 <summary>Product Details (product/<product_id>.html) </summary>
 
-![Wireframe: Product Details]()
+![Wireframe: Product Details](/documentation/wireframes/wireframe_product_details.png)
 </details>
 
 <details>
 <summary>Shopping Cart (cart.html)</summary>
 
-![Wireframe: Shopping Cart]()
+![Wireframe: Shopping Cart](/documentation/wireframes/wireframe_cart.png)
 </details>
 
 <details>
 <summary>Checkout (checkout.html) </summary>
 
-![Wireframe: Checkout]()
-</details>
-
-<details>
-<summary>Payment (checkout.html) </summary>
-
-![Wireframe: Payment]()
+![Wireframe: Checkout](/documentation/wireframes/wireframe_checkout.png)
 </details>
 
 <details>
 <summary>Checkout Success (checkout_success.html)</summary>
 
-![Wireframe: Checkout Success]()
+![Wireframe: Checkout Success](/documentation/wireframes/wireframe_checkout_success.png)
 </details>
 
 <details>
-<summary>Login Page (login.html) </summary>
+<summary>Login Page (accounts/login.html) </summary>
 
-![Wireframe: Login]()
+![Wireframe: Login](/documentation/wireframes/wireframe_login.png)
 </details>
 
 <details>
-<summary>Registration Page (register.html)</summary>
+<summary>Registration Page (accounts/signup.html) </summary>
 
-![Wireframe: Registration]()
+![Wireframe: Registration](/documentation/wireframes/wireframe_register.png)
 </details>
 
 <details>
 <summary>Our Story (our_story.html)</summary>
 
-![Wireframe: Our Story]()
+![Wireframe: Our Story](/documentation/wireframes/wireframe_our_story.png)
 </details>
 
 <details>
 <summary>FAQ (faq.html)</summary>
 
-![Wireframe: FAQ]()
+![Wireframe: FAQ](/documentation/wireframes/wireframe_faq.png)
+</details>
+
+<details>
+<summary>Contact Us (contact_us.html)</summary>
+
+![Wireframe: FAQ](/documentation/wireframes/wireframe_contact_us.png)
 </details>
 
 <details>
 <summary>Coffee Corner (coffee_corner.html) - registered users</summary>
 
-![Wireframe: Coffee Corner]()
+![Wireframe: Coffee Corner](/documentation/wireframes/wireframe_coffee_corner.png)
 </details>
 
 <details>
 <summary>Add Products Page (add_products.html) - for admin users</summary>
 
-![Wireframe: Add Products]()
+![Wireframe: Add Products](/documentation/wireframes/wireframe_add_product.png)
 </details>
 
 <details>
-<summary>Edit Resource Page  (edit_products.html) - for admin users</summary>
+<summary>Edit Products Page  (edit_products.html) - for admin users</summary>
 
-![Wireframe: Edit Products]()
+![Wireframe: Edit Products](/documentation/wireframes/wireframe_edit_product.png)
+</details>
+
+<details>
+<summary>Delete Products Page  (delete_products.html) - for admin users</summary>
+
+![Wireframe: Delete Products](/documentation/wireframes/wireframe_delete_product.png)
+</details>
+
+<details>
+<summary>Forum Page  (forum.html) - for registered users</summary>
+
+![Wireframe: Forum](/documentation/wireframes/wireframe_forum.png)
+</details>
+
+<details>
+<summary>Thread Page  (thread.html) - for registered users</summary>
+
+![Wireframe: Thread](/documentation/wireframes/wireframe_thread.png)
+</details>
+
+<details>
+<summary>Add Thread Page  (add_thread.html) - for registered users</summary>
+
+![Wireframe: Add Thread Page](/documentation/wireframes/wireframe_add_thread.png)
+</details>
+
+<details>
+<summary>Edit Thread Page (edit_thread.html) - for registered users</summary>
+
+![Wireframe: Edit Thread Page](/documentation/wireframes/wireframe_edit_thread.png)
+</details>
+
+<details>
+<summary>Delete Thread Page delete_thread.html) - for registered users</summary>
+
+![Wireframe: Delete Thread Page](/documentation/wireframes/wireframe_delete_thread.png)
+</details>
+
+<details>
+<summary>Add Comment Page  (add_comment.html) - for registered users</summary>
+
+![Wireframe: Add Comment Page](/documentation/wireframes/wireframe_add_comment.png)
+</details>
+
+<details>
+<summary>Edit Comment Page (edit_comment.html) - for registered users</summary>
+
+![Wireframe: Edit Comment Page](/documentation/wireframes/wireframe_edit_comment.png)
+</details>
+
+<details>
+<summary>Delete Comment Page delete_comment.html) - for registered users</summary>
+
+![Wireframe: Delete Comment Page](/documentation/wireframes/wireframe_delete_comment.png)
 </details>
 
 ___
