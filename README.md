@@ -4,7 +4,7 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 [View live version of website via Heroku]()
 
-![Mockup image]()
+![Mockup image](documentation/images/general_doc_img/mockup.png)
 
 ___
 <br>
@@ -80,41 +80,42 @@ This website project will target users who are interested in purchasing coffee a
 
 #### **Guest User**
 *As a Guest User, I want:*
-1. the main purpose of the site to be clear so that I immediately know what the site is intended for upon entering;
+1. the main purpose of the site is to be clear so that I immediately know what the site is intended for upon entering;
 2. to be met with a visually appealing and easy to read layout of created items;
 3. to view the product group categories to get a sense of what type of products they can buy and easily navigate to it;
 4. be able to easily go to the store section to purchase items;
-5. to easily find a way to search for products to to view what what I might be looking for
-to be able to register as a returning user to save my personal detail & access exclusive information
-6. to be able to get in contact via social media so that I can follow Happy Bean.
-7. to easily find a way to get in contact with Happy Bean if I have questions
-8. to feel secure in the payment process 
-9. to view an option to be a registered user to have my tailored experience
-10. to view products by category so I view particular group of products
-11. to be able to add a product to the shopping cart and view the total of the order at any time 12. to control my budget
-13. to control the number of products they view on a page for ease of use
-14. to view product details and high quality images so I am able to determine if you want the product and be able to choose the type, quantity and size of the product
-15. to be able to update and delete product in the basket to be in full control of the purchase
-16. to view order details to be able to confirm everything before purchase
-17. a clear indication how to pay for the product as well as an easy and secure method to pay for products with personal & card details so that they feel comfortable providing the information
-18. to view another summary to ensure the products and cost as final check
-19. to receive appropriate feedback of order success or failure to ensure purchase has gone through
-20. to connect and learn about Happy Bean and Coffee so that I have a better understanding of the products and company
+5. to easily find a way to search for products to view what I might be looking for;
+6. to be able to register as a returning user to save my detail & access exclusive information;
+7. to be able to get in contact via social media so that I can follow Happy Bean;
+8. to easily find a way to get in contact with Happy Bean if I have questions;
+9. to feel secure in the payment process;
+10. to view products by category so I view a particular group of products;
+11. to be able to add a product to the shopping cart and view the total of the order at any time to control my budget;
+12. to control the number of products they view on a page for ease of use;
+13. to view product details and images so I can see the product closer up and see it in more detail ;
+14. to be able to update and delete products in the basket to be in full control of the purchase;
+15. to view order details to be able to confirm everything before purchase;
+16. a clear indication of how to pay for the product as well as an easy and secure method to pay for products with personal & card details so that they feel comfortable providing the information;
+17. to view another summary to ensure the products and cost as a final check;
+18. to view how long the checkout process is to see how far they are in the process of completing the order;
+19. to receive appropriate feedback of order success or failure to ensure purchase has gone through;
+20. to connect and learn about Happy Bean and Coffee so that I have a better understanding of the products and company;
+21. to easily scroll up on pages with longer information.
 
 #### **Registered User**
 *As a Registered User, I want to have the same as the a Guest user as well as:*
-1. to be able to log back into the site with my initial latest credentials
-2. to be able to reset password in the event they forget it
-3. to view place with my order history but also view, edit, add, delete personal info
+1. to be able to log back into the site with my initial latest credentials;
+2. to be able to reset password in the event they forget it;
+3. to view the place with my order history but also view, edit, add, delete personal info;
 4. to be able to log out of my account;
-5. to view an exclusive place with insights and information about Coffee
+5. to view an exclusive place with insights and information about Coffee;
+6. to add and view thread and comments, edit and delete their own thread and comments on the coffee forum to be part of a coffee community.
 
 #### **Admin User**
 *As a Admin User, I want to have the same as the a Guest & Registered users as well as:*
-1. to provide simple design e-commerce website so that they return and enjoy the experience
-2. to have the ability to log in to an admin account so that I can add, edit and delete products to the database;
-3. to give users an option to checkout with or without having an account
-have a secure website so that only authorised users can take CRUD actions and user profiles are protected
+1. to have the ability to log in to an admin account so that I can add, edit and delete products to the database;
+2. to have an environment to view all users, products and manage other information of the e-commerce store;
+3. to add and view thread and comments, edit and delete any thread and comments on a coffee forum to be part of a coffee community.
 
 <a></a>
 ### **User Flow**
