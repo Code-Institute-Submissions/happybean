@@ -4,7 +4,7 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 [View live version of website via Heroku]()
 
-![Mockup image](documentation/images/general_doc_img/mockup.png)
+![Mockup image](/documentation/images/general_doc_img/mockup.png)
 
 ___
 <br>
@@ -120,7 +120,7 @@ This website project will target users who are interested in purchasing coffee a
 <a></a>
 ### **User Flow**
 In the planning phase, I created a User flow to determine the main paths the user might take on the web app. 
-![User flow]()
+![User flow](/documentation/images/general_doc_img/high_level_user_flow.png)
 ___
 <br>
 
@@ -133,18 +133,18 @@ ___
 
 <a></a>
 ### **Colour Scheme**
-- The colour scheme is based on creating an environment with that is modern and timeless with a touch of “Terra Cotta” to symbolize warmth & enjoyment ;
+- The colour scheme is based on creating an environment that is modern and timeless with a touch of “Terra Cotta” to symbolize warmth & enjoyment ;
 - The logo was created with "Charcoal". The illustration is from [Canva](https://www.canva.com/) which combined "Charcoal" and “Terra Cotta”;
 - The navbar is created with the lighter version of "Cultured";
 - The call to action buttons background is created with "Charcoal";
 - All colours were checked with [WebAIM](https://webaim.org/resources/contrastchecker/) to check the accessibility of the colours and present a pass.
 
 #### **Colour Palette**
-Coolors was used to map out my colour scheme.
+FigJam was used to map out my colour scheme.
 <details>
 <summary>Colour Palette Detail</summary>
 
-![Colour Palette](/documentation/images/general_doc_img/colour_palette.png)
+![Colour Palette](/documentation/images/general_doc_img/colour_palette_lg.png)
 </details>
 
 <a></a>
@@ -159,7 +159,7 @@ ___
 
 <a></a>
 ## **Wireframes**
-I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes and used Figma to create medium-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience. There is a mobile-first focus and therefore I wanted to keep in mind first what will work on mobile.
+I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience. There is a mobile-first focus and therefore I wanted to keep in mind first what will work on mobile.
 
 ### **Site Structure**
 In the planning phase, the following site structure was created to determine the pages, subpages and which pages are related.
@@ -376,7 +376,7 @@ The data structure outline: ![Data Structure]()
 - The admin user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
 - If the user clicks on the cancel button it will take them back to the products page.
 
-### Delete Product - for admin users
+### Delete Product (delete_products.html) - for admin users
 - If the user is an administrator, they will see the option to delete a product.
 - If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the product and the database will be updated.
 
@@ -447,7 +447,7 @@ The data structure outline: ![Data Structure]()
 - This page has a form where the they user can edit an existing thread. 
 - The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
 
-### Delete Thread
+### Delete Thread (delete_thread.html)
 - If the user created the thread or is an administrator, they will see the option to delete a thread.
 - If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the thread and the database will be updated.
 
@@ -460,7 +460,7 @@ The data structure outline: ![Data Structure]()
 - This page has a form where the they user can edit an existing comment. 
 - The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
 
-### Delete Comment
+### Delete Comment (delete_comment.html)
 - If the user created the comment or is an administrator, they will see the option to delete a comment.
 - If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the comment and the database will be updated.
 
