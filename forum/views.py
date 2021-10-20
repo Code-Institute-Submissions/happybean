@@ -8,7 +8,7 @@ Django and Python including Views and Modals. Reference:
 https://www.youtube.com/watch?v=knGk9aUr4Do
 """
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -35,6 +35,11 @@ def forum_view(request):
     This renders the forum page. To access this page, a user needs
     to be logged in. All the current threads will display.
     """
+    if not request.user.is_authenticated:
+        messages.error(
+            request, 'You must be logged in to see the Coffee Forum')
+        return redirect(reverse('login'))
+
     threads = Thread.objects.all().order_by('-date_created')
 
     # Pagination: https://docs.djangoproject.com/en/3.2/topics/pagination/

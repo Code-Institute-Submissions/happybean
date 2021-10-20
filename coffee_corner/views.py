@@ -3,7 +3,7 @@ Views for Coffee Corner
 """
 
 from django.shortcuts import (
-    render, HttpResponse)
+    render, redirect, reverse)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -16,5 +16,5 @@ def coffee_corner(request):
     if not request.user.is_authenticated:
         messages.error(
             request, 'You must be logged in to see the Coffee Corner')
-        return HttpResponse(status=200)
+        return redirect(reverse('login'))
     return render(request, 'coffee_corner/coffee_corner.html')
