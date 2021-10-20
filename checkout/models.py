@@ -13,6 +13,9 @@ from products.models import Product
 from profiles.models import UserProfile
 
 
+# ------------------------------------------- #
+#                ORDER MODEL                  #
+# ------------------------------------------- #
 class Order(models.Model):
     """
     Checkout models for Order
@@ -76,6 +79,9 @@ class Order(models.Model):
         return self.order_number
 
 
+# ------------------------------------------- #
+#              ORDER ITEM MODEL               #
+# ------------------------------------------- #
 class OrderLineItem(models.Model):
     """"
     A model for referencing line items
