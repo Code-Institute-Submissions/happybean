@@ -1,5 +1,5 @@
 """
-Product Form
+Product Form Classes
 """
 from django import forms
 from .widgets import CustomClearableFileInput
