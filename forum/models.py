@@ -1,3 +1,11 @@
+"""
+Forum Models including Thread and Comment
+The majority of this app was generally influenced by Selmi Tech's
+youtube tutorital series on how to create a Forum App but it
+was used to understand general principles of how to work with
+Django and Python including Views and Modals. Reference:
+https://www.youtube.com/watch?v=knGk9aUr4Do
+"""
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -8,7 +16,10 @@ from django.urls import reverse
 # ------------------------------------------- #
 class Thread(models.Model):
     """
-    Model for threads in forum
+    Model for threads in forum app. There field that links to
+    the User model by foreign key. The fields include a Thread,
+    title, who created it, the description and dates for when the
+    thread was created and edited.
     """
     title = models.CharField(max_length=60)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -25,6 +36,9 @@ class Thread(models.Model):
     # To handle named arguments not yet defined from:
     # https://docs.python.org/2/tutorial/controlflow.html#keyword-arguments
     def get_absolute_url(self):
+        """
+        Function to return the url with the thread and the pk
+        """
         return reverse('thread', kwargs={'pk': self.pk})
 
 

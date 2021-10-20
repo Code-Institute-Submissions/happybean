@@ -1,9 +1,14 @@
 """
 Views for Forum, including threads and comments,
 also to add, edit and delete threads and comments.
+The majority of this app was generally influenced by Selmi Tech's
+youtube tutorital series on how to create a Forum App but it
+was used to understand general principles of how to work with
+Django and Python including Views and Modals. Reference:
+https://www.youtube.com/watch?v=knGk9aUr4Do
 """
 
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -11,7 +16,6 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
-    ListView,
     DetailView,
     CreateView,
     UpdateView,

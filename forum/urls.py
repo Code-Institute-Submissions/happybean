@@ -1,6 +1,8 @@
+"""
+URLs for Forum App includng Forum, Add, View and Delete Threads,
+and Add, View and Delete Comments
+"""
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
 from . import views
 from .views import (
     ThreadView,
