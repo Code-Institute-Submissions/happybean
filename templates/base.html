@@ -72,8 +72,8 @@
   <title>Happy Bean {% block extra_title %}{% endblock %}</title>
 
 </head>
-<!-- Body -->
 
+<!-- Body -->
 <body>
   <header class="container-fluid fixed-top ps-0 pe-0">
     <!-- Navbar -->
@@ -94,7 +94,6 @@
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
-
           <!-- Shop -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="shop-link" role="button" data-bs-toggle="dropdown"
@@ -110,7 +109,6 @@
               <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
             </ul>
           </li>
-
           <!-- Connect & Learn -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="about-link" role="button" data-bs-toggle="dropdown"
@@ -125,12 +123,10 @@
               <li><a class="dropdown-item" href="{% url 'coffee_corner' %}">Coffee Corner</a></li>
             </ul>
           </li>
-
           <!-- Forum -->
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{% url 'forum' %}">Forum</a>
           </li>
-
           <!-- User -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="user-link" role="button" data-bs-toggle="dropdown"
@@ -150,13 +146,11 @@
               {% endif %}
             </ul>
           </li>
-
           <!-- Search -->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
             </a>
           </li>
-
           <!-- Shopping Cart -->
           <li class="nav-item list-inline-item cart-nav-item">
             <a href="{% url 'view_cart' %}"
@@ -178,8 +172,6 @@
             </a>
           </li>
         </ul>
-
-      </div>
       </div>
     </nav>
     <div id="delivery-banner" class="row text-center">
@@ -189,9 +181,8 @@
         </h4>
       </div>
     </div>
-
   </header>
-
+  <!-- Toasts Messages -->
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
@@ -210,9 +201,11 @@
   </div>
   {% endif %}
 
+  <!-- Page Headers -->
   {% block page_header %}
   {% endblock %}
 
+  <!-- Page Content -->
   {% block content %}
   {% endblock %}
 
@@ -257,13 +250,14 @@
     </div>
     <div class="container">
       <div class="row">
+        <!-- Copyright section -->
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2021 - This website is created by <a id="link-external"
               href="https://franciskadutoit.com/" target="_blank" rel="noopener noreferrer"
               aria-hidden="false">Franciska Du Toit </a> for educational purpose only
           </p>
         </div>
-
+        <!-- Social Links section -->
         <div class="col-md-4 col-sm-6 col-xs-12 d-flex">
           <ul class="social-icons">
             <li><a class="github" target="_blank" href="https://github.com/Franciskadtt" rel="noopener noreferrer"
@@ -279,10 +273,10 @@
       </div>
     </div>
   </footer>
-
+  <!-- Javascript -->
   {% block postloadjs %}
   {% endblock %}
-
+  <!-- Extra Javascript -->
   {% block extra_scripts %}
   <script type="text/javascript">
     $(document).ready(function () {
@@ -290,7 +284,5 @@
     });
   </script>
   {% endblock %}
-
 </body>
-
 </html>
