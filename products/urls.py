@@ -5,6 +5,9 @@ to add, edit and delete products.
 
 from django.urls import path
 from . import views
+from .views import (
+    DeleteProductView,
+)
 
 
 urlpatterns = [
@@ -12,6 +15,6 @@ urlpatterns = [
     path('<int:product_id>/', views.product_detail, name='product_detail'),
     path('add/', views.add_product, name='add_product'),
     path('edit/<int:product_id>/', views.edit_product, name='edit_product'),
-    path('delete/<int:product_id>/', views.delete_product,
-         name='delete_product'),
+    path('products/delete/<int:pk>', DeleteProductView.as_view(),
+         name="delete_product"),
 ]
