@@ -11,22 +11,22 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
-        </div>
+<div class="container header-container">
+  <div class="row">
+    <div class="col">
     </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="container">
   <!-- Heading-->
   <div class="row">
-      <div class="col text-center mt-3">
-          <h2 class="logo-font">{% trans "Sign Up" %}</h2>
-          <hr class="w-100 mb-1">
-      </div>
+    <div class="col text-center mt-3">
+      <h2 class="logo-font">{% trans "Sign Up" %}</h2>
+      <hr class="w-100 mb-1">
+    </div>
   </div>
 </div>
 <section class="container">
@@ -36,8 +36,8 @@
     </div>
     <div class="col-12 col-md-6">
       <h3 class="block">{% blocktrans %}Your Information{% endblocktrans %}
-    	</h3>
-
+      </h3>
+      <!-- Form -->
       <form class="signup pt-1" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form|crispy }}
@@ -45,33 +45,36 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="pt-1" />
         {% endif %}
         <div class="pt-0 mb-3">
-          <button type="submit" class="btn button-text action-btn mt-4 mb-1">{% trans "Sign Up" %} <i class="fas fa-chevron-right ms-3"></i></button>
-      </div>
-      <p>{% blocktrans %}We will never share your information with anyone! Already Registered? <a href="{{ login_url }}" class="link-text">Log In here</a>.{% endblocktrans %}</p>
+          <button type="submit" class="btn button-text action-btn mt-4 mb-1">{% trans "Sign Up" %} <i
+              class="fas fa-chevron-right ms-3"></i></button>
+        </div>
+        <p>{% blocktrans %}We will never share your information with anyone! Already Registered? <a
+            href="{{ login_url }}" class="link-text">Log In here</a>.{% endblocktrans %}</p>
       </form>
     </div>
-</div>
+  </div>
 </section>
 <hr>
 <!-- Registration section -->
-<div class="container" >
-	<div class="row h-100">
-		<div class="col-12 col-md-6 block">
-			<h2 class="block-heading">Have checked out the Coffee Corner?
-			</h2>
-			<p class="information">
-				Simply log in, then you will see the Coffee Corner the Menu bar.
-			</p>
-			<p>
-				The Coffee Corner have loads of interesting things such as the latest recipies, brewing techniques and Coffee Tips. 
-			</p>
-			</ul>
-			<a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Visit the Coffee Corner</a>
-		</div>
-		<div class="col-sm-12 col-md-6 p-5 ">
-			<img src="{% static 'images/coffee_corner.png' %}"  class="section-img" alt="Coffee Grounds">
-		</div>
-	</div>
+<div class="container">
+  <div class="row h-100">
+    <div class="col-12 col-md-6 block">
+      <h2 class="block-heading">Have checked out the Coffee Corner?
+      </h2>
+      <p class="information">
+        Simply log in, then you will see the Coffee Corner the Menu bar.
+      </p>
+      <p>
+        The Coffee Corner have loads of interesting things such as the latest recipies, brewing techniques and Coffee
+        Tips.
+      </p>
+      </ul>
+      <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Visit the Coffee
+        Corner</a>
+    </div>
+    <div class="col-sm-12 col-md-6 p-5 ">
+      <img src="{% static 'images/coffee_corner.png' %}" class="section-img" alt="Coffee Grounds">
+    </div>
+  </div>
 </div>
-
 {% endblock %}
