@@ -147,7 +147,7 @@
             </div>
             <div class="row">
                 {% for product in page_obj %}
-                <div class="col-sm-6 col-md-6 col-xl-3">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                     <!-- Product cards -->
                     <div class="card h-100 border-0">
                         <!-- Product image -->
@@ -199,35 +199,11 @@
                         </div>
                     </div>
                 </div>
-
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
-                </div>
-                {% endif %}
                 {% endfor %}
             </div>
             <!-- Pagination from Bootstrap and Django Documentation -->
-            <nav aria-label="Page navigation">
-                <ul class="pagination  justify-content-center">
+            <nav aria-label="Page navigation ">
+                <ul class="pagination  justify-content-center mt-5">
                     {% if page_obj.has_previous %}
                     <li class="page-item"> <a class="page-link link-text" href="?page=1">&laquo; first</a></li>
                     <li class="page-item"> <a class="page-link link-text"
