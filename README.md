@@ -6,8 +6,8 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 ![Mockup image](/documentation/images/general_doc_img/mockup.png)
 
-___
 <br>
+<hr>
 
 <a></a>
 ## Table of Contents 
@@ -39,8 +39,8 @@ ___
 * [Deployment](#deployment)
 * [Credits](#credits)
 
-___
 <br>
+<hr>
 
 <a name="ux"></a>
 ## **UX**
@@ -50,16 +50,16 @@ This website project will target users who are interested in purchasing coffee a
 
 <a></a>
 ### **User Goals**
-- View featured products on the website;
-- View, search and be able to easily purchase coffee and related products easily and securely;
+- View featured products on the website.
+- View, search and be able to easily purchase coffee and related products easily and securely.
 - The e-commerce store has to work well on all kinds of devices like mobile phones, tablets and desktops.
 
 <a></a>
 ### **Site Owners Goals**
-- View, edit, search, delete products;
-- Have an easy and effective user flow so that the user is able to, without obstacles, successfully make a purchase so that the conversion rate is high, shopping cart abandonment rate is low and the number of returning customers increase
+- View, edit, search, delete products.
+- Have an easy and effective user flow so that the user can, without obstacles, successfully purchase so that the conversion rate is high, shopping cart abandonment rate is low and the number of returning customers increases.
 - Be the “go-to” and reliable place for users to buy their coffee and coffee equipment.
-- To create a community for users in who are interested in learning more about coffee
+- To create a community for users who are interested in learning more about coffee.
 
 <a></a>
 ### **User Requirements and Expectations**
@@ -67,7 +67,7 @@ This website project will target users who are interested in purchasing coffee a
 - Easy to navigate by using the navigation menu.
 - Relevant content for each product category.
 - Appealing visual elements.
-- Easy way to search, sort and filter products relevant to the user.
+- Easy way to search, sort and filter products that are relevant to the user.
 
 #### **Expectations**
 - When clicking on links (resource and social media links), expect the page to open in a separate browser.
@@ -120,9 +120,15 @@ This website project will target users who are interested in purchasing coffee a
 <a></a>
 ### **User Flow**
 In the planning phase, I created a User flow to determine the main paths the user might take on the web app. 
+
+<details>
+<summary>User flow</summary>
+
 ![User flow](/documentation/images/general_doc_img/high_level_user_flow.png)
-___
+</details>
+
 <br>
+<hr>
 
 <a></a>
 ## **UI Design**
@@ -154,12 +160,13 @@ FigJam was used to map out my colour scheme.
 <a></a>
 ### **Framework**
 The overall structure that was used is the [Bootstrap5](https://getbootstrap.com/) framework. Bootstrap provides various elements of CSS and Javascript which is very helpful to keep a good structure on your page.
-___
+
 <br>
+<hr>
 
 <a></a>
 ## **Wireframes**
-I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience. There is a mobile-first focus and therefore I wanted to keep in mind first what will work on mobile.
+I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience.
 
 ### **Site Structure**
 In the planning phase, the following site structure was created to determine the pages, subpages and which pages are related.
@@ -167,7 +174,7 @@ In the planning phase, the following site structure was created to determine the
 <details>
 <summary>Site Structure</summary>
 
-![Site Structure]()
+![Site Structure](/documentation/images/general_doc_img/site_structure.png)
 </details>
 
 <br>
@@ -320,16 +327,16 @@ In the planning phase, the following site structure was created to determine the
 ![Wireframe: Delete Comment Page](/documentation/wireframes/wireframe_delete_comment.png)
 </details>
 
-___
 <br>
+<hr>
 
 <a></a>
 ## **Data Structure**
 A database structure was designed to be specifically suited for Happy Bean. It was important to make sure the data structure was logical. Each product is linked to a category and these are identified by id (pk number). The products on the Coffee Group of Categories, are linked to an origin and are identified by id (pk number).
 
-Each order has a unique order number which is generated when the order is processed and orders have the user’s and product details.
+Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
 
-Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their personal details will not be saved, they won’t be able to see a Profile with their personal details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their personal details pre-populated the next time they shop and have access to the Coffee Corner. 
+Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop and have access to the Coffee Corner. 
 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
@@ -340,6 +347,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 </details>
 
 <br>
+<hr>
 
 <a></a>
 ## **Existing Features**
@@ -395,9 +403,9 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - This is the main page of the website. 
 - The landing page gives the user an immediate welcome and indication of what the site is about.
 - There is a CTA button to view the Store (products.html) which is important as the primary goal of the user is to purchase products.
-- The main section is a navigation to the main product groups so the user can again easily go to a specific category of products.
+- The main section is navigation to the main product groups so the user can again easily go to a specific category of products.
 - A section on subscriptions and what they are as well as a CTA button to go to the shop and view the Speciality products view of the Store.
-- A Register section with a CTA that takes the user to the Registration page (register.html)
+- A Register section with a CTA that takes the user to the Registration page.
 
 ### Profile Page (profile.html) - registered users 
 - This page can only be viewed by registered users
@@ -408,15 +416,15 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - If it is an admin user, there is a link to Product Management Page to easily 
 
 ### Products (products.html, products/<category_name>.html) 
-- The pages where users can see all products and sort by group of categories & category
+- The pages where users can see all products and sort by a group of categories & category
 - If a user clicks on the product image, it will take them to the product details page.
 
 ### Product Details (product/<product_id>.html) 
-- These pages are where the users can see product details and to select options such as size, quantity 
+- These pages are where the users can see product details and to select the quantity;
 - The user will see product detail like Price, Category and Intensity (if Coffee)
-- Users can add a product in the shopping cart.
+- Users can add a product to the shopping cart.
 - The user will also be able to click on a link to go back to the products page
-- If a user adds a product to their shopping cart, they are notified and a toast will popup with a summary of what is in their shopping cart at that point in time as well as the cost, product info and a link to the shopping cart. 
+- If a user adds a product to their shopping cart, they are notified and a toast will popup with a summary of what is in their shopping cart then as well as the cost, product info and a link to the shopping cart.
 
 ### Add Products Page (add_products.html) - for admin users
 - This page can only be viewed by the admin user.
@@ -455,7 +463,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - At the top of the page, there is an indication of where the user is in the buying/checkout process for a better user experience.
 
 ### Checkout Success (checkout_success.html) 
-- The users will see the checkout success page if the payment is a success and the order processed. Users can see the order number, shipping address and product details. 
+- The users will see the checkout success page if the payment is a success and the order is processed. Users can see the order number, shipping address and product details. 
 - The user will be able to return to the products page or the Coffee Corner 
 - At the top of the page, there is an indication of where the user is in the buying/checkout - process for a better user experience.
 
@@ -464,7 +472,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - There is helper text under each input field to guide the user as to the parameters they can input.
 - The user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
 - If the user lands on the log in page but realises they don't have an account yet and would like to register, there is a link on the page that will take them to the registration page or they can click on the navbar menu Register link.
-- The page where users can log in to the website and access to the Profile page to see their user info, delivery info and order history
+- The page where users can log in to the website and access the Profile page to see their user info, delivery info and order history
 - The form with built-in functionality is created with the Django Allauth package.
 
 ### Registration Page (register.html)
@@ -477,7 +485,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - There is a section with links to other pages related to Connect & Learn including FAQ, Contract Us and Coffee Corner. If the Coffee corner link is clicked and the user is not logged in, they will be redirected to the Login page and be notified that they need to be logged in. If the user is logged in, they will be redirected to the Coffee Corner page.
 
 ### FAQ (faq.html)
-- The user will be able to see frequently asked questions about products, ordering etc
+- The user will be able to see frequently asked questions about products, orders etc
 - There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and Coffee Corner. If the Coffee corner link is clicked and the user is not logged in, they will be redirected to the Login page and be notified that they need to be logged in. If the user is logged in, they will be redirected to the Coffee Corner page.
 
 ### Coffee Corner (coffee_corner.html) - registered users
@@ -486,22 +494,22 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and FAQ. 
 
 ### Forum (forum.html) - for registered users
-- This page can only be viewed by the registered users.
+- This page can only be viewed by registered users.
 - This page features the option to add and view threads about Coffee. 
-- If the user created the thread, they will be able to edit or delete the thread. An admin users will be able to edit or delete any thread.
+- If the user created the thread, they will be able to edit or delete the thread. Admin users will be able to edit or delete any thread.
 
 ### Thread (thread.html) - for registered users
 - This page can only be viewed by the registered users where they can see the detail of a thread if they clicked on the heading of a specific thread.
 - They can see comments added by other users and they can add a new comment to a thread.
-- If the user created the comment, they will be able to edit or delete the comment. An admin users will be able to edit or delete any comment.
+- If the user created the comment, they will be able to edit or delete the comment. Admin users will be able to edit or delete any comment.
 
 ### Add Thread (add_thread.html)
-- This page can only be viewed by the registered users.
-- This page has a form where the they user can add a new thread. The form has a space to add a subject and a description in input fields and click "create thread".
+- This page can only be viewed by registered users.
+- This page has a form where the user can add a new thread. The form has a space to add a subject and a description in input fields and click "create thread".
 
 ### Edit Thread (edit_thread.html)
 - This page can only be viewed by the registered users who created the thread or an admin user.
-- This page has a form where the they user can edit an existing thread. 
+- This page has a form where the user can edit an existing thread. 
 - The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
 
 ### Delete Thread (delete_thread.html)
@@ -509,12 +517,12 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - If they click it, they will be presented with a confirmation screen and then if they click delete, they can delete the thread and the database will be updated.
 
 ### Add Comment (add_comment.html)
-- This page can only be viewed by the registered users.
-- This page has a form where the they user can add a comment in an input field and click "add comment"
+- This page can only be viewed by registered users.
+- This page has a form where the user can add a comment in an input field and click "add comment"
 
 ### Edit Comment (edit_comment.html)
 - This page can only be viewed by the registered users who created the comment or an admin user.
-- This page has a form where the they user can edit an existing comment. 
+- This page has a form where the user can edit an existing comment. 
 - The current thread information will be shown and the user can change the information and save it. This will update the database with the new information.
 
 ### Delete Comment (delete_comment.html)
@@ -529,17 +537,17 @@ SQLite, which is Django built-in database is used for development mode and Herok
 ### 404 & 500 Page
 - The custom 404 & 500 Pages contains an image and text that makes the user understand they have encountered an error. There is a button to return the user to the Happy Bean Home page.
 
-___
 <br>
+<hr>
 
 <a></a>
 ## **Future Features**
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
-- The user can change their password if they click on the Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
+- The user can change their password and email from their profile if they click on a Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - If the store owner decided to release some products in different sizes with different prices, there would be an option on the product view page to select different sizes and the prices will change accordingly.
 
-___
 <br>
+<hr>
 
 <a></a>
 ## **Technologies Used**
@@ -583,11 +591,12 @@ ___
 
 ### **Design**
 - [Balsamiq](https://balsamiq.com/) to design low fidelity mockups
-- [Figma](https://www.figma.com/) to design a medium-fidelity mockup
-- [Canva](https://www.canva.com/) for the logo
+- [Figma](https://www.figma.com/) to design a product images, type scales and Colour palette.
+- [FigJam](https://www.figma.com/figjam/) to design Data Structure, Site Structure and User Flow.
+- [Canva](https://www.canva.com/) to design the logo.
 
-___
 <br>
+<hr>
 
 <a></a>
 ## **Testing**
