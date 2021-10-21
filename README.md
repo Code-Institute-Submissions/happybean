@@ -164,16 +164,15 @@ I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes.
 ### **Site Structure**
 In the planning phase, the following site structure was created to determine the pages, subpages and which pages are related.
 
+<details>
+<summary>Site Structure</summary>
+
 ![Site Structure]()
-
-
-### **Wireframe Images**
-#### **Sketches**
-Sketches were part of the first phase of the design for this project. Sketches with pen and paper are used to roughly draft the flow and the structure of the project without having to focus on colour, fonts and the correct layout.
-![Sketch]()
+</details>
 
 <br>
 
+### **Wireframe Images**
 #### **Low Fidelity**
 [Balsamiq](https://balsamiq.com/) was used to create low-fidelity wireframes. Low-fidelity designs were utilised to make the design process simple and test low-tech concepts. When designing a low-fi prototype, the font types and colours are ignored to focus on the design of the project itself.
 
@@ -334,7 +333,11 @@ Users have the option to purchase products as guest users or as registered users
 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
-The data structure outline: ![Data Structure]()
+<details>
+<summary>Data Structure</summary>
+
+![Data Structure](/documentation/images/general_doc_img/data_structure.png)
+</details>
 
 <br>
 
