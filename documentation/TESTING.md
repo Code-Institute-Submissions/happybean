@@ -2,7 +2,7 @@
 
 [Main README.md file](/README.md)
 
-[View live version of website via Heroku](#)
+[View live version of website via Heroku](https://happybean.herokuapp.com/)
 ___
 <br>
 
@@ -43,16 +43,9 @@ Testing user stories from the UX section with corresponding features, styles and
 ## **Testing and Validation**
 ### [Link Checker](https://validator.w3.org/checklink)
 - To check that all links are working and not broken. 
-- [Link Validation Test](#)
+- The report did not have any issues in final testing.
 <br>
 
-
-### Lighthouse (Google dev tool)
-- To test the accessibility and performance of the website. 
-- Final versions: 
-   - [Lighthouse report desktop ](#)
-   - [Lighthouse report mobile ](#)
-<br>
 
 ### [Responsinator](http://www.responsinator.com/)
 - To test the responsiveness of the live website and functionalities on different size mobile devices.
