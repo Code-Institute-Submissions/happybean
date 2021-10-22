@@ -81,6 +81,9 @@
             </div>
         </div>
     </div>
+    <div class="row mt-1">
+        <h3 class="smaller-heading ms-3">Comments</h3>
+    </div>
     {% for comment in comments %}
     <div class="row thread m-3">
         <div class="col-sm-10 pb-3">
@@ -120,7 +123,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     // Page scroll up feature 
     /* Orginal code from with modifications for project:
      https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */

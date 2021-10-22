@@ -23,10 +23,8 @@
 <!-- Checkout Progress bar -->
 <!-- Original code with modifications for progress bar from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913 -->
 <div class="progresses py-4">
-    <ol class="d-flex align-items-center justify-content-between">
-        <a href="{% url 'view_cart' %}" class="page-link-text">
-            <li id="step-1-checkout"></li>
-        </a>
+    <ol class="d-flex align-items-center justify-content-between"> 
+        <li id="step-1-checkout"></li>
         <li id="step-2-checkout"></li>
         <li id="step-3-checkout"></li>
     </ol>
@@ -38,7 +36,6 @@
 <!-- Heading -->
 <div class="overlay"></div>
 <div class="container">
-
     <div class="row">
         <div class="col text-center mt-5">
             <h2 class="logo-font">Checkout</h2>
@@ -160,11 +157,11 @@
 </main>
 <!-- Loading Overlay -->
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <div class="text-light logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </div>
 </div>
 {% endblock %}
 

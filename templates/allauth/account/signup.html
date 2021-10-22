@@ -24,7 +24,7 @@
   <!-- Heading-->
   <div class="row">
     <div class="col text-center mt-3">
-      <h2 class="logo-font">{% trans "Sign Up" %}</h2>
+      <h2 class="logo-font">{% trans "Register" %}</h2>
       <hr class="w-100 mb-1">
     </div>
   </div>
@@ -45,7 +45,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="pt-1" />
         {% endif %}
         <div class="pt-0 mb-3">
-          <button type="submit" class="btn button-text action-btn mt-4 mb-1">{% trans "Sign Up" %} <i
+          <button type="submit" class="btn button-text action-btn mt-4 mb-1">{% trans "Register" %} <i
               class="fas fa-chevron-right ms-3"></i></button>
         </div>
         <p>{% blocktrans %}We will never share your information with anyone! Already Registered? <a
@@ -68,7 +68,6 @@
         The Coffee Corner have loads of interesting things such as the latest recipies, brewing techniques and Coffee
         Tips.
       </p>
-      </ul>
       <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Visit the Coffee
         Corner</a>
     </div>
