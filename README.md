@@ -2,7 +2,7 @@
 
 This project is part of my Code Institute Full Stack Software Development studies, specifically the Full Stack Frameworks with Django module. The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an actual e-commerce website. This project is an e-commerce store for an artisanal coffee roasting company that specialises in roasting and selling coffee but also sells coffee equipment. 
 
-[View live version of website via Heroku]()
+[View live version of website via Heroku](https://happybean.herokuapp.com/)
 
 ![Mockup image](/documentation/images/general_doc_img/mockup.png)
 
@@ -603,6 +603,7 @@ These are possible future features to be added to the project which was suggeste
 Testing information can be found in the separate [TESTING.md file](documentation/TESTING.md)
 
 <br>
+<hr>
 
 <a></a>
 ## **Deployment**
@@ -846,5 +847,6 @@ ___
 
 ### **Acknowledgements**
 - Thanks to my mentor Antonio Rodriquez for guiding me throughout this project.
+- Code Institute Tutors for giving me a guidance on how to solve issues.
 
 ##### back to [top](#table-of-contents)
