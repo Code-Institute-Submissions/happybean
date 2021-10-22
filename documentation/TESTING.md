@@ -44,7 +44,7 @@ Testing user stories from the UX section with corresponding features, styles and
 ### [Link Checker](https://validator.w3.org/checklink)
 - To check that all links are working and not broken. 
 - [Link Validation Test](#)
-
+<br>
 
 
 ### Lighthouse (Google dev tool)
@@ -52,34 +52,47 @@ Testing user stories from the UX section with corresponding features, styles and
 - Final versions: 
    - [Lighthouse report desktop ](#)
    - [Lighthouse report mobile ](#)
+<br>
 
 ### [Responsinator](http://www.responsinator.com/)
 - To test the responsiveness of the live website and functionalities on different size mobile devices.
-- Final version: 
-   - [Mobile view ](#)
-   - [Tablet view ](#)
+- The allauth templates were styled to ensure they are responsive after testing.
+- All pages are now responsive.
+
+<br>
 
 ### [Am I Responsive](http://ami.responsivedesign.is/)
 - To view images of the website on different devices.
-- Final version: [Am I Responsive ](#)
+<details>
+<summary>Am I Responsive</summary>
 
-### JavaScript
-- [JSHint](https://jshint.com/)
-   - [Test JavaScript Validation](#)
-   - [Final JavaScript Validation](#)
+![Am I Responsive](/documentation/images/general_doc_img/mockup.png)
+</details>
+<br>
+
+### [JavaScript: JSHint](https://jshint.com/)
+- JSHint was used to test javascript code in this project. 
+- All issues where resolved except the below:
    - Final version - addressing errors and warnings: 
       - Warning for ''let' is available in ES6 (use 'esversion: 6'). Can be safely ignored. If add /*jshint esversion: 6 */ at top of code so that JSHint does not raise unnecessary warnings for ECMAScript 6 features.
       - JSHint flags Jquery $ symbol as an undefined variable - safely ignored. 
-- [JSEsprima](#)
-   - [Final JavaScript Validated](#)
 
 ### [CSS: W3C CSS validation](https://jigsaw.w3.org/css-validator/)
 - To validate the CCS code of the project pasting code in by direct input method.
-- [Final CSS Validation](#)
+- All issues where resolved.
+
+<br>
 
 ### [HTML: W3C Markup Validation](https://validator.w3.org/)
 - To validate the HTML code of the project by pasting code in by direct input method. Note the W3C Validator for HTML does not understand the Jinja templating syntax therefore if there are warnings related to this, this can be safely ignored.
-        
+- All issues where resolved except for 2 errors relating to Django cripspy forms (see image below for more detail)
+<details>
+<summary>Checklist for checking all HTMl pages</summary>
+
+![Checklist for checking all HTMl pages](/documentation/images/general_doc_img/html_validator.png)
+</details>
+<br>
+    
 ### Python
 - [Extendsclass](https://extendsclass.com/python-tester.html) - No syntax errors
    - [Final Python Validated](#)
@@ -138,7 +151,7 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 - Asked fellow students, friends and family to look at the site on their devices and report any issues they find.
 - Review all functionality and responsiveness on different desktop browsers and the website displayed correctly in all browsers including Safari, Chrome, Edge, Firefox and Opera browsers. (see Browser Compatibility section for detail)
 
-### Deployment
+## **Deployment**
 - Ensured deployed page on Heroku loads up correctly.
 - Ensured Debug variable in app.py file is set to False.
 - Confirmed that there is no difference between the deployed version and the development version.
