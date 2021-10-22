@@ -81,7 +81,7 @@
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand ms-3" href="{% url 'home' %}">
-          <h1 class="logo">Happy Bean</h1>
+          <h2 class="logo">Happy Bean</h2>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,7 +119,7 @@
               <li><a class="dropdown-item" href="{% url 'our_story' %}">Our Story</a></li>
               <li><a class="dropdown-item" href="{% url 'faq' %}">FAQ</a></li>
               <li><a class="dropdown-item" href="{% url 'contact_us' %}">Contact Us</a></li>
-              <div class="dropdown-divider"></div>
+              <li class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{% url 'coffee_corner' %}">Coffee Corner</a></li>
             </ul>
           </li>
@@ -278,7 +278,7 @@
   {% endblock %}
   <!-- Extra Javascript -->
   {% block extra_scripts %}
-  <script type="text/javascript">
+  <script>
     $(document).ready(function () {
       $(".toast").toast('show');
     });
