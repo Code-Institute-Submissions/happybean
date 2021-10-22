@@ -12,7 +12,6 @@
         </div>
     </div>
 </div>
-</div>
 {% endblock %}
 
 {% block content %}
@@ -234,7 +233,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     // Page scroll up feature for resource page
     /* Orginal code from with modifications for project:
      https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php */
@@ -253,7 +252,7 @@
     });
 </script>
 
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
