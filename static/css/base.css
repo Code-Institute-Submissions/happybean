@@ -169,6 +169,10 @@ h3 {
     text-transform: uppercase;
 }
 
+.text-error{
+    color: var(--Error);
+}
+
 /* --------------------------------------------------- */
 /*                       FORMS                         */
 /* --------------------------------------------------- */
@@ -428,6 +432,7 @@ h3 {
 .card-title {
     text-align: center;
     margin-top: -10px;
+    font-size: 18px;
 }
 
 /* --- SUBSCRIPTION SECTION --- */
