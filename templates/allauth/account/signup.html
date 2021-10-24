@@ -1,5 +1,7 @@
 {% extends "account/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
+{% crispy example_form example_form.helper %}
 
 {% load i18n %}
 {% load account socialaccount %}
@@ -41,6 +43,10 @@
       <form class="signup pt-1" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form|crispy }}
+        <br>
+        <small><em><strong>Username tip:</strong> Your username must be at least 4 characters.</em></small>
+        <br>
+        <small><em><strong>Password tip:</strong> Your password must contain at least 8 characters, a combination of numbers & letters, not be similar to your email address and not a common combination like (abcdefgh or 12345678). You can include special characters but it is not required.</em></small>
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" class="pt-1" />
         {% endif %}
@@ -68,7 +74,7 @@
         The Coffee Corner have loads of interesting things such as the latest recipies, brewing techniques and Coffee
         Tips.
       </p>
-      <a class="btn btn-lg subscription-button" href="{% url 'account_signup' %}" role="button">Visit the Coffee
+      <a class="btn btn-lg subscription-button mb-3" href="{% url 'account_signup' %}" role="button">Visit the Coffee
         Corner</a>
     </div>
     <div class="col-sm-12 col-md-6 p-5 ">
