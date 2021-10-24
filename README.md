@@ -490,11 +490,13 @@ SQLite, which is Django built-in database is used for development mode and Herok
 
 ### Coffee Corner (coffee_corner.html) - registered users
 - This page can only be viewed by the registered users.
+- It was decided to still show the Coffee Corner App link in the nav menu as I want the users to be aware of this function (Marketing of the page). It is an incentive to register to be able to view this page.
 - The page will include Insights and information for registered users including Brewing Guides, Coffee Tips and Coffee Recipes
 - There is a section with links to other pages related to Connect & Learn including Our Story, Contract Us and FAQ. 
 
 ### Forum (forum.html) - for registered users
 - This page can only be viewed by registered users.
+- This item will only appear in the navbar once the user is logged in.
 - This page features the option to add and view threads about Coffee. 
 - If the user created the thread, they will be able to edit or delete the thread. Admin users will be able to edit or delete any thread.
 
