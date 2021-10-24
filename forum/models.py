@@ -1,7 +1,7 @@
 """
 Forum Models including Thread and Comment
 The majority of this app was generally influenced by Selmi Tech's
-youtube tutorital series on how to create a Forum App but it
+youtube tutorial series on how to create a Forum App but it
 was used to understand general principles of how to work with
 Django and Python including Views and Modals. Reference:
 https://www.youtube.com/watch?v=knGk9aUr4Do
@@ -28,7 +28,8 @@ class Thread(models.Model):
     date_edited = models.DateTimeField(auto_now=True)
 
     # Represents the class objects as a string
-    #  v
+    # To return a string of the thread title the creator of it
+    # https://www.python-course.eu/python3_magic_methods.php
     def __str__(self):
         return self.title + ' by ' + str(self.creator)
 

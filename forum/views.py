@@ -2,7 +2,7 @@
 Views for Forum, including threads and comments,
 also to add, edit and delete threads and comments.
 The majority of this app was generally influenced by Selmi Tech's
-youtube tutorital series on how to create a Forum App but it
+youtube tutorial series on how to create a Forum App but it
 was used to understand general principles of how to work with
 Django and Python including Views and Modals. Reference:
 https://www.youtube.com/watch?v=knGk9aUr4Do
