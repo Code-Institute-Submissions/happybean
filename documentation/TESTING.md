@@ -1,4 +1,4 @@
-# The Growth Club Website - Testing details
+# Happy Bean Website - Testing details
 
 [Main README.md file](/README.md)
 
@@ -176,20 +176,21 @@ Testing user stories from the UX section with corresponding features, styles and
 
 ### [JavaScript: JSHint](https://jshint.com/)
 - JSHint was used to test javascript code in this project. 
-- All issues where resolved except the below:
+- All issues were resolved except the below:
    - Final version - addressing errors and warnings: 
       - Warning for ''let' is available in ES6 (use 'esversion: 6'). Can be safely ignored. If add /*jshint esversion: 6 */ at top of code so that JSHint does not raise unnecessary warnings for ECMAScript 6 features.
-      - JSHint flags Jquery $ symbol as an undefined variable - safely ignored. 
+      - JSHint flags Jquery $ symbol as an undefined variable - safely ignored.
 
 ### [CSS: W3C CSS validation](https://jigsaw.w3.org/css-validator/)
 - To validate the CSS code of the project pasting code in by direct input method.
-- All issues where resolved.
+- All issues were resolved.
+
 
 <br>
 
 ### [HTML: W3C Markup Validation](https://validator.w3.org/)
 - To validate the HTML code of the project by pasting code in by direct input method. Note the W3C Validator for HTML does not understand the Jinja templating syntax therefore if there are warnings related to this, this can be safely ignored.
-- All issues where resolved except for 2 errors relating to Django cripspy forms (see image below for more detail)
+- All issues were resolved except for 2 errors relating to Django crispy forms (see image below for more detail)
 <details>
 <summary>Checklist for checking all HTMl pages</summary>
 
@@ -199,8 +200,16 @@ Testing user stories from the UX section with corresponding features, styles and
     
 ### [Python: PEP8 Online](http://pep8online.com/)
 
-- To validate the Python code of the project to check if it is PEP8 compliant. It was done by pasting code on the site by direct input method.
-- I have resolved the Pylint issues as far as I can, there are still a few warnings, but becuase it is close to submission I will not edit those as it might break something in the app. Also, I kept a few empthy python files such as models.py in the about and coffee corner apps, because I could use them later for future development.
+- To validate the Python code of the project to check if it is PEP8 compliant. It was done by pasting code on the site by the direct input method.
+- I have resolved the Pylint issues as far as I can, there are still a few warnings, but because it is close to submission I will not edit those as it might break something in the app. Also, I kept a few empty python files such as models.py in the about and coffee corner apps, because I could use them later for future development.
+
+<br>
+
+### Lighthouse (Google dev tool)
+- To test the accessibility and performance of the website. 
+- After testing the site on Lighthouse, there were minor changes that needed to be made, for example, some buttons did not have aria labels, which was added. Another aspect that was fixed was link text styling, the colour needed to be changed to make it more accessible. Lastly, some heading tags were not in order, which was changed as well. 
+- After the above changes were made, the overall performance and accessibility have increased. 
+- Additional future changes can be made in optimising images in next-generation formats.
 
 <br>
 
@@ -226,7 +235,7 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 
 ![Manual testing for features](/documentation/images/general_doc_img/manual_feature_testing.png)
 </details>
-- Note: Email verification message: The allauth tmeplate was amended as well as the admin dashboard site settings to reflect Happy bean in the email subject line but it still refers to "example.com" in the email the user receives when they sign up. This could be further investigated in the future but because of time constraints this could not be solved.
+- Note: Email verification message - The allauth template was amended as well as the admin dashboard site settings to reflect Happy bean in the email subject line but it still refers to "example.com" in the email the user receives when they sign up. This could be further investigated in the future but because of time constraints, this could not be solved.
 <br>
 <hr>
 
@@ -247,7 +256,7 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 <hr>
 
 ## **Further testing**
-- Usability tests were done with two users to analyse the User Experience. The feedback from the users were very helpful to determine what works, what can be improved and determine future features.  
+- Usability tests were done with two users to analyse the User Experience. The feedback from the users was very helpful to determine what works, what can be improved and determine future features.  
 - Asked fellow students, friends and family to look at the site on their devices and report any issues they find.
 - Review all functionality and responsiveness on different desktop browsers and the website displayed correctly in all browsers including Safari, Chrome, Edge, Firefox and Opera browsers. (see Browser Compatibility section for detail)
 
