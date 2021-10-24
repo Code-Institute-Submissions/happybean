@@ -16,7 +16,7 @@ ___
 ___
 <br>
 
-## **Test User Stories**
+## **Test User Stories Test Images**
 Testing user stories from the UX section with corresponding features, styles and content.
 
 <details>
@@ -36,6 +36,117 @@ Testing user stories from the UX section with corresponding features, styles and
 
 ![Admin User](/documentation/images/general_doc_img/test_user_stories_admin.png)
 </details>
+<br>
+
+### User story images
+<details>
+<summary>Home</summary>
+
+![Home](/documentation/images/general_doc_img/landing_home_page.png)
+</details>
+
+<details>
+<summary>Footer</summary>
+
+![Footer](/documentation/images/general_doc_img/footer.png)
+</details>
+
+<details>
+<summary>Shop: Product filter, sort and search</summary>
+
+![Shop: Products](/documentation/images/general_doc_img/product_filter_sort_search.png)
+</details>
+
+<details>
+<summary>Shop: Pagination</summary>
+
+![Shop: Pagination](/documentation/images/general_doc_img/products_view_pagination.png)
+</details>
+
+<details>
+<summary>Product detail</summary>
+
+![Product detail](/documentation/images/general_doc_img/product_detail.png)
+</details>
+
+<details>
+<summary>Cart: Empty</summary>
+
+![Cart: Empty](/documentation/images/general_doc_img/cart_app_empty.png)
+</details>
+
+<details>
+<summary>Cart: With Products</summary>
+
+![Cart: With Products](/documentation/images/general_doc_img/cart_app_products.png)
+</details>
+
+<details>
+<summary>Checkout</summary>
+
+![Checkout](/documentation/images/general_doc_img/checkout_app.png)
+</details>
+
+<details>
+<summary>Checkout Success</summary>
+
+![Checkout Success](/documentation/images/general_doc_img/checkout_success.png)
+</details>
+
+<details>
+<summary>Profile</summary>
+
+![Profile](/documentation/images/general_doc_img/profile_app.png)
+</details>
+
+<details>
+<summary>Coffee Corner</summary>
+
+![Coffee Corner](/documentation/images/general_doc_img/coffee_corner.png)
+</details>
+
+<details>
+<summary>About App</summary>
+
+![About App](/documentation/images/general_doc_img/about_app.png)
+</details>
+
+<details>
+<summary>Contact Us</summary>
+
+![Contact Us](/documentation/images/general_doc_img/contact_us.png)
+</details>
+
+<details>
+<summary>FAQ</summary>
+
+![FAQ](/documentation/images/general_doc_img/faq.png)
+</details>
+
+<details>
+<summary>Coffee Forum</summary>
+
+![Coffee Forum](/documentation/images/general_doc_img/coffee_forum_app.png)
+</details>
+
+<details>
+<summary>Coffee Forum: Thread & Comments</summary>
+
+![Coffee Forum: Thread & Comments](/documentation/images/general_doc_img/threads_comments_forum_app.png)
+</details>
+
+<details>
+<summary>Login</summary>
+
+![Login](/documentation/images/general_doc_img/login.png)
+</details>
+
+<details>
+<summary>Register</summary>
+
+![Login](/documentation/images/general_doc_img/register.png)
+</details>
+
 
 <br>
 <hr>
@@ -71,7 +182,7 @@ Testing user stories from the UX section with corresponding features, styles and
       - JSHint flags Jquery $ symbol as an undefined variable - safely ignored. 
 
 ### [CSS: W3C CSS validation](https://jigsaw.w3.org/css-validator/)
-- To validate the CCS code of the project pasting code in by direct input method.
+- To validate the CSS code of the project pasting code in by direct input method.
 - All issues where resolved.
 
 <br>
@@ -86,15 +197,12 @@ Testing user stories from the UX section with corresponding features, styles and
 </details>
 <br>
     
-### Python
-- [Extendsclass](https://extendsclass.com/python-tester.html) - No syntax errors
-   - [Final Python Validated](#)
-- [PEP8 Online](#) - Python file is PEP8 compliant
-   - [Final Python Validated](#)
+### [Python: PEP8 Online](http://pep8online.com/)
 
-### Google Dev Tool 
-- To check for errors in JavaScript code
+- To validate the Python code of the project to check if it is PEP8 compliant. It was done by pasting code on the site by direct input method.
+- I have resolved the Pylint issues as far as I can, there are still a few warnings, but becuase it is close to submission I will not edit those as it might break something in the app. Also, I kept a few empthy python files such as models.py in the about and coffee corner apps, because I could use them later for future development.
 
+<br>
 
 ### Browser Compatibility
 To ensure a broad range of users can successfully use this site, I tested it across the 4 major browsers in both desktop and mobile configuration. See the Browser Compatibility Table below for more detail. The following browsers were tested:
@@ -109,7 +217,6 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 ![Browser Compatibility detail](/documentation/images/general_doc_img/browser_compatibility.png)
 </details>
 
-
 <br>
 <hr>
 
@@ -119,7 +226,7 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 
 ![Manual testing for features](/documentation/images/general_doc_img/manual_feature_testing.png)
 </details>
-
+- Note: Email verification message: The allauth tmeplate was amended as well as the admin dashboard site settings to reflect Happy bean in the email subject line but it still refers to "example.com" in the email the user receives when they sign up. This could be further investigated in the future but because of time constraints this could not be solved.
 <br>
 <hr>
 
@@ -133,9 +240,9 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 <details>
 <summary>Deployment Phase: Bugs & Fixes</summary>
 
-![<summary>Deployment Phase: Bugs & Fixes</summary>
- Phase: Bugs & Fixes](/documentation/images/general_doc_img/bugs_fixes_deployment.png)
+![Deployment Phase: Bugs & Fixes](/documentation/images/general_doc_img/bugs_fixes_deployment.png)
 </details>
+
 <br>
 <hr>
 
@@ -144,9 +251,12 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 - Asked fellow students, friends and family to look at the site on their devices and report any issues they find.
 - Review all functionality and responsiveness on different desktop browsers and the website displayed correctly in all browsers including Safari, Chrome, Edge, Firefox and Opera browsers. (see Browser Compatibility section for detail)
 
+<br>
+<hr>
+
 ## **Deployment**
 - Ensured deployed page on Heroku loads up correctly.
-- Ensured Debug variable in app.py file is set to False.
+- Ensured Debug variable is set to False.
 - Confirmed that there is no difference between the deployed version and the development version.
 
 
