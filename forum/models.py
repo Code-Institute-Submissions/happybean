@@ -28,8 +28,7 @@ class Thread(models.Model):
     date_edited = models.DateTimeField(auto_now=True)
 
     # Represents the class objects as a string
-    # To return a string of the thread title the creator of it
-    # https://www.python-course.eu/python3_magic_methods.php
+    #  v
     def __str__(self):
         return self.title + ' by ' + str(self.creator)
 

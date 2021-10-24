@@ -63,7 +63,6 @@ def forum_view(request):
 # Class Based views: https://bit.ly/3p0oH2F
 # Login & Security: https://bit.ly/3iVyCma
 # https://stackoverflow.com/questions/42698197/is-there-django-list-view-model-sort
-# https://pypi.org/project/django-sortable-listview/
 
 # --- THREAD VIEW FUNCTION --- #
 class ThreadView(LoginRequiredMixin, DetailView):
