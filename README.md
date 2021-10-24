@@ -545,7 +545,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
 - The user can change their password and email from their profile if they click on a Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - If the store owner decided to release some products in different sizes with different prices, there would be an option on the product view page to select different sizes and the prices will change accordingly.
-
+- I would like to have custom helper text for all forms on the site. Currently the forms have crispy and django feedback to users which could frustrate them as they only receive feedback if the fields were filled in incorrectly. After user research it is clear that user want to know what is expected of them before they enter information in the input fields. As a temporary measure to solve user frustration, I added helper text at the bottom of the form to guide the user at least what is expected of them.
 <br>
 <hr>
 
