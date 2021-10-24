@@ -130,7 +130,7 @@
           <!-- User -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="user-link" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+              aria-expanded="false" aria-label="User Menu">
               <i class="fas fa-user fa-lg"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="user-link">
@@ -148,13 +148,13 @@
           </li>
           <!-- Search -->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'products' %}"><i class="fas fa-search fa-lg"></i>
+            <a class="nav-link" href="{% url 'products' %}" aria-label="Search link"><i class="fas fa-search fa-lg"></i>
             </a>
           </li>
           <!-- Shopping Cart -->
           <li class="nav-item list-inline-item cart-nav-item">
             <a href="{% url 'view_cart' %}"
-              class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+              class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" aria-label="Shopping Cart">
               <div class="text-center">
                 <div class="cart-menu">
                   <i class="fas fa-shopping-bag fa-lg">
@@ -176,9 +176,9 @@
     </nav>
     <div id="delivery-banner" class="row text-center">
       <div class="col delivery-banner">
-        <h4 class="logo-font my-1">
+        <h3 class="logo-font my-1">
           Free delivery on orders over €{{ free_delivery_threshold }}
-        </h4>
+        </h3>
       </div>
     </div>
   </header>
@@ -261,13 +261,13 @@
         <div class="col-md-4 col-sm-6 col-xs-12 d-flex">
           <ul class="social-icons">
             <li><a class="github" target="_blank" href="https://github.com/Franciskadtt" rel="noopener noreferrer"
-                aria-hidden="false"><i class="fa fa-github"></i></a></li>
+                aria-hidden="false" aria-label="Github"><i class="fa fa-github"></i></a></li>
             <li><a class="twitter" target="_blank" href="https://twitter.com/FranciskaDuToit" rel="noopener noreferrer"
-                aria-hidden="false"><i class="fa fa-twitter"></i></a></li>
+                aria-hidden="false" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
             <li><a class="instagram" target="_blank" href="https://www.instagram.com/designed.byfranciska/"
-                rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-instagram"></i></a></li>
+                rel="noopener noreferrer" aria-hidden="false" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
             <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/franciskadutoit/"
-                rel="noopener noreferrer" aria-hidden="false"><i class="fa fa-linkedin"></i></a></li>
+                rel="noopener noreferrer" aria-hidden="false" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
           </ul>
         </div>
       </div>
