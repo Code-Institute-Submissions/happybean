@@ -336,7 +336,7 @@ A database structure was designed to be specifically suited for Happy Bean. It w
 
 Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
 
-Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop and have access to the Coffee Corner. 
+Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop as well as have access to the Coffee Corner and Coffee Forum. 
 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
@@ -467,7 +467,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - The user will be able to return to the products page or the Coffee Corner 
 - At the top of the page, there is an indication of where the user is in the buying/checkout - process for a better user experience.
 
-### Login Page (login.html)  
+### Login Page
 - The login page features a simple form where the user can enter either their username or their email address and their password.
 - There is helper text under each input field to guide the user as to the parameters they can input.
 - The user will receive validation or error feedback when they enter information in the input field which is also accompanied by colours to show validation (green for correct and red for incorrect).
@@ -475,7 +475,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - The page where users can log in to the website and access the Profile page to see their user info, delivery info and order history
 - The form with built-in functionality is created with the Django Allauth package.
 
-### Registration Page (register.html)
+### Registration Page
 - The sign-up page features a simple form, where the user can input a username, email address and password. The form was kept deliberately simple so that signup has minimum barriers.
 - If the user lands on the registration page but realises they already have an account and would like to log in, there is a link on the page that will take them to the login page or they can click on the navbar menu Log in Page link.
 - There is a message to the user about not sharing their information to put the user's mind at ease.
@@ -545,7 +545,7 @@ SQLite, which is Django built-in database is used for development mode and Herok
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
 - The user can change their password and email from their profile if they click on a Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - If the store owner decided to release some products in different sizes with different prices, there would be an option on the product view page to select different sizes and the prices will change accordingly.
-- I would like to have custom helper text for all forms on the site. Currently the forms have crispy and django feedback to users which could frustrate them as they only receive feedback if the fields were filled in incorrectly. After user research it is clear that user want to know what is expected of them before they enter information in the input fields. As a temporary measure to solve user frustration, I added helper text at the bottom of the form to guide the user at least what is expected of them.
+- I would like to have custom helper text for all forms on the site. Currently, the forms have crispy and Django feedback to users which could frustrate them as they only receive feedback if the fields were filled in incorrectly. After user research, it is clear that users want to know what is expected of them before they enter information in the input fields. As a temporary measure to solve user frustration, I added helper text at the bottom of the form to guide the user at least what is expected of them.
 <br>
 <hr>
 
@@ -815,7 +815,6 @@ ___
 
 - Logo Illustration is from [Canva](https://www.canva.com/)
 - Designs for coffee beans, grounds, capsules, gift boxes, taster boxes and subscriptions designed by Franciska Du Toit using the logo from [Canva](https://www.canva.com/)
-
 - Coffee Products photos from the following sources:
     - Filter Coffee Papers from https://www.whittard.co.uk/equipmentcoffee-equipmentreplacement-partscoffee-filters-302240.html-302240.html?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNx31Epwjrewm8gHQAXr64HrpPc6yYnZzWt-0mvauMbkqMzUs0xNWoaAlNvEALw_wcB&gclsrc=aw.ds
     - AeroPress Filters from https://coffee.ie/products/aeropress-filter-s-2-packs
@@ -827,23 +826,33 @@ ___
     - Baratza Encore Grinder from https://www.cremashop.eu/en/products/baratza/encore/2293
     - Coffee Corner Images with icons from [Canva](https://www.canva.com/)
 
-
 ### **Code**
 - Checkout progress: Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-5-ecommerce-checkout-form-progress-bar-44177913
-- Contact Form - https://learndjango.com/tutorials/django-email-contact-form
+- Contact Form: Original code with modifications from: https://learndjango.com/tutorials/django-email-contact-form
 - Forum templates:
+    - thread structure: https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 
     - navigation: https://www.youtube.com/watch?v=knGk9aUr4Do
-    - comment counter: https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9 
-- Class based views for forum app views https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/
-- Login & Security views for forum app views: https://docs.djangoproject.com/en/3.2/topics/auth/default/
-- Delete Success Message:  views for forum app views: https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
-- User permissions: views for forum app views: https://learndjango.com/tutorials/django-best-practices-user-permissions
-- Forum views success messages views for forum app views:  # for success messages: https://docs.djangoproject.com/en/3.2/ref/contrib/messages/
-- Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
-- Function to set the ridirect page: views for forum app views https://steemit.com/utopian-io/@duski.harahap/create-a-forum-application-using-django-15-use-reverse-lazy-and-implementing-the-pagination-system
-- Class based views & urlshttps://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/#using-class-based-views
-- For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
-
+    - comment counter: https://www.youtube.com/watch?v=6SkoqRJ-yAw&list=PLMXItuyqfZ94JEmU4KWcbPepKLAK2KGDb&index=9
+- Forum Models including Thread and Comment: The majority of this app was generally influenced by Selmi Tech's youtube tutorial series on how to create a Forum App but it was used to understand general principles of how to work with Django and Python including Views and Modals. Reference: https://www.youtube.com/watch?v=knGk9aUr4Do
+    - To return a string of the thread title the creator of it: https://www.python-course.eu/python3_magic_methods.php
+    - To handle named arguments not yet defined from: https://docs.python.org/2/tutorial/controlflow.html#keyword-arguments
+    - Python String format() Method: https://www.geeksforgeeks.org/python-string-format-method/
+- Views for Forum, including threads and comments, also to add, edit and delete threads and comments. The majority of this app was generally influenced by Selmi Tech's youtube tutorial series on how to create a Forum App but it was used to understand general principles of how to work with Django and Python including Views and Modals. Reference: https://www.youtube.com/watch?v=knGk9aUr4Do
+    - Class-based views for forum app views https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/ and https://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/#using-class-based-views
+    - Login & Security views for forum app views: https://docs.djangoproject.com/en/3.2/topics/auth/default/
+    - Delete Success Message:  views for forum app views: https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown
+    - User permissions: views for forum app views: https://learndjango.com/tutorials/django-best-practices-user-permissions
+    - Forum views success messages views for forum app views: for success messages: https://docs.djangoproject.com/en/3.2/ref/contrib/messages/
+    - Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
+    - Function to set the redirect page: views for forum app views https://steemit.com/utopian-io/@duski.harahap/create-a-forum-application-using-django-15-use-reverse-lazy-and-implementing-the-pagination-system
+    - For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
+- Products app:
+    - User permissions: https://bit.ly/3mSsegO
+    - Success message in DeleteView: https://bit.ly/3oRYlzG
+- Pagination from Bootstrap and Django Documentation: https://docs.djangoproject.com/en/3.2/topics/pagination/ and https://getbootstrap.com/docs/4.0/components/pagination/
+- Page scroll up javascript feature: Orginal code from with modifications for the project from https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php 
+- Scroll up button and icon Styling: Orginal code from with modifications for the project from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+- Toast styling: Orginal code from with modifications for the project from CSS-tricks.com https://css-tricks.com/snippets/css/css-triangle/ 
 
 ### **Acknowledgements**
 - Thanks to my mentor Antonio Rodriquez for guiding me throughout this project.
