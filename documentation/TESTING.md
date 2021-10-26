@@ -235,7 +235,8 @@ To ensure a broad range of users can successfully use this site, I tested it acr
 
 ![Manual testing for features](/documentation/images/general_doc_img/manual_feature_testing.png)
 </details>
-- Note: Email verification message - The allauth template was amended as well as the admin dashboard site settings to reflect Happy bean in the email subject line but it still refers to "example.com" in the email the user receives when they sign up. This could be further investigated in the future but because of time constraints, this could not be solved.
+- Note 1: Email verification message - The allauth template was amended as well as the admin dashboard site settings to reflect Happy bean in the email subject line but it still refers to "example.com" in the email the user receives when they sign up. This could be further investigated in the future but because of time constraints, this could not be solved.
+- Note 2: Contact Us Email - If a user fills in the contact us form and submits, the email sends perfectly but in the destination email inbox the from and to email is the same. Therefore it is not reflecting the user's email they filled in in the contact form. This could be further investigated in the future, I suspect it could be the view for the contact form but because of time constraints I was worried I could break the code, and therefore this could not be resolved.
 <br>
 <hr>
 
