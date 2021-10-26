@@ -545,9 +545,11 @@ SQLite, which is Django built-in database is used for development mode and Herok
 <a></a>
 ## **Future Features**
 These are possible future features to be added to the project which was suggested by users during the usability tests. As these features were not part of a minimum viable product launch phase, they will be implemented in future releases.
+- For the forum app, to add a search feature so that users can easily find their favourite topics easily. Another feature that could be added is to paginate comments so that if there are many comments, the users are not overwhelmed by the number of comments.
 - The user can change their password and email from their profile if they click on a Change password button. A modal will pop up and ask for the new password. If they confirm to change their password, their password will be updated in the database under the Users collection.
 - If the store owner decided to release some products in different sizes with different prices, there would be an option on the product view page to select different sizes and the prices will change accordingly.
 - I would like to have custom helper text for all forms on the site. Currently, the forms have crispy and Django feedback to users which could frustrate them as they only receive feedback if the fields were filled in incorrectly. After user research, it is clear that users want to know what is expected of them before they enter information in the input fields. As a temporary measure to solve user frustration, I added helper text at the bottom of the register form to guide the user at least what is expected of them.
+
 <br>
 <hr>
 
