@@ -536,8 +536,8 @@ SQLite, which is Django built-in database is used for development mode and Herok
 - A registered user will have to log in again if they want to see their Profile or the Coffee Corner Page.
 - An Admin user will have to log in again if they want to see their Profile, Coffee Corner Page or the Manage Products Page.
 
-### 404 & 500 Page
-- The custom 404 & 500 Pages contains an image and text that makes the user understand they have encountered an error. There is a button to return the user to the Happy Bean Home page.
+### 403, 404 & 500 Pages
+- The custom 403, 404 & 500 Pages contains an image and text that makes the user understand they have encountered an error. There is a button to return the user to the Happy Bean Home page.
 
 <br>
 <hr>
