@@ -587,11 +587,8 @@ These are possible future features to be added to the project which was suggeste
 - [Link Checker](https://validator.w3.org/checklink) for checking all links on the website and see if all links work
 - Lighthouse in Google dev tool for testing the performance of the website
 - [TestProject](https://testproject.io/) for automated testing of website
-- [Python Tester](https://extendsclass.com/python-tester.html) for checking Python code syntax
-- [Closing Tag Checker for HTML5](https://www.aliciaramirez.com/closing-tags-checker/) to validate all tags correct
-- [Google Mobile-Friendly Test Mobile](https://search.google.com/test/mobile-friendly) to check if site is mobiole friendly
+- [PEP8 Online](http://pep8online.com/) for checking Python code syntax
 - [Grammerly](https://www.grammarly.com/) to check spelling & grammer
-- [AutoPrefixer](https://autoprefixer.github.io/) to parse CSS and adds vendor prefixes
 
 ### **Design**
 - [Balsamiq](https://balsamiq.com/) to design low fidelity mockups
