@@ -166,17 +166,16 @@ The overall structure that was used is the [Bootstrap5](https://getbootstrap.com
 
 <a></a>
 ## **Wireframes**
-I have used [Balsamic](https://balsamiq.com/) to create low-fidelity wireframes. First I created a basic wireframe for mobile, for tablet and desktop. The website will be easy to navigate by using the navigation bar or by scrolling down the page. I have included a scroll-up button for user convenience.
+I created a hight level site structure and low fidelity wireframes in the planning phase.
 
 ### **Site Structure**
-In the planning phase, the following site structure was created to determine the pages, subpages and which pages are related.
+The following site structure was created in [Figjam](https://www.figma.com/figjam/) to determine the pages, subpages and which pages are related.
 
 <details>
 <summary>Site Structure</summary>
 
 ![Site Structure](/documentation/images/general_doc_img/site_structure.png)
 </details>
-
 <br>
 
 ### **Wireframe Images**
@@ -586,7 +585,6 @@ These are possible future features to be added to the project which was suggeste
 - [JSHint Validator](https://jshint.com/) for detecting errors and potential problems in your JavaScript code
 - [Link Checker](https://validator.w3.org/checklink) for checking all links on the website and see if all links work
 - Lighthouse in Google dev tool for testing the performance of the website
-- [TestProject](https://testproject.io/) for automated testing of website
 - [PEP8 Online](http://pep8online.com/) for checking Python code syntax
 - [Grammerly](https://www.grammarly.com/) to check spelling & grammer
 - [Notion](https://www.notion.so) for project planning and tracking
